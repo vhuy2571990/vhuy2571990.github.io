@@ -10,7 +10,7 @@
 	  $routeProvider.when('/', {
 	    template: '<home user="$resolve.user"></home>',
 	    resolve: {
-	      user: function($http) { return $http.get('...'); }
+	      user: function($http) { return $http.get('/data.json'); }
 	    }
 	  });
 	});
