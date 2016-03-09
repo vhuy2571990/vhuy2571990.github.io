@@ -1,0 +1,11 @@
+[
+	{
+		"_id" : "template1",
+		"name":"huy",
+		"detail": "hehe"
+	},
+	{	"_id" : "template2",
+		"name":"kute",
+		"detail": "haha"
+	}
+]
