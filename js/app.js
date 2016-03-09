@@ -8,7 +8,7 @@
 	});
 	myMod.config(function($routeProvider) {
 	  $routeProvider.when('/', {
-	    template: '<home user="$resolve.user.name"></home>',
+	    template: '<home user="$resolve.user"></home>',
 	    resolve: {
 	      user: function($http) { return $http.get('/data.json'); }
 	    }
