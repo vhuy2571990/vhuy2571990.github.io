@@ -7,9 +7,8 @@ angular.module('app', ['ui.router'])
 				url:'/templates',
 				templateUrl: 'partials/list-template.html',
 				controller: function($scope, $http){
-					$http.get('data-template.json').then(function(data){
-						console.log(data);
-						$scope.templates = data;
+					$http.get('data-template.json').then(function(response){
+						$scope.templates = response.data;
 					});
 				}
 			}).
