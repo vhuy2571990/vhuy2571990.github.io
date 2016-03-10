@@ -1,17 +1,16 @@
-(function(){
-	var myMod = angular.module('myMod', ['ngRoute']);
-	myMod.component('home', {
-	  template: '<h1>Home</h1><p>Hello, {{ $ctrl.user.name }} !</p>',
-	  bindings: {
-	    user: '<'
-	  }
-	});
-	myMod.config(function($routeProvider) {
-	  $routeProvider.when('/', {
-	    template: '<home user="$resolve.user"></home>',
-	    resolve: {
-	      user: function($http) { return $http.get('/data.json'); }
-	    }
-	  });
-	});
-})();
+'use strict';
+angular.module('app', ['ngRoute'])
+		.config(['$routeProvider', function($routeProvider){
+			$routeProvider.when('/templates', {
+				templateUrl: '/partials/list-template.html',
+				controller: 'TemplateCtrl'
+			}).
+			when('/templates/:templateId', {
+				templateUrl: '/partials/template-detail.html',
+				controller: 'TemplateDetailCtrl'
+			}).
+			otherwise({
+				redirectTo: '/templates'
+			});	 
+		}]);
+	
