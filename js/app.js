@@ -11,7 +11,7 @@ angular.module('app', ['ui.router'])
 				templateUrl: 'partials/template-detail.html',
 				controller: 'TemplateDetailCtrl'
 			});
-			
-			$urlRouterProvider('/templates');	 
+
+			$urlRouterProvider.otherwise('/templates');	 
 		});
 	
