@@ -10,7 +10,8 @@ angular.module('app', ['ui.router'])
 			state('/templates/:templateId', {
 				templateUrl: 'partials/template-detail.html',
 				controller: 'TemplateDetailCtrl'
-			}).
+			});
+			
 			$urlRouterProvider('/templates');	 
 		});
 	
