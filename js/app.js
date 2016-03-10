@@ -1,9 +1,9 @@
 'use strict';
 angular.module('app', ['ui.router'])
-		.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider, $stateProvider){
+		.config(function($urlRouterProvider, $locationProvider, $stateProvider){
 			$locationProvider.html5Mode(true);
 
-			$routeProvider.state('/templates', {
+			$stateProvider.state('/templates', {
 				templateUrl: 'partials/list-template.html',
 				controller: 'TemplateCtrl'
 			}).
@@ -12,5 +12,5 @@ angular.module('app', ['ui.router'])
 				controller: 'TemplateDetailCtrl'
 			}).
 			$urlRouterProvider('/templates');	 
-		}]);
+		});
 	
