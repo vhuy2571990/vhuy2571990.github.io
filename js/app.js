@@ -6,15 +6,16 @@ angular.module('app', ['ui.router'])
 			$stateProvider.state('templates', {
 				url:'/templates',
 				templateUrl: 'partials/list-template.html',
-				controller: function($scope){
-
+				controller: function($scope, $http){
+					$http.get('data-template.json').then(function(data){
+						$scope.templates = data;
+					});
 				}
 			}).
 			state('templates.detail', {
 				url: '/templates/:id',
 				templateUrl: 'partials/template-detail.html',
 				controller: function($scope, $stateParams){
-					
 				}
 			});
 

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-hello word!!
-=======
+<a ui-sref="templates"><h1>Home</h1></a>
 <ul>
 	<li ng-repeat="item in templates">
-		<a href="#/templates/{{item._id}}">{{item.name}}</a>
+		<a ui-sref="templates.details({id: item._id})">{{item.name}}</a>
 	</li>
 </ul>
->>>>>>> b53f32ced4eea92b2bb5099abdd5ad542cc0d0f5
