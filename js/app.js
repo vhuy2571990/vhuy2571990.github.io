@@ -16,6 +16,7 @@ angular.module('app', ['ui.router'])
 				url: '/templates/:id',
 				templateUrl: 'partials/template-detail.html',
 				controller: function($scope, $stateParams){
+					$scope.id = $stateParams.id;
 				}
 			});
 
