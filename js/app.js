@@ -17,6 +17,7 @@ angular.module('app', ['ui.router'])
 				templateUrl: 'partials/template-detail.html',
 				controller: function($scope, $stateParams, $http){
 					$http.get('data-template/'+$stateParams.id+'.json').then(function(response){
+						console.log(response);
 						$scope.templates = response.data;
 					});
 				}
