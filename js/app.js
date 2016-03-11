@@ -16,7 +16,9 @@ angular.module('app', ['ui.router'])
 				url: '/:id',
 				templateUrl: 'partials/template-detail.html',
 				controller: function($scope, $stateParams){
-					$scope.id = $stateParams.id;
+					$http.get('data-template/'+$stateParams+'.json').then(function(response){
+						$scope.templates = response.data;
+					});
 				}
 			});
 
