@@ -10,7 +10,7 @@ angular.module('app', ['ui.router'])
 			}
 			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
 			$stateProvider
-			.state('', {
+			.state('/', {
 				url: '/',
 				templateUrl: 'index.html',
 				controller: function($scope){
@@ -52,6 +52,6 @@ angular.module('app', ['ui.router'])
 				}
 			});
 
-			$urlRouterProvider.otherwise('/templates');	 
+			$urlRouterProvider.otherwise('/');	 
 		});
 	
