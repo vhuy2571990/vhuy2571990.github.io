@@ -24,7 +24,6 @@ angular.module('app', ['ui.router'])
 				templateUrl : 'partials/template-detail.html',
 				controller: function($scope, $http, $stateParams){
 					var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
-					console.log(stateParams);
 					$http.get('data-template/'+stateParams+'.json').then(function(response){
 						$scope.templatesdetail = response.data.details;
 					});
@@ -39,9 +38,6 @@ angular.module('app').directive('leftNavbar', function(){
 		templateUrl: 'partials/navbar.html',
 		controllerAs: 'leftNavBar',
 		controller: function($scope){
-			angular.element(document).ready(function(){
-				$('[data-toggle="tooltip"]').tooltip();
-			});	
 				$scope.navbar = [
 							{
 								"name": "Home",
