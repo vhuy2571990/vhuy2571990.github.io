@@ -12,7 +12,7 @@ angular.module('app', ['ui.router'])
 					});
 				}
 			}).
-			state('templatesdetails', {
+			state('templates.detail', {
 				url: '/:id',
 				templateUrl: 'partials/template-detail.html',
 				controller: function($scope, $stateParams, $http){
@@ -22,6 +22,6 @@ angular.module('app', ['ui.router'])
 				}
 			});
 
-			$urlRouterProvider.otherwise('templates');	 
+			$urlRouterProvider.otherwise('/templates');	 
 		});
 	
