@@ -12,7 +12,7 @@ angular.module('app', ['ui.router'])
 			$stateProvider
 			.state('index', {
 				url:'/',
-				templateUrl: 'partials/index.html'
+				templateUrl: 'index.html'
 			})
 			.state('templates', {
 				url : '/templates',
