@@ -39,6 +39,9 @@ angular.module('app').directive('leftNavbar', function(){
 		templateUrl: 'partials/navbar.html',
 		controllerAs: 'leftNavBar',
 		controller: function($scope){
+			angular.element(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();
+			});	
 				$scope.navbar = [
 							{
 								"name": "Home",
