@@ -19,7 +19,7 @@ angular.module('app', ['ui.router'])
 				templateUrl : 'partials/template-detail.html',
 				controller: function($scope, $http, $stateParams){
 					var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
-					$http.get('data-template/'+stateParams+'.json').then(function(response){
+					$http.get('data-template/'+stateParams+'/'+stateParams+'.json').then(function(response){
 						$scope.templatesdetail = response.data.details;
 					});
 				}
