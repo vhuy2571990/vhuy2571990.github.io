@@ -46,15 +46,15 @@ angular.module('app').directive('leftNavbar', function(){
 							{
 								"name": "Home",
 								"icon": "icon-home",
-								"ref": "templates"
+								"_ref": "templates"
 							},{
 								"name": "Blog",
 								"icon": "icon-feed",
-								"uiSref" : "blog"
+								"_ref" : "blog"
 							},{
 								"name": "About",
 								"icon": "icon-emotsmile",
-								"ref": "about"
+								"_ref": "about"
 							}
 						]
 		}
