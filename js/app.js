@@ -20,10 +20,7 @@ angular.module('app').directive('template', function(){
 		restrict: 'E',
 		templateUrl: 'partials/list-template.html',
 		controllerAs: 'listTemplate',
-		controller: function($scope, $reactive){
-			$reactive(this).attach($scope);
-
-			this.newParty = {};
+		controller: function($scope){
 		}
 	}
 });
