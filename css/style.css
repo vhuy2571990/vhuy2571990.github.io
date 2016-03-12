@@ -1,3 +1,15 @@
 body{
 	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+}
+a.btn-def.btn-icon{
+	padding:5px 10px;
+	background: #fff;
+	color:#333;
+	border:1px solid #ddd;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
 }
