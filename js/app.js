@@ -1,8 +1,14 @@
 'use strict';
 angular.module('app', ['ui.router'])
-		.config(function($urlRouterProvider, $locationProvider, $stateProvider){
+		.config(function($urlRouterProvider, $locationProvider, $stateProvider, $urlMatcherFactoryProvider){
 			$locationProvider.html5Mode(true);
-
+			var templateUrlType = {
+				encode: function(str) { return str && str.replace(/ /g, "-");},
+				decode: function(str) { return str && str.replace(/-/g, " ");},
+				is: angular.isString,
+				pattern: /[^/]+/
+			}
+			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
 			$stateProvider.state('templates', {
 				url : '/templates',
 				templateUrl : 'partials/list-template.html',
@@ -13,7 +19,7 @@ angular.module('app', ['ui.router'])
 				}
 			})
 			.state('templatedetail', {
-				url : '/templates/:tplId',
+				url : '/templates/{tplId:templateUrl}',
 				templateUrl : 'partials/template-detail.html',
 				controller: function($scope, $http, $stateParams){
 					var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
