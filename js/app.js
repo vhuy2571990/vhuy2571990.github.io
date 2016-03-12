@@ -46,11 +46,11 @@ angular.module('app').directive('leftNavbar', function(){
 								"ui-sref": "templates"
 							},{
 								"name": "Blog",
-								"icon": "icon-blog",
+								"icon": "icon-feed",
 								"ui-sref" : "blog"
 							},{
 								"name": "About",
-								"icon": "icon-about",
+								"icon": "icon-emotsmile",
 								"ui-sref": "about"
 							}
 						]
