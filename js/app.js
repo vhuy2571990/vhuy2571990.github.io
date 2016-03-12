@@ -1,28 +1,30 @@
 'use strict';
 angular.module('app', ['ui.router'])
-		
 		.config(function($urlRouterProvider, $locationProvider, $stateProvider){
 			$locationProvider.html5Mode(true);
 
 			$stateProvider.state('templates', {
 				url:'/templates',
-				templateUrl: 'partials/list-template.html',
-				controller: function($scope, $http){
-					$http.get('data-template.json').then(function(response){
-						$scope.templates = response.data;
-					});
-				}
+				template: '<template></template>'
 			}).
-			state('templates.detail', {
-				url: '/:id',
-				templateUrl: 'partials/template-detail.html',
-				controller: function($scope, $stateParams, $http){
-					$http.get('data-template/'+$stateParams.id+'.json').then(function(response){
-						$scope.templates = response.data.details;
-					});
-				}
+			state('templateDetails', {
+				url: '/templates/:templateId',
+				template: '<template-details></template-details>'
 			});
 
 			$urlRouterProvider.otherwise('templates');	 
 		});
+
+angular.module('app').directive('template', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'partials/list-template.html',
+		controllerAs: 'listTemplate',
+		controller: function($scope, $reactive){
+			$reactive(this).attach($scope);
+
+			this.newParty = {};
+		}
+	}
+});
 	
