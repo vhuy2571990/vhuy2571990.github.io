@@ -1,5 +1,6 @@
-<ul>
-	<li ng-repeat="item in templates">
-		<a ui-sref="templatedetail({tplId: item._id})">{{item.name}}</a>
-	</li>
-</ul>
+<div class="row">
+	<div class="col-md-4" ng-repeat="item in templates">
+		<a ui-sref="templatedetail({tplId: item._id})" class="tpl-name">{{item.name}}</a>
+	</div>
+</div>
+
