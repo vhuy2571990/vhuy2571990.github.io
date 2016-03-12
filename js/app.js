@@ -12,6 +12,15 @@ angular.module('app', ['ui.router'])
 					});
 				}
 			})
+			.state('templatedetail', function(){
+				url:'/templates/:tplId',
+				templateUrl: 'partials/tempalate-detail.html',
+				controller: function($scope, $http, $stateParams){
+					$http.get('data-template/'+$stateParams.tplId+'.json').then(function(response){
+						$scope.templatesdetail = response.data.details;
+					});
+				}
+			})
 			$urlRouterProvider.otherwise('/templates');	 
 		});
 	
