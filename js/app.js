@@ -15,6 +15,21 @@ angular.module('app', ['ui.router'])
 				controller : function($scope, $http){
 					$http.get('data-template.json').then(function(response){
 						$scope.templates = response.data;
+						$scope.navbar = [
+							{
+								"name": "Home",
+								"icon": "icon-home",
+								"ui-sref": "templates"
+							},{
+								"name": "Blog",
+								"icon": "icon-blog",
+								"ui-sref" : "blog"
+							},{
+								"name": "About",
+								"icon": "icon-about",
+								"ui-sref": "about"
+							}
+						]
 					});
 				}
 			})
