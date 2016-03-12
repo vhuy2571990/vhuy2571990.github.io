@@ -1,5 +1,6 @@
 'use strict';
 angular.module('app', ['ui.router'])
+		
 		.config(function($urlRouterProvider, $locationProvider, $stateProvider){
 			$locationProvider.html5Mode(true);
 
