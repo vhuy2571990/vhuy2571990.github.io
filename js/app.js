@@ -16,6 +16,7 @@ angular.module('app', ['ui.router'])
 				url : '/templates/:tplId',
 				templateUrl : 'partials/template-detail.html',
 				controller: function($scope, $http, $stateParams){
+					$stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
 					$http.get('data-template/'+$stateParams.tplId+'.json').then(function(response){
 						$scope.templatesdetail = response.data.details;
 					});
