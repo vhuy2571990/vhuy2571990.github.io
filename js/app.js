@@ -9,13 +9,12 @@ angular.module('app', ['ui.router'])
 				pattern: /[^/]+/
 			}
 			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
-			$stateProvider.state('templates', {
-				url : '/templates',
-				templateUrl : 'partials/list-template.html',
-				controller : function($scope, $http){
-					$http.get('data-template.json').then(function(response){
-						$scope.templates = response.data;
-						$scope.navbar = [
+			$stateProvider
+			.state('', {
+				url: '/',
+				templateUrl: 'index.html',
+				controller: function($scope){
+					$scope.navbar = [
 							{
 								"name": "Home",
 								"icon": "icon-home",
@@ -30,6 +29,14 @@ angular.module('app', ['ui.router'])
 								"ui-sref": "about"
 							}
 						]
+				}
+			})
+			.state('templates', {
+				url : '/templates',
+				templateUrl : 'partials/list-template.html',
+				controller : function($scope, $http){
+					$http.get('data-template.json').then(function(response){
+						$scope.templates = response.data;
 					});
 				}
 			})
