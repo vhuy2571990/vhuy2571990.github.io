@@ -11,17 +11,7 @@ angular.module('app', ['ui.router'])
 						$scope.templates = response.data;
 					});
 				}
-			}).
-			state('templatedetail', {
-				url: '/:id',
-				templateUrl: 'partials/template-detail.html',
-				controller: function($scope, $stateParams, $http){
-					$http.get('data-template/'+$stateParams.id+'.json').then(function(response){
-						$scope.templates = response.data.details;
-					});
-				}
-			});
-
+			})
 			$urlRouterProvider.otherwise('/templates');	 
 		});
 	
