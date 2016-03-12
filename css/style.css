@@ -12,4 +12,5 @@ a.btn-def.btn-icon{
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
+	text-decoration: none;
 }
