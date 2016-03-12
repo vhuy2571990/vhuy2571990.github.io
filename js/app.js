@@ -56,7 +56,7 @@ angular.module('app').directive('leftNavbar', function(){
 		}
 	}
 });
-angular.module('app').directive('toggle', function(){
+angular.module('app').controller("mainCtrl", function($scope){}).directive('toggle', function(){
 	return {
 		restrict: 'A',
 		link: function(scope, element, attrs) {
@@ -68,4 +68,4 @@ angular.module('app').directive('toggle', function(){
 		      }
 		}
 	}
-})
+});
