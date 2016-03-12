@@ -12,12 +12,7 @@ angular.module('app', ['ui.router'])
 			$stateProvider
 			.state('index', {
 				url:'/',
-				templateUrl: 'index.html',
-				controller: function($scope, $http){
-					$http.get('data-template.json').then(function(response){
-						$scope.templates = response.data;
-					});
-				}
+				templateUrl: 'index.html'
 			})
 			.state('templatedetail', {
 				url : '/templates/{tplId:templateUrl}',
@@ -53,6 +48,18 @@ angular.module('app').directive('leftNavbar', function(){
 								"_ref": "about"
 							}
 						]
+		}
+	}
+});
+angular.module('app').directive('listTemplate', function(){
+	return {
+		restrict : 'E',
+		templateUrl: 'partials/list-template.html',
+		controllerAs: 'listTemplate',
+		controller: function($scope, $http){
+			$http.get('data-template.json').then(function(response){
+				$scope.templates = response.data;
+			});
 		}
 	}
 });
