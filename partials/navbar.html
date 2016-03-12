@@ -1,9 +1,9 @@
 <nav class="left-nav">
       <ul>
         <li ng-repeat="item in navbar"><a ui-sref="{{item.ui-sref}}" 
-        title="Tech Hours Progress" 
+        title="{{item.name}}"
         data-placement="right" 
-        data-toggle="popover"
+        data-toggle="tooltip"
         class="btn-def btn-icon">
         <i class="{{item.icon}} icons"></i>
         </a></li>
