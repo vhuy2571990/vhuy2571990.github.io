@@ -10,27 +10,6 @@ angular.module('app', ['ui.router'])
 			}
 			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
 			$stateProvider
-			.state('/', {
-				url: '/',
-				templateUrl: 'index.html',
-				controller: function($scope){
-					$scope.navbar = [
-							{
-								"name": "Home",
-								"icon": "icon-home",
-								"ui-sref": "templates"
-							},{
-								"name": "Blog",
-								"icon": "icon-blog",
-								"ui-sref" : "blog"
-							},{
-								"name": "About",
-								"icon": "icon-about",
-								"ui-sref": "about"
-							}
-						]
-				}
-			})
 			.state('templates', {
 				url : '/templates',
 				templateUrl : 'partials/list-template.html',
@@ -54,4 +33,27 @@ angular.module('app', ['ui.router'])
 
 			$urlRouterProvider.otherwise('/');	 
 		});
-	
+angular.module('app').directive('leftNavbar', function(){
+	return {
+		restrict : 'E',
+		templateUrl: 'partials/navbar.html',
+		controllerAs: 'leftNavBar',
+		controller: function($scope){
+				$scope.navbar = [
+							{
+								"name": "Home",
+								"icon": "icon-home",
+								"ui-sref": "templates"
+							},{
+								"name": "Blog",
+								"icon": "icon-blog",
+								"ui-sref" : "blog"
+							},{
+								"name": "About",
+								"icon": "icon-about",
+								"ui-sref": "about"
+							}
+						]
+		}
+	}
+});
