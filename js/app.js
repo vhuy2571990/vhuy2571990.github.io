@@ -12,7 +12,7 @@ angular.module('app', ['ui.router'])
 					});
 				}
 			})
-			.state('templatedetail', function(){
+			.state('templatedetail', {
 				url : '/templates/:tplId',
 				templateUrl : 'partials/tempalate-detail.html',
 				controller: function($scope, $http, $stateParams){
