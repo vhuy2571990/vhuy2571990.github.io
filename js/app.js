@@ -12,17 +12,12 @@ angular.module('app', ['ui.router'])
 			$stateProvider
 			.state('index', {
 				url:'/',
+				template:'<list-template></list-template>',
 				templateUrl: 'index.html'
 			})
 			.state('templatedetail', {
 				url : '/templates/{tplId:templateUrl}',
-				templateUrl : 'partials/template-detail.html',
-				controller: function($scope, $http, $stateParams){
-					var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
-					$http.get('data-template/'+stateParams+'/'+stateParams+'.json').then(function(response){
-						$scope.templatesObj = response.data;
-					});
-				}
+				template: '<template-detail></template-detail>',
 			});
 
 			$urlRouterProvider.otherwise('/');	 
@@ -59,6 +54,19 @@ angular.module('app').directive('listTemplate', function(){
 		controller: function($scope, $http){
 			$http.get('data-template.json').then(function(response){
 				$scope.templates = response.data;
+			});
+		}
+	}
+});
+angular.module('app').directive('templateDetail', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'partials/template-detail.html',
+		controllerAs: 'templateDetail',
+		controller: function($scope, $http, $stateParams){
+			var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
+			$http.get('data-template/'+stateParams+'/'+stateParams+'.json').then(function(response){
+				$scope.templatesObj = response.data;
 			});
 		}
 	}
