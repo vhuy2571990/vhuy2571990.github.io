@@ -10,6 +10,10 @@ angular.module('app', ['ui.router'])
 			}
 			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
 			$stateProvider
+			.state('', {
+				url:'/',
+				templateUrl: 'partials/index.html'
+			})
 			.state('templates', {
 				url : '/templates',
 				templateUrl : 'partials/list-template.html',
