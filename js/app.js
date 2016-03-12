@@ -56,12 +56,16 @@ angular.module('app').directive('leftNavbar', function(){
 		}
 	}
 });
-angular.module('app').directive('tooltip', function(){
+angular.module('app').directive('toggle', function(){
 	return {
-		restrict: 'EA',
+		restrict: 'A',
 		link: function(scope, element, attrs) {
-			attrs.tooltipTrigger = attrs.tooltipTrigger;
-			attrs.tooltipPlacement = attrs.tooltipPlacement || 'top';
+			 if (attrs.toggle=="tooltip"){
+		        $(element).tooltip();
+		      }
+		      if (attrs.toggle=="popover"){
+		        $(element).popover();
+		      }
 		}
 	}
 })
