@@ -5,23 +5,23 @@ angular.module('app', ['ui.router'])
 
 			$stateProvider.state('templates', {
 				url:'/templates',
-				template: '<template></template>'
+				templateUrl: 'partials/list-template.html',
+				controller: function($scope, $http){
+					$http.get('data-template.json').then(function(response){
+						$scope.templates = response.data;
+					});
+				}
 			}).
-			state('templateDetails', {
-				url: '/templates/:templateId',
-				template: '<template-details></template-details>'
+			state('templates.detail', {
+				url: '/:id',
+				templateUrl: 'partials/template-detail.html',
+				controller: function($scope, $stateParams, $http){
+					$http.get('data-template/'+$stateParams.id+'.json').then(function(response){
+						$scope.templates = response.data.details;
+					});
+				}
 			});
 
 			$urlRouterProvider.otherwise('templates');	 
 		});
-
-angular.module('app').directive('template', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'partials/list-template.html',
-		controllerAs: 'listTemplate',
-		controller: function($scope){
-		}
-	}
-});
 	
