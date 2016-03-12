@@ -10,7 +10,7 @@ angular.module('app', ['ui.router'])
 			}
 			$urlMatcherFactoryProvider.type('templateUrl', templateUrlType);
 			$stateProvider
-			.state('', {
+			.state('index', {
 				url:'/',
 				templateUrl: 'partials/index.html'
 			})
@@ -46,7 +46,7 @@ angular.module('app').directive('leftNavbar', function(){
 							{
 								"name": "Home",
 								"icon": "icon-home",
-								"ui-sref": "templates"
+								"ui-sref": "index"
 							},{
 								"name": "Blog",
 								"icon": "icon-feed",
