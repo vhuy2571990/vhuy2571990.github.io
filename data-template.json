@@ -1,10 +1,10 @@
 [
 	{
-		"_id" : "template1",
+		"_id" : "template 1",
 		"name":"huy",
 		"detail": "hehe"
 	},
-	{	"_id" : "template2",
+	{	"_id" : "template 2",
 		"name":"kute",
 		"detail": "haha"
 	}
