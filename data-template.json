@@ -1,8 +1,8 @@
 [
 	{
-		"_id" : "template 1",
-		"name":"huy",
-		"detail": "hehe"
+		"_id" : "Salient",
+		"name":"Salient-Responsive Multi-Purpose Theme",
+		"thumbnailUrl": "data-template/Salient/img/thumbnail.png"
 	},
 	{	"_id" : "template 2",
 		"name":"kute",
