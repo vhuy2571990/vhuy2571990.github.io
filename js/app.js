@@ -46,7 +46,7 @@ angular.module('app').directive('leftNavbar', function(){
 							{
 								"name": "Home",
 								"icon": "icon-home",
-								"_ref": "templates"
+								"_ref": "index"
 							},{
 								"name": "Blog",
 								"icon": "icon-feed",
