@@ -20,7 +20,8 @@ angular.module('app', ['ui.router'])
 						$scope.templatesdetail = response.data.details;
 					});
 				}
-			})
+			});
+			
 			$urlRouterProvider.otherwise('/templates');	 
 		});
 	
