@@ -1,7 +1,5 @@
-<a ui-sref="templates"><h1>Home</h1></a>
 <ul>
 	<li ng-repeat="item in templates">
 		<a ui-sref="templates.detail({id: item._id})">{{item.name}}</a>
 	</li>
 </ul>
-<div ui-view></div>
