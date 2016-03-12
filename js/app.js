@@ -66,6 +66,7 @@ angular.module('app').directive('templateDetail', function(){
 		controller: function($scope, $http, $stateParams){
 			var stateParams = $stateParams.tplId.replace(/\s+/g,'-').toLowerCase();
 			$http.get('data-template/'+stateParams+'/'+stateParams+'.json').then(function(response){
+				console.log(response.data.name)
 				$scope.templatesObj = response.data.name;
 			});
 		}
