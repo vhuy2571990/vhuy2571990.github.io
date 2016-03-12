@@ -12,12 +12,8 @@ angular.module('app', ['ui.router'])
 			$stateProvider
 			.state('index', {
 				url:'/',
-				templateUrl: 'index.html'
-			})
-			.state('templates', {
-				url : '/templates',
-				templateUrl : 'partials/list-template.html',
-				controller : function($scope, $http){
+				templateUrl: 'index.html',
+				controller: function($scope, $http){
 					$http.get('data-template.json').then(function(response){
 						$scope.templates = response.data;
 					});
