@@ -36,6 +36,7 @@ a.btn-def.btn-icon{
 	border-radius: 3px;
 	text-decoration: none;
 }
+.list-tpl{margin-top: 16px;}
 .list-tpl .tpl-name{
 	color: #333;
 	font-size: 16px;
