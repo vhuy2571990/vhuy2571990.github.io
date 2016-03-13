@@ -65,7 +65,6 @@ angular.module('app').directive('templateDetail', function(){
 		controllerAs: 'templateDetail',
 		controller: function($scope, $http, $stateParams){
 			$http.get('data-template/'+$stateParams.tplId+'/'+$stateParams.tplId+'.json').then(function(response){
-				console.log(response.data.name)
 				$scope.templatesObj = response.data.name;
 			});
 		}

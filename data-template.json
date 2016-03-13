@@ -4,8 +4,8 @@
 		"name":"Salient-Responsive Multi-Purpose Theme",
 		"thumbnailUrl": "data-template/Salient/img/thumbnail.png"
 	},
-	{	"_id" : "template 2",
-		"name":"kute",
-		"detail": "haha"
+	{	"_id" : "roku",
+		"name":"Roku - Responsive eCommerce Theme",
+		"thumbnailUrl": "data-template/roku/img/thumbnail.png"
 	}
 ]
