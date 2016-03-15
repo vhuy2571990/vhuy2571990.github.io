@@ -3,13 +3,16 @@
 		"_id" : "Salient",
 		"name":"Salient-Responsive Multi-Purpose Theme",
 		"thumbnailUrl": "data-template/Salient/img/thumbnail.png",
-		"_url": "http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266",
-		"_src": "themeforest"
+		"_url": "http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266"
 	},
 	{	"_id" : "roku",
 		"name":"Roku - Responsive eCommerce Theme",
 		"thumbnailUrl": "data-template/roku/img/thumbnail.png",
-		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007",
-		"_src": "themeforest"
+		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007"
+	},
+	{	"_id" : "roku",
+		"name":"Roku - Responsive eCommerce Theme",
+		"thumbnailUrl": "data-template/roku/img/thumbnail.png",
+		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007"
 	}
 ]
