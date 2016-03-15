@@ -14,7 +14,7 @@
 	},
 	{	"_id" : "paper",
 		"name":"Paper - Material Admin Theme",
-		"thumbnailUrl": "data-template/paperadmin/img/thumbnail.png",
+		"thumbnailUrl": "data-template/paperadmin/thumbnail.png",
 		"_url": "http://themeforest.net/item/paper-material-admin-theme/full_screen_preview/15129372",
 		"_src": "themeforest"
 	}
