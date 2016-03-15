@@ -3,16 +3,19 @@
 		"_id" : "Salient",
 		"name":"Salient-Responsive Multi-Purpose Theme",
 		"thumbnailUrl": "data-template/Salient/img/thumbnail.png",
-		"_url": "http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266"
+		"_url": "http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266",
+		"_src": "themeforest"
 	},
 	{	"_id" : "roku",
 		"name":"Roku - Responsive eCommerce Theme",
 		"thumbnailUrl": "data-template/roku/img/thumbnail.png",
-		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007"
+		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007",
+		"_src": "themeforest"
 	},
-	{	"_id" : "roku",
-		"name":"Roku - Responsive eCommerce Theme",
-		"thumbnailUrl": "data-template/roku/img/thumbnail.png",
-		"_url": "http://themeforest.net/item/roku-responsive-wordpress-ecommerce-theme/full_screen_preview/14927007"
+	{	"_id" : "paper",
+		"name":"Paper - Material Admin Theme",
+		"thumbnailUrl": "data-template/paperadmin/img/thumbnail.png",
+		"_url": "http://themeforest.net/item/paper-material-admin-theme/full_screen_preview/15129372",
+		"_src": "themeforest"
 	}
 ]
