@@ -2,43 +2,8 @@ body{
 	font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 }
-.left-nav{
+.avatar-info{
 	position: fixed;
-	left: 0;
-	top:0;
-	bottom: 0;
-	background: #fff;
-	border-right: 1px solid #ccc;
-	padding: 5px;
+	top:50%;
+	margin-top:-50px;
 }
-.left-nav ul li{
-	margin-bottom: 1rem;
-}
-.left-nav ul li:first-child{
-	margin-top: 20px;
-}
-.left-nav ul li{
-	cursor: pointer;
-}
-ul,li{
-	padding-left: 0;
-	list-style-type: none;
-}
-a.btn-def.btn-icon{
-	padding:5px 10px;
-	background: #fff;
-	color:#333;
-	border:1px solid #ddd;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
-	text-decoration: none;
-}
-.list-tpl{margin-top: 16px;}
-.list-tpl .tpl-name{
-	color: #333;
-	font-size: 16px;
-}
-.text-capitalize{text-transform: capitalize;}
