@@ -1,0 +1,90 @@
+body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"], body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"] .loading-icon {
+		    display: block;
+		    opacity: 1;
+	}
+#ajax-loading-screen {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+}
+#ajax-loading-screen .loading-icon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.default-loading-icon {
+    top: 50%;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    border: 3px solid #e5e5e5;
+    margin-top: -20px;
+}
+.loading-icon.spin, .portfolio-loading.spin, .pp_loaderIcon.spin, .default-loading-icon.spin {
+    animation: 2s cubic-bezier(0.63, 0.045, 0.34, 1) 0s normal none infinite spinning_animation;
+    -webkit-animation: 2s cubic-bezier(0.63, 0.045, 0.34, 1) 0s normal none infinite spinning_animation;
+}
+.default-loading-icon:before {
+    position: absolute;
+    content: "";
+    border-color: rgba(0, 0, 0, 1) transparent transparent;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 3px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: -3px;
+    left: -3px;
+}
+.default-loading-icon:before {
+    border-top-color: #000000!important;
+}
+@keyframes
+spinning_animation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0.8) rotate(360deg);
+    -o-transform: scale(0.8) rotate(360deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(720deg);
+    -o-transform: scale(1) rotate(720deg);
+  }
+}
+
+@-webkit-keyframes
+spinning_animation {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8) rotate(360deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(720deg);
+  }
+}
+.nectar-slider-loading .loading-icon, .portfolio-loading, #ajax-loading-screen .loading-icon, .loading-icon, .pp_loaderIcon {
+    background-image: url("");
+}
