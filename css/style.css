@@ -1,6 +1,6 @@
 @font-face{
 	font-family: 'Roboto';
-	src: url('fonts/Roboto-Light.ttf');
+	src: url('../fonts/Roboto-Light.ttf');
 }
 body{
 	font-family: 'Helvetica', sans-serif;
