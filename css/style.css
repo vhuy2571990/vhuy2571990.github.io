@@ -51,7 +51,7 @@ body{
 	font-size: 14px;
 }
 #target h3, #skills h3, #interests h3{
-	font-size: 1.2rem;
+	font-size: 2rem;
 	font-family: 'Roboto', sans-serif;
 	color: #555;
 	display: inline-block;
