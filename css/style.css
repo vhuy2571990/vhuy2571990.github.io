@@ -16,7 +16,7 @@ body{
 	width: 250px;
 }
 .panel-default>.panel-heading{
-	background-color: none;
+	background-color: transparent;
 }
 #left-sidebar .avatar{
 	margin-top: 1rem;
