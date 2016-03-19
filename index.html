@@ -10,8 +10,10 @@
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	<div class="container-fluid">
 	 <!-- Start left side bar-->
-    <nav id="left-sidebar">
+	<div class="row">
+    <nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12 m-t-1">
     	<div class="user-info">
     		<img src="avatar.jpg" class="avatar img-responsive center-block img-circle" width="48" height="48" alt="">
     		<div class="user-name text-xs-center">
@@ -55,91 +57,93 @@
     </nav>
   <!-- End left side bar-->
   <!-- Main content-->
-	<div class="container main-content-cv">
-		<!-- <div id="accordion" role="tablist" aria-multiselectable="true"> -->
-		  <div class="panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingOne">
-		      <h4 class="panel-title">
-		      	<i class="icon-graduation icons"></i>
-		        <a href="#educationSection" aria-expanded="true" aria-controls="collapseOne">
-		           Education
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-			  	<ul>
-			  		<li>
-				  		<h6>Li Tu Trong High School - Nha Trang - Khanh Hoa (<small class="time text-muted">2005-2008</small>)</h6>
-			  		</li>
-			  		<li>
-			  			<h6>Ho Chi Minh City University of Science (<small class="time text-muted">2008-2011</small>)</h6>
-			  		</li>
-			  	</ul>
-		    </div>
-		  </div>
-		  <div class="panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingTwo">
-		      <h4 class="panel-title">
-		      	<i class="icon-briefcase icons"></i>
-		        <a class="collapsed"  data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-		          Work Experience
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
-			  <h5>Gianty Global Company(<small>6 months until now.</small>)</h5><small class="text-muted">Front-end Developers</small>
-			  <p>
-			  	
-			  	<span class="content">
-			  	<ul>
-			  		<li>
-			  		Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.
-			  		</li>
-					<li>
-					Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS 	
-					</li>
-					<li>
-					Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.
-					</li>
-					<li>
-					Fixed front end bugs (HTML, CSS, Javascript errors (JQUERY))
-					</li>
-					<li>
-						Experience with angularjs, meteor framework, Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)
-					</li>
-			  	</ul>
-			  	</span>
-			  </p>
-		    </div>
-		  </div>
-		  <div class="panel panel-default">
-		    <div class="panel-heading" role="tab" id="headingThree">
-		      <h4 class="panel-title">
-		      	<i class="icon-clock icons"></i>
-		        <a  href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-		          Activities
-		        </a>
-		      </h4>
-		    </div>
-		    <div id="collapseThree" class="panel-collapse" role="tabpanel" aria-labelledby="headingThree">
-		    <ul>
-		    	<li>
-		    		<small class="text-muted">2011-2013</small>
-			     	<p>
-			     		Work at Goodland company.(<small class="text-muted">Operator</small>)
-			     	</p>	
-		    	</li>
-		    	<li>
-		    		<small class="text-muted">2013-2016</small>
-					<p>
-						Work at Gianty company.(<small class="text-muted">Front-end Developer.</small>)
-					</p>	
-		    	</li>
-		    </ul>
-		    </div>
-		  <!-- </div> -->
+			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1">
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      <h4 class="panel-title">
+				      	<i class="icon-graduation icons"></i>
+				        <a href="#educationSection" aria-expanded="true" aria-controls="collapseOne">
+				           Education
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					  	<ul>
+					  		<li>
+						  		<h6>Li Tu Trong High School - Nha Trang - Khanh Hoa (<small class="time text-muted">2005-2008</small>)</h6>
+					  		</li>
+					  		<li>
+					  			<h6>Ho Chi Minh City University of Science (<small class="time text-muted">2008-2011</small>)</h6>
+					  		</li>
+					  	</ul>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingTwo">
+				      <h4 class="panel-title">
+				      	<i class="icon-briefcase icons"></i>
+				        <a class="collapsed"  data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          Work Experience
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
+					  Gianty Co.Ltd(<small>6 months until now.</small>)<small class="text-muted"> Front-end Developers</small>
+					  <p>
+					  	
+					  	<span class="content">
+					  	<ul>
+					  		<li>
+					  		Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.
+					  		</li>
+							<li>
+							Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS 	
+							</li>
+							<li>
+							Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.
+							</li>
+							<li>
+							Fixed front end bugs (HTML, CSS, Javascript errors (JQUERY))
+							</li>
+							<li>
+								Experience with angularjs, meteor framework, Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)
+							</li>
+					  	</ul>
+					  	</span>
+					  </p>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingThree">
+				      <h4 class="panel-title">
+				      	<i class="icon-clock icons"></i>
+				        <a  href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				          Activities
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse" role="tabpanel" aria-labelledby="headingThree">
+				    <ul class="activites-streamline">
+				    	<li>
+				    		<small class="text-muted">- 2011-2013</small>
+					     	<p>
+					     		Work at Goodland company.(<small class="text-muted">Operator</small>)
+					     	</p>	
+				    	</li>
+				    	<li>
+				    		<small class="text-muted">- 2013-2016</small>
+							<p>
+								Work at Gianty company.(<small class="text-muted">Front-end Developer.</small>)
+							</p>	
+				    	</li>
+				    </ul>
+				    </div>
+				  </div>
+				</div><!--end accordion -->
+			</div><!-- end col 8-->
 		</div>
-	</div>
+</div>
   <!-- End content-->
 </body>
 </html>

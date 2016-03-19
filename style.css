@@ -2,21 +2,11 @@
 	font-family: 'Roboto';
 	src: url('fonts/Roboto-Light.ttf');
 }
-body{
-	background: #e5e5e5;
+a, a:hover{
+	color:#333;
+	text-decoration: none;
 }
-#left-sidebar{
-	position: fixed;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	background: #fff;
-	width: 300px;
-}
-#left-sidebar .avatar{
-	margin-top: 1rem;
-	zoom:1.5;
-}
+.border-left{border-left :1px solid #ccc;}
 #left-sidebar .user-name{
 	margin-top:1rem;
 	text-transform: capitalize;
@@ -56,8 +46,9 @@ body{
 #target h3{color: #2ECC71;}
 #skills h3{color: #E74C3C;}
 #interests h3{color: #354b60;}
-.main-content-cv{margin-left: 300px; margin-top: 30px;}
+.main-content-cv{margin-top: 10px;}
 .main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
 .main-content-cv .panel .panel-title a{color: #555;}
-.main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%; border: 1px solid #354b60;  color: #354b60;}
+.main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
+ul.activites-streamline li{list-style-type: none;position: relative;}
