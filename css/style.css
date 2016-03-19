@@ -15,7 +15,7 @@ body{
 	top: 0;
 	bottom: 0;
 	background: #fff;
-	width: 300px;
+	width: 250px;
 }
 #left-sidebar .avatar{
 	margin-top: 1rem;
@@ -60,7 +60,7 @@ body{
 #target h3{color: #2ECC71;}
 #skills h3{color: #E74C3C;}
 #interests h3{color: #354b60;}
-.main-content-cv{margin-left: 300px; margin-top: 30px;}
+.main-content-cv{padding-left: 250px; margin-top: 30px;}
 .main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
 .main-content-cv .panel .panel-title a{color: #555;}
