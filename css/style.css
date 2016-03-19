@@ -61,7 +61,7 @@ body{
 #skills h3{color: #E74C3C;}
 #interests h3{color: #354b60;}
 .main-content-cv{padding-left: 250px; margin-top: 30px;}
-.main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
+.main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem; border-color: #ccc;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
 .main-content-cv .panel .panel-title a{color: #555;}
 .main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
