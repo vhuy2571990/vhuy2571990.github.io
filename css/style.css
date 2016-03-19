@@ -2,10 +2,66 @@ body{
 	font-family: 'Helvetica', sans-serif;
 	font-size: 16px;
 }
-.avatar-info{
-	position: fixed;
-	top:50%;
-	left:50%;
-	margin-top:-35px;
-	margin-left:-100px;
+@font-face{
+	font-family: 'Roboto';
+	src: url('fonts/Roboto-Light.ttf');
 }
+body{
+	background: #e5e5e5;
+}
+#left-sidebar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #fff;
+	width: 300px;
+}
+#left-sidebar .avatar{
+	margin-top: 1rem;
+	zoom:1.5;
+}
+#left-sidebar .user-name{
+	margin-top:1rem;
+	text-transform: capitalize;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 25px;
+}
+.list-group-info{
+	text-align: left;
+	margin:1rem;
+	list-style-type: none;
+	font-size: 14px;
+	color: #888;
+	border-top: 1px solid #e5e5e5;
+}
+.list-group-info li{
+	margin:1rem 0;
+}
+.list-group-info li i{
+	color: white;
+	background:#21bedd;
+	border-radius:100%;
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+}
+#target, #skills, #interests {
+	margin: 1rem;
+	font-size: 14px;
+}
+#target h3, #skills h3, #interests h3{
+	font-size: 1.2rem;
+	font-family: 'Roboto', sans-serif;
+	color: #555;
+	display: inline-block;
+}
+#interests ul{padding-left: 1rem;}
+#target h3{color: #2ECC71;}
+#skills h3{color: #E74C3C;}
+#interests h3{color: #354b60;}
+.main-content-cv{margin-left: 300px; margin-top: 30px;}
+.main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
+.main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
+.main-content-cv .panel .panel-title a{color: #555;}
+.main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%; border: 1px solid #354b60;  color: #354b60;}
