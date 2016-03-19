@@ -17,6 +17,9 @@ body{
 	background: #fff;
 	width: 250px;
 }
+.panel-default>.panel-heading{
+	background-color: none;
+}
 #left-sidebar .avatar{
 	margin-top: 1rem;
 	zoom:1.5;
@@ -64,4 +67,4 @@ body{
 .main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
 .main-content-cv .panel .panel-title a{color: #555;}
-.main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%; border: 1px solid #354b60;  color: #354b60;}
+.main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
