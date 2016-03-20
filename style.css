@@ -2,10 +2,11 @@
 	font-family: 'Roboto';
 	src: url('fonts/Roboto-Light.ttf');
 }
-a, a:hover{
-	color:#333;
-	text-decoration: none;
-}
+a, a:hover{color:#333;text-decoration: none;}
+.panel-title{font-size:22px; font-family: 'Roboto';}
+.panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
+.panel-title i.icon-graduation, .panel-title a.collapsed{color: #e74c3c;}
+.panel-title i.icon-clock, .panel-title a.collapsed{color:#2c3e50;}
 .border-left{border-left :1px solid #ccc;}
 #left-sidebar .user-name{
 	margin-top:1rem;
