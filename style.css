@@ -2,7 +2,7 @@
 	font-family: 'Roboto';
 	src: url('fonts/Roboto-Light.ttf');
 }
-*, ::after, ::before{box-sizing: content-box;}
+
 a, a:hover{color:#333;text-decoration: none;}
 .panel-title{font-size:22px; font-family: 'Roboto';}
 .panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
@@ -107,6 +107,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
     width: 100%;
     top: -3px;
     left: -3px;
+    box-sizing: content-box;
 }
 .default-loading-icon:before {
     border-top-color: #000000!important;
