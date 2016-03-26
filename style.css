@@ -1,4 +1,4 @@
-/*@font-face{
+@font-face{
 	font-family: 'Roboto';
 	src: url('fonts/Roboto-Light.ttf');
 }
@@ -53,7 +53,7 @@ a, a:hover{color:#333;text-decoration: none;}
 .main-content-cv .panel .panel-title a{color: #555;}
 .main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
 ul.activites-streamline li{list-style-type: none;position: relative;}
-*/
+
 /*Loading icon*/
 body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"], body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"] .loading-icon {
 		    display: block;
