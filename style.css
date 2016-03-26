@@ -2,6 +2,7 @@
 	font-family: 'Roboto';
 	src: url('fonts/Roboto-Light.ttf');
 }
+*, ::after, ::before{box-sizing: content-box;}
 a, a:hover{color:#333;text-decoration: none;}
 .panel-title{font-size:22px; font-family: 'Roboto';}
 .panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
