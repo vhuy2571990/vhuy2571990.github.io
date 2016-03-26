@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="simple-lineicons.css">
 </head>
-<body>
+<body data-ajax-transitions="true">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	<div class="container-fluid">
@@ -169,5 +169,13 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
   <!-- End content-->
  <script id="dsq-count-scr" src="//vhuy2571990.disqus.com/count.js" async></script><!--disq comment count -->
+ <!--loading icon -->
+<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" data-method="standard" style="/* opacity: 0; *//* display: none; */">
+		<span class="loading-icon none"> 
+			<span class="default-loading-icon spin"></span> 
+		</span>
+</div>
+<!-- end loading icon-->
+<script src="script.js"></script>
 </body>
 </html>
