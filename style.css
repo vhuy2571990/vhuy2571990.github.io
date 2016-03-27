@@ -22,7 +22,6 @@ a, a:hover{color:#333;text-decoration: none;}
 	list-style-type: none;
 	font-size: 14px;
 	color: #888;
-	border-top: 1px solid #e5e5e5;
 }
 .list-group-info li{
 	margin:1rem 0;
@@ -34,10 +33,12 @@ a, a:hover{color:#333;text-decoration: none;}
 	padding: 0.5rem;
 	margin-right: 0.5rem;
 }
+#collapseTwo ul li{line-height: 1.8;}
 #target, #skills, #interests {
 	margin: 1rem;
 	font-size: 14px;
 }
+.work-experience{padding-left: 28px; font-weight: bold;}
 #target h3, #skills h3, #interests h3{
 	font-size: 1.2rem;
 	font-family: 'Roboto', sans-serif;
