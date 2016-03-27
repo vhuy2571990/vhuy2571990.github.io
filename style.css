@@ -5,6 +5,7 @@
 
 a, a:hover{color:#333;text-decoration: none;}
 .panel-title{font-size:22px; font-family: 'Roboto';}
+.panel-title a{border-bottom: 2px solid #34495e;}
 .panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
 .panel-title i.icon-graduation, .panel-title a.collapsed{color: #e74c3c;}
 .panel-title i.icon-clock, .panel-title a.collapsed{color:#2c3e50;}
@@ -28,12 +29,12 @@ a, a:hover{color:#333;text-decoration: none;}
 }
 .list-group-info li i{
 	color: white;
-	background:#21bedd;
+	background:#34495e;
 	border-radius:100%;
 	padding: 0.5rem;
 	margin-right: 0.5rem;
 }
-#collapseTwo ul li{line-height: 1.8;}
+#collapseTwo ul li, #educationSection ul li{line-height: 1.9;}
 #target, #skills, #interests {
 	margin: 1rem;
 	font-size: 14px;
