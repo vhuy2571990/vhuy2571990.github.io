@@ -1,6 +1,6 @@
 @font-face{
 	font-family: 'Roboto';
-	src: url('fonts/Roboto-Light.ttf');
+	src: url('../fonts/Roboto-Light.ttf');
 }
 
 a, a:hover{color:#333;text-decoration: none;}

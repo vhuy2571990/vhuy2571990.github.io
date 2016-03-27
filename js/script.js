@@ -16,7 +16,7 @@
 						cur_per += 1;
 						_this.attr('value', cur_per);
 					}
-				}, 50)
+				}, 20)
 			});
 		}, 300);
 	});
