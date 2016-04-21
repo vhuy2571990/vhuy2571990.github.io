@@ -9,24 +9,35 @@
 </head>
 <body data-ajax-transitions="true">
 <!--loading icon -->
-<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" data-method="standard" style="/* opacity: 0; *//* display: none; */">
+<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" data-method="standard" style=" opacity: 0;  display: none; ">
 		<span class="loading-icon none"> 
 			<span class="default-loading-icon spin"></span> 
 		</span>
 </div>
 <!-- end loading icon-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!--gsap-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	<div class="container-fluid">
 	 <!-- Start left side bar-->
 	<div class="row">
     <nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12">
     	<div class="user-info">
+    		<!-- <div id="gsap-test"></div> -->
     		<img src="images/avatar-svg.svg" class="avatar img-responsive center-block img-circle" width="74" height="74" alt="">
     		<div class="user-name text-xs-center">
-    			Huy Nguyễn
+    			Huy Nguyễn 
+    			<!-- <span 
+    			data-toggle="popover" 
+    			data-title="Hello!"
+    			data-placement="bottom" 
+    			data-content="<ul class='opt-ofm'><li>Code cloud</li><li>Ecommerce template</li></ul>"
+				data-html="true"
+    			>
+    				<img src="images/ios7-arrow-down.svg" width="16" height="16" alt="">
+    			</span> -->
     		</div>
-	
     		<ul class="list-group list-group-info">
     			<li><i class="icon-location-pin icons"></i>666/47 đường 3/2, Q.10, tp.HCM</li>
     			<li><i class="icon-envelope icons"></i>vhuy271990@gmail.com</li>
@@ -96,7 +107,7 @@
 				      </h5>
 				    </div>
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
-				    <section>
+				    <section class="timeline-item">
 					  <div class="work-experience">Gianty Co.Ltd <small>- 9 months until now </small>-<small class="text-muted"> Front-end Developers</small></div>
 					  	<ul class="m-t-1">
 					  		<li>
@@ -116,7 +127,7 @@
 							</li>
 					  	</ul>
 					</section>
-					<section>
+					<section class="timeline-item">
 					  <div class="work-experience">Goodland <small>- 6 months </small>-<small class="text-muted"> Operator data entry</small></div>
 					  	<ul class="m-t-1">
 					  		<li>
