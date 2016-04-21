@@ -1,5 +1,8 @@
 (function(){
 	'use strict';
+	$('[data-toggle="popover"]').popover({
+			    container: 'body'
+	});
 	$(window).load(function(){
 		$('body').attr('data-ajax-transitions', false);
 		$('#ajax-loading-screen').hide();
@@ -16,8 +19,11 @@
 						cur_per += 1;
 						_this.attr('value', cur_per);
 					}
-				}, 20)
+				}, 30)
 			});
 		}, 300);
 	});
+
+	var ele = $('.avatar');
+	TweenLite.to(ele, 1, {scaleX: 1.5, scaleY:1.5, ease:Bounce.easeOut, y: 0});
 })();
