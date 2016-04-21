@@ -3,8 +3,8 @@
 	src: url('../fonts/Roboto-Light.ttf');
 }
 a, a:hover{color:#333;text-decoration: none;}
-.panel-title{font-size:22px; font-family: 'Roboto';}
-.panel-title a{border-bottom: 2px solid #34495e;}
+.panel-title{font-size:18px; font-family: 'Roboto'; color: #34495e; font-weight: bold;}
+/*.panel-title a{border-bottom: 2px solid #34495e;}*/
 .panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
 .panel-title i.icon-graduation, .panel-title a.collapsed{color: #e74c3c;}
 .panel-title i.icon-clock, .panel-title a.collapsed{color:#2c3e50;}
@@ -54,7 +54,7 @@ a, a:hover{color:#333;text-decoration: none;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
 .main-content-cv .panel .panel-title a{color: #555;}
 .main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
-ul.activites-streamline li{list-style-type: none;position: relative;}
+ul.activites-streamline li{list-style-type: none; position: relative;}
 .user-name span{cursor: pointer;}
 .opt-ofm {padding-left: 0;margin-bottom: 0px;}
 .popover-content{padding: 0;}
@@ -121,38 +121,27 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 .timeline-item{
     position: relative;
 }
-.work-experience:before{
-    content:"";
-    width: 4px;
-    height: 4px;
-    border-radius: 48px;
-    background: #21bedd;
-    display: block;
-    position: absolute;
-    left: -5px;
-    top: 0px;
-}
 .timeline-item ul:before{
     content:"";
     width: 10px;
     height: 10px;
     padding: 5px;
     border-radius: 48px;
-    border:2px solid #21bedd;
+    border:2px solid #34495e;
     display: block;
     position: absolute;
     left: -10px;
-    top:-5px;
+    top:-6px;
 }
 .timeline-item ul:after{
     content:"";
-    height:100%;
-    background: #21bedd;
+    height:102%;
+    background:#34495e;
     width: 3px;
     display: block;
     position: absolute;
     left:-5px;
-    top:10px;
+    top:8px;
 }
 @keyframes
 spinning_animation {
