@@ -2,7 +2,6 @@
 	font-family: 'Roboto';
 	src: url('../fonts/Roboto-Light.ttf');
 }
-
 a, a:hover{color:#333;text-decoration: none;}
 .panel-title{font-size:22px; font-family: 'Roboto';}
 .panel-title a{border-bottom: 2px solid #34495e;}
@@ -56,7 +55,12 @@ a, a:hover{color:#333;text-decoration: none;}
 .main-content-cv .panel .panel-title a{color: #555;}
 .main-content-cv .panel .panel-title i{padding: 0.5rem; border-radius: 100%;  color: #354b60;}
 ul.activites-streamline li{list-style-type: none;position: relative;}
-
+.user-name span{cursor: pointer;}
+.opt-ofm {padding-left: 0;margin-bottom: 0px;}
+.popover-content{padding: 0;}
+.opt-ofm li{list-style-type: none;padding: 5px 10px; margin-bottom: 5px;}
+.opt-ofm li:hover{background-color: #ea6153; color: #fff;cursor: pointer; transition: all 0.2 ease-out;}
+.opt-ofm li:last-child{border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin-bottom: 0px;}
 /*Loading icon*/
 body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"], body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"] .loading-icon {
 		    display: block;
@@ -114,6 +118,42 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 .default-loading-icon:before {
     border-top-color: #000000!important;
 }
+.timeline-item{
+    position: relative;
+}
+.work-experience:before{
+    content:"";
+    width: 4px;
+    height: 4px;
+    border-radius: 48px;
+    background: #21bedd;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 0px;
+}
+.timeline-item ul:before{
+    content:"";
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 48px;
+    border:2px solid #21bedd;
+    display: block;
+    position: absolute;
+    left: -10px;
+    top:-5px;
+}
+.timeline-item ul:after{
+    content:"";
+    height:100%;
+    background: #21bedd;
+    width: 3px;
+    display: block;
+    position: absolute;
+    left:-5px;
+    top:10px;
+}
 @keyframes
 spinning_animation {
   0% {
@@ -150,3 +190,6 @@ spinning_animation {
     background-image: url("");
 }
 /*End loading icon*/
+/*Gsap*/
+#gsap-test{width: 100px; height:100px; background-color: red; position: absolute;}
+/**/
