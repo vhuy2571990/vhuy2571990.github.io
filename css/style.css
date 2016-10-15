@@ -184,4 +184,5 @@ spinning_animation {
 #gsap-test{width: 100px; height:100px; background-color: red; position: absolute;}
 /**/
 
-.vixs-2{position: fixed; bottom: 10px; right:10px; padding: 5px 10px; border-radius: 4px; color:#fff;}
+.vixs-2{position: fixed; bottom: 10px; right:10px; padding: 5px 10px; border-radius: 4px; color:#fff; background: orange; transition: all .2s ease-out}
+.vixs-2:hover{background: #f3a007; color:#fff;}
