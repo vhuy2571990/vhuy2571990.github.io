@@ -27,3 +27,26 @@
 	var ele = $('.avatar');
 	TweenLite.to(ele, 1, {scaleX: 1.5, scaleY:1.5, ease:Bounce.easeOut, y: 0});
 })();
+
+var app = angular.module('app', []);
+
+app.controller('infoCtrl', function($scope, $document){
+	$scope.listOpt = [
+		{name: 'Blog'},
+		{name: 'Shop / Ecommerce'}
+	];
+
+	$document.bind('click', function(e){
+		if(!$('.vixs-2').is(angular.element(e.target))
+			&& $('.vixs-2 ').has(e.target).length === 0){
+			$scope.$apply(function(){
+				$scope.showOpt = false;
+			});
+		}
+	});
+
+	$scope.showOpt = false;
+	$scope.toggleShowOpt = function(){
+		$scope.showOpt = !$scope.showOpt;
+	}
+});

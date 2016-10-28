@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,9 +14,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/tether.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
-<body data-ajax-transitions="true">
+<body data-ajax-transitions="true" ng-controller="infoCtrl">
 <div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" 
 		data-method="standard" style=" opacity: 0;  display: none; ">
 		<span class="loading-icon none"> 
@@ -31,15 +34,14 @@
     		<!-- <div id="gsap-test"></div> -->
     		<img src="images/avatar-svg.svg" class="avatar img-responsive center-block img-circle" width="74" height="74" alt="">
     		<div class="user-name text-xs-center">
-    			Huy Nguyễn 
+    			Huy Nguyễn
     		</div>
     		<ul class="list-group list-group-info">
     			<li><i class="icon-location-pin icons"></i>666/47 đường 3/2, Q.10, tp.HCM</li>
     			<li><i class="icon-envelope icons"></i>vhuy271990@gmail.com</li>
     			<li><i class="icon-phone icons"></i>01223636224</li>
     		</ul>
-    	</div><!--end user info-->
-    	
+    	</div><!--end user info--> 	
     	<div id="target">
     		<h3>My Objective</h3>
     		<p>
@@ -162,6 +164,11 @@
 		</div>
 	</div><!-- end containter -->
 </div>
-<a class="vixs-2" href=""><i class="icon-options icons"></i></a>
+<div class="vixs-2">
+	<a class="m-main" ng-click="toggleShowOpt()" href> <i class="icon-options icons"></i> </a>
+	<div class="_optd" ng-class="{'active': showOpt}">
+		<div class="_item" ng-repeat="item in listOpt">{{item.name}}</div>
+	</div>
+</div>
 </body>
 </html>
