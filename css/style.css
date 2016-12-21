@@ -2,9 +2,11 @@
 	font-family: 'Roboto';
 	src: url('../fonts/Roboto-Light.ttf');
 }
-
+body, html{
+    font-family: 'Noto Serif', serif;
+    line-height: 1.8;
+}
 a, a:hover{color:#333;text-decoration: none;}
-.panel-title{font-size:18px; font-family: 'Roboto'; color: #34495e; font-weight: bold;}
 /*.panel-title a{border-bottom: 2px solid #34495e;}*/
 .panel-title i.icon-briefcase, .panel-title a.collapsed{color: #27ae60;}
 .panel-title i.icon-graduation, .panel-title a.collapsed{color: #e74c3c;}
@@ -17,6 +19,9 @@ a, a:hover{color:#333;text-decoration: none;}
 	font-weight: 300;
 	font-size: 25px;
 }
+.panel-title{text-transform: uppercase; font-weight: normal;}
+.panel-title a{border-bottom: 2px solid #2c3e50;}
+.panel-title:focus, .panel-title:active, .panel-title:visited{border-bottom: none;}
 .list-group-info{
 	text-align: left;
 	margin:1rem;
@@ -34,7 +39,7 @@ a, a:hover{color:#333;text-decoration: none;}
 	padding: 0.5rem;
 	margin-right: 0.5rem;
 }
-#collapseTwo ul li, #educationSection ul li{line-height: 1.9;}
+#collapseTwo ul li, #educationSection ul li{line-height: 2.5rem;}
 #target, #skills, #interests {
 	margin: 1rem;
 	font-size: 14px;
