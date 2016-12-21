@@ -104,27 +104,16 @@
 				      </h5>
 				    </div>
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
-				    <section>
-					  <div class="work-experience"><i class="icon-check icons text-success"></i> Gianty Co.Ltd - <small>2 years until now </small>-<small class="text-muted"> Front-end Developers</small></div>
+				    <section ng-repeat="k in dataWorkexperience">
+					  <div class="work-experience">
+						  <i class="icon-check icons text-success"></i> {{k.company}} - 
+						  <small>{{k.time}}</small> -
+						  <small class="text-muted">{{k.position}}</small>
+					  </div>
 					  	<ul class="m-t-1">
-					  		<li>
-					  		Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.
+					  		<li ng-repeat="z in k.works">
+					  			{{z.content}}
 					  		</li>
-							<li>
-							Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS 	
-							</li>
-							<li>
-							Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.
-							</li>
-							<li>
-							Fixed front end bugs (HTML, CSS, Javascript errors (JQUERY))
-							</li>
-							<li>
-							Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.
-							</li>
-							<li>
-								Experience with Angular 1 & 2 , Ionic 1 & 2 Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)
-							</li>
 					  	</ul>
 					</section>
 				    </div>

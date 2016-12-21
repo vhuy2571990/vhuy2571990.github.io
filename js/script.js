@@ -48,5 +48,21 @@ app.controller('infoCtrl', function($scope, $document){
 	$scope.showOpt = false;
 	$scope.toggleShowOpt = function(){
 		$scope.showOpt = !$scope.showOpt;
-	}
+	};
+
+	$scope.dataWorkexperience = [
+		{
+			company: 'Gianty Co.Ltd',
+			time: '2 years until now',
+			position: 'Front-end Developers',
+			works: [
+				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
+				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS'},
+				{content: 'Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.'},
+				{content: 'Fixed front end bugs (HTML, CSS, Javascript errors (JQUERY))'},
+				{content: 'Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.'},
+				{content: 'Experience with Angular 1 & 2 , Ionic 1 & 2 Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)'}
+			]
+		}
+	]
 });
