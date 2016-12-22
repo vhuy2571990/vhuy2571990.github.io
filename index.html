@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/simple-lineicons.css">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!--gsap-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -37,16 +37,17 @@
     		<div class="user-name text-xs-center">
     			Huy Nguyễn
     		</div>
+    		<div class="text-xs-center text-muted"><small>{{currentInfo.helloText}}</small></div>
     		<ul class="list-group list-group-info">
-    			<li><i class="icon-location-pin icons"></i>666/47 đường 3/2, Q.10, tp.HCM</li>
-    			<li><i class="icon-envelope icons"></i>vhuy271990@gmail.com</li>
-    			<li><i class="icon-phone icons"></i>01223636224</li>
+    			<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
+    			<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
+    			<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
     		</ul>
     	</div><!--end user info--> 	
     	<div id="target">
     		<h3>My Objective</h3>
     		<p>
-    		Executed and contributed to full-stack web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.
+    			{{currentInfo.objective}}
     		</p>
     	</div>
 		
@@ -78,7 +79,6 @@
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne">
 				      <h5 class="panel-title">
-				      	<!-- <img src="images/medical-18.svg" class="img-circle" width="32" height="32" alt=""> -->
 				        <a href="#educationSection" aria-expanded="true" aria-controls="collapseOne">
 				           Education
 				        </a>
@@ -98,7 +98,6 @@
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingTwo">
 				      <h5 class="panel-title">
-				      <!-- 	<img src="images/icon-61.svg" class="img-circle" width="32" height="32" alt=""> -->
 				        <a class="collapsed"  data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 				          Work Experience
 				        </a>
@@ -106,10 +105,10 @@
 				    </div>
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
 				    <section ng-repeat="k in dataWorkexperience">
-					  <div class="work-experience">
-						  <i class="icon-check icons text-success"></i> {{k.company}} - 
-						  <small>{{k.time}}</small> -
-						  <small class="text-muted">{{k.position}}</small>
+					  <div class="work-experience m-t-1">
+						  <i class="icon-check icons text-success"></i> 
+						  <span class="company-name">{{k.company}}</span>
+						  <span class="_time"><time>({{k.time}})</time></span>
 					  </div>
 					  	<ul class="m-t-1">
 					  		<li ng-repeat="z in k.works">

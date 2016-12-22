@@ -3,7 +3,7 @@
 	src: url('../fonts/Roboto-Light.ttf');
 }
 body, html{
-    font-family: 'Noto Serif', serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.8;
 }
 a, a:hover{color:#333;text-decoration: none;}
@@ -39,12 +39,13 @@ a, a:hover{color:#333;text-decoration: none;}
 	padding: 0.5rem;
 	margin-right: 0.5rem;
 }
-#collapseTwo ul li, #educationSection ul li{line-height: 2.5rem;}
+#collapseTwo ul li, #educationSection ul li{line-height: 1.8rem; list-style: none; margin-bottom: 15px;}
 #target, #skills, #interests {
 	margin: 1rem;
 	font-size: 14px;
 }
-.work-experience{padding-left: 28px; font-weight: bold;}
+.work-experience .company-name{ font-size: 20px;  }
+.work-experience ._time{color: #888; font-size: 15px; margin-left: 10px;}
 #target h3, #skills h3, #interests h3{
 	font-size: 1.2rem;
 	font-family: 'Roboto', sans-serif;

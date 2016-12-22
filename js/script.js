@@ -55,7 +55,6 @@ app.controller('infoCtrl', function($scope, $document){
 		{
 			company: 'Gianty Co.Ltd',
 			time: '2 years until now',
-			position: 'Front-end Developers',
 			works: [
 				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
 				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS'},
@@ -65,5 +64,13 @@ app.controller('infoCtrl', function($scope, $document){
 				{content: 'Experience with Angular 1 & 2 , Ionic 1 & 2 Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)'}
 			]
 		}
-	]
+	];
+
+	$scope.currentInfo = {
+		helloText: `Hi, I'm a FrontEnd Developer.`,
+		address: '666/47 (3/2 Street, Q.10, tp.HCM)',
+		mail: 'vhuy271990@gmail.com',
+		phone: '01223636224',
+		objective: 'Executed and contributed to full-stack web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
+	}
 });
