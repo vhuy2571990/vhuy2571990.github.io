@@ -49,7 +49,7 @@ app.controller('infoCtrl', function($scope, $document){
 	$scope.showOpt = false;
 	$scope.toggleShowOpt = function(){
 		$scope.showOpt = !$scope.showOpt;
-	};
+	}
 
 	$scope.dataWorkexperience = [
 		{
@@ -57,14 +57,14 @@ app.controller('infoCtrl', function($scope, $document){
 			time: '2 years until now',
 			works: [
 				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
-				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS'},
+				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS.'},
 				{content: 'Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.'},
-				{content: 'Fixed front end bugs (HTML, CSS, Javascript errors (JQUERY))'},
+				{content: 'Fixed front end bugs.'},
 				{content: 'Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.'},
-				{content: 'Experience with Angular 1 & 2 , Ionic 1 & 2 Tweenlite(TweenLite is an extremely fast, lightweight, and flexible animation tool that serves as the foundation of the GreenSock Animation Platform)'}
+				{content: 'Experience with Angular , Ionic, Tweenlite.'}
 			]
 		}
-	];
+	]
 
 	$scope.currentInfo = {
 		helloText: `Hi, I'm a FrontEnd Developer.`,
@@ -73,4 +73,6 @@ app.controller('infoCtrl', function($scope, $document){
 		phone: '01223636224',
 		objective: 'Executed and contributed to full-stack web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
 	}
+
+	$scope.skills = [{name: 'Html', image: 'html.png'}, {name: 'Css', image: 'css3.png'}, {name: 'Javascript', image: 'js.png'}, {name: 'Angular', image: 'angular.png'}, {name: 'Ionic', image: 'ionic.jpg'}, {name: 'NodeJs', image: 'nodejs.png'}]
 });

@@ -4,7 +4,7 @@
 }
 body, html{
     font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.8;
+    line-height: 1.8;    
 }
 a, a:hover{color:#333;text-decoration: none;}
 /*.panel-title a{border-bottom: 2px solid #34495e;}*/
@@ -39,10 +39,10 @@ a, a:hover{color:#333;text-decoration: none;}
 	padding: 0.5rem;
 	margin-right: 0.5rem;
 }
-#collapseTwo ul li, #educationSection ul li{line-height: 1.8rem; list-style: none; margin-bottom: 15px;}
+#collapseThree ul li, #collapseTwo ul li, #educationSection ul li{line-height: 1.8rem; list-style: none; margin-bottom: 15px; font-size: 18px;}
 #target, #skills, #interests {
 	margin: 1rem;
-	font-size: 14px;
+	font-size: 18px;
 }
 .work-experience .company-name{ font-size: 20px;  }
 .work-experience ._time{color: #888; font-size: 15px; margin-left: 10px;}
@@ -52,10 +52,11 @@ a, a:hover{color:#333;text-decoration: none;}
 	color: #555;
 	display: inline-block;
 }
-#interests ul{padding-left: 1rem;}
-#target h3{color: #2ECC71;}
+#interests ul{padding-left: 1rem; list-style: none;}
+#target h3{color: #6436d0;}
 #skills h3{color: #E74C3C;}
-#interests h3{color: #354b60;}
+#interests h3{color: #1d8a54;}
+#target h3, #skills h3, #interests h3{text-transform: uppercase;}
 .main-content-cv{margin-top: 10px;}
 .main-content-cv .panel{background:#fff; border-radius: 3px; padding:1rem; margin:1rem;}
 .main-content-cv .panel .panel-title{text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; margin-bottom: 1.5rem;}
@@ -201,3 +202,5 @@ spinning_animation {
 ._optd ._item:first-child{border-top-right-radius: 4px; border-top-left-radius: 4px; border-bottom: 1px solid #e2e2e2;}
 ._optd ._item:last-child{ border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
 ._optd ._item:hover{background: #ff6000; color:#fff; cursor: pointer; border-color: #ff6000;}
+
+._skill-container img{margin: 2px; box-shadow: 1px 1px 1px 1px #ccc;}
