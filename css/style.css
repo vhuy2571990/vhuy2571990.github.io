@@ -3,7 +3,7 @@
 	src: url('../fonts/Roboto-Light.ttf');
 }
 body, html{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.8;
 }
 a, a:hover{color:#333;text-decoration: none;}
