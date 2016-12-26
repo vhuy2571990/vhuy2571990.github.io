@@ -36,7 +36,7 @@ app.controller('infoCtrl', function($scope, $document){
 	
 	var ele = $('#avatar');
 	var tween = TweenLite.to(ele, 1, {scaleX: 1.5, scaleY:1.5, ease:Power1.easeInOut, y: 0});
-
+	
 	$document.bind('click', function(e){
 		if(!$('.vixs-2').is(angular.element(e.target))
 			&& $('.vixs-2 ').has(e.target).length === 0){
