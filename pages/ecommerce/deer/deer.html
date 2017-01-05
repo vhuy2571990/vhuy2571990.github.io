@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Deer-Shop</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="deer.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script>
+		var app = angular.module('app', []);
+		app.controller('appCtrl', function($scope){
+			$scope.itemNav = [
+				{name: 'Home'},
+				{name: 'Female'},
+				{name: 'Male'},
+				{name: 'Shirt'},
+				{name: 'T-pant'},
+				{name: 'Shoes'},
+			];
+
+			$scope.itemList = [
+				{name: 'Clothes penta', imageUrl: 'm01.jpg'},
+				{name: 'Raddest Men', imageUrl: 'm02.jpg'},
+				{name: 'Urban Outfits & Footwear for men', imageUrl: 'm03.jpg'},
+				{name: 'Camel Ankle', imageUrl: 'm04.jpg'},
+				{name: 'Ultimate Canderla', imageUrl: 'm05.jpg'},
+				{name: 'Mens Slouchy Beanie', imageUrl: 'm06.jpg'},
+				{name: `A Man 's Guide to the Scarf`, imageUrl: 'm07.jpg'},
+				{name: 'Astor Blouse', imageUrl: 'wm01.jpg'},
+				{name: 'Valentino Fall 2016 ', imageUrl: 'wm02.jpg'},
+				{name: 'Gauze Woman Bra Set', imageUrl: 'wm03.jpg'},
+				{name: 'Ultra Thin Embroidered ', imageUrl: 'wm04.jpg'},
+				{name: 'Stylish And Trendy Summer Outfits To Try Now', imageUrl: 'wm05.jpg'},
+				{name: 'Forward Outfits to Wear this Fall', imageUrl: 'wm06.jpg'}
+			]
+		});
+	</script>
+</head>
+<body ng-controller="appCtrl">
+	<div class="_logo">
+		<img src="images/shop_logo.jpg" alt="" class="img-responsive" width="120">
+	</div>
+	<div class="navigation">
+		<ul>
+			<li ng-repeat="i in itemNav"><a href="#">{{i.name}}</a></li>
+		</ul>
+	</div>
+	<div class="_item-container masonry">
+		<div class="item" ng-repeat="i in itemList">
+			<div class="item-image"><img ng-src="images/men/{{i.imageUrl}}" alt=""></div>
+		</div>
+	</div>
+	<div class="text-center uppercase">
+		<h1>Brands</h1>
+		<div class="brands-wrapper">
+			<img src="images/brand/01.jpg" alt="">
+			<img src="images/brand/02.png" alt="">
+			<img src="images/brand/03.png" alt="">
+			<img src="images/brand/04.png" alt="">
+			<img src="images/brand/zara.png" alt="">
+		</div>
+	</div>
+</body>
+</html>
