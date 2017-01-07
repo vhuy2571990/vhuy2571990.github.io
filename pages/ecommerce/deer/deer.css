@@ -21,6 +21,13 @@ body, html{
 .text-center{text-align: center;} .uppercase{text-transform: uppercase;}
 .brands-wrapper{display: flex; justify-content: space-around; align-items: center;}
 .brands-wrapper img{max-width: 250px; height: auto;}
+.wrapper-text{
+	margin:0 auto;
+	border: 3px double #333;
+	width: 200px;
+	position: relative;
+}
+
 @media only screen and (min-width: 400px) {
     .masonry {
         -moz-column-count: 2;

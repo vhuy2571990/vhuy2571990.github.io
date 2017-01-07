@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="moduleMain">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" type="text/css" href="full-page-effects/jquery.fullPage.css" />
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="full-page-effects/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+</head>
+<body>
+	<div class="modal-video">
+		<a href="#" class="hero-modal-close" rel="nofollow">
+			<img src="images/delete.png" alt="">
+		</a>
+		<iframe width="100%" id="video-youtube-id" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div id="fullpage">
+		<section class="header-section section js-full-height overlay-parallax" id="video-section">
+			<header>
+				<nav id="navigation">
+					<img src="images/Logos.png" alt="GNT" class="img-responsive">
+					<ul>
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Members</a></li>
+						<li><a href="#">Access</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<video id="video-gnt-background" class="grayscale" data-keepplaying loop>
+				<source data-src="vid.mp4" type="video/mp4">
+			</video>
+			<div id="gnt-description">	
+				<h2>With you, we challenge infinite possibilites</h2>
+				Provident quod unde saepe aspernatur quo praesentium cupiditate esse!
+			</div>
+			<div class="icon-watch"><img src="images/icon-watch.png" alt="Play fullscreen"></div>
+			<a class="scroll-down next-section" href="#whatwedo"><span></span></a>
+		</section>
+		<section class="info-section fp-auto-height section js-full-height" id="section-info">
+			<div class="wrapper-section-whatwedo">
+				<div class="left-field">
+					<h2>What we do</h2>
+					<div class="item-info item-1">
+						<div class="item-icon">
+							<img src="images/Icon-services.png" alt="" class="img-responsive">
+						</div>
+						<div class="item-description">
+							<h3>Offshore Services</h3>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
+							</span>
+							<p><a href="#" class="read-more"> Read more >></a></p>
+						</div>
+					</div>
+					<div class="item-info item-2">
+						<div class="item-icon">
+							<img src="images/Icon-services.png" alt="" class="img-responsive">
+						</div>
+						<div class="item-description">
+							<h3>UI/UX Design</h3>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
+							</span>
+							<p><a href="#" class="read-more"> Read more >></a></p>
+						</div>
+					</div>
+					<div class="item-info item-3">
+						<div class="item-icon">
+							<img src="images/Icon-services.png" alt="" class="img-responsive">
+						</div>
+						<div class="item-description">
+							<h3>Graphic Design</h3>
+							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
+							</span>
+							<p><a href="#" class="read-more"> Read more >></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="right-field"><img src="images/Computer.png" alt="" class="img-responsive"></div>
+			</div>
+		</section>
+		<section class="feedback-section section fp-auto-height  js-full-height" id="feedback-section">
+			<div class="text-center text-bold axeroItro">
+				Trusted by more than <strong>100+ businesses,</strong> <br>
+				with <strong>100+ good reviews</strong>
+			</div>
+			<div class="ng-controller" ng-controller="ctrlSlide">
+				<div class="feedback-wrapper text-center">
+					<div class="nav next-slide"><img src="images/right-arrow.png" alt="" ng-click="nexSlide()"></div>
+					<div class="nav previous-slide"><img src="images/left-arrow.png" alt="" ng-click="previousSlide()"></div>
+					<div class="feedback-item" ng-class="{'active': f.active}" ng-repeat="f in slideList">
+						<img ng-src="{{f.imgUrl}}" alt="microsoft" class="img-responsive">
+						<blockquote class="feedback-description">
+							<span>{{f.feedBackContent}}</span>
+						</blockquote>
+						<div class="text-center">
+							{{f.author}} - <span class="text-muted">{{f.position}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide-signal">
+					<div class="signal-item" ng-class="{'active': z.active}" ng-repeat="z in slideList"></div>
+				</div>
+			</div>
+		</section>
+		<section class="section fp-auto-height" id="section-footer">
+			<div class="logo-company">
+					<img src="images/google.png" alt="">
+					<img src="images/synaptics.png" alt="">
+					<img src="images/WordPress.png" alt="">
+					<img src="images/cisco.png" alt="">
+					<img src="images/fb.png" alt="">
+			</div>
+			<div class="footer-inner">
+				<div class="field-left">
+					<img src="images/Footer-hcm.png" alt="">
+					<div class="text-inner">
+						会 社 名:  株式会社GNT （英文名：GNT Inc.）<br>
+						所 在 地:  〒150-0002 東京都渋谷区渋谷3-11-2 渋谷パインビル5F  <br>
+						Tel:03-5766-6001（代表） <br>
+						Fax:03-5766-6009 <br>
+						代 表 者 :  ホー・トゥン・ラム（代 表取締役社長) <br>
+						事業内容 :  スマートフォン 向けゲームやアプリなどベトナム、ホーチミンを拠点としたオフショア開発サービス事業
+					</div>
+				</div>
+				<div class="field-right">
+					<img src="images/Footer-jp.png" alt="">
+					<div class="text-inner">
+						会 社 名:  GNT VietNam Co.,Ltd <br>
+						所 在 地:  11th Floor, Green Power Tower 35 Ton Duc Thang Street, Dist 1, Ho Chi Minh City  <br>
+						Tel: 84-8-22281111 <br>
+						Fax: 84-8-22282222 <br>
+						事業内容 :  ソフトウェア開発事業 <br>
+						グラフィック制作事業
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>	
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $('#fullpage').fullpage({ //init full page js
+	    	anchors: ['video', 'whatwedo', 'feedback', 'footer'],
+
+	    	scrollBar: true,
+	    	lazyLoading: true,
+	    	autoScrolling: false,
+	    	fitToSection: false,
+	    	afterLoad: function(anchorLink, index){
+	    		console.log(anchorLink, index);
+	    		if(index == 2 && anchorLink == 'whatwedo'){
+	    			$('.wrapper-section-whatwedo .left-field .item-info').addClass('active');
+	    			$('.right-field img').addClass('active');
+	    			$('a.scroll-down').addClass('hide');
+	    		}else if(index == 3 && anchorLink == 'feedback'){
+	    			$('.axeroItro').addClass('active');
+	    			$('.ng-controller').addClass('active');
+	    		}else if(index == 1 && anchorLink == 'video'){
+	    			$('a.scroll-down').removeClass('hide');
+	    		}
+	    	}
+	    });
+
+	    //play vid after 3s
+		var vid = document.getElementById('video-gnt-background');
+		var slogan = document.getElementById('gnt-description'); var timeoutVid;
+		vid.addEventListener('canplay', () => {
+			timeoutVid = setTimeout(() => {
+				slogan.setAttribute('class', 'hidden');
+				$(".icon-watch").addClass('blur');
+				//vid.play();
+			}, 5000);
+		});
+
+		var url = 'https://www.youtube.com/embed/axJPdHFTzF4?autoplay=1';
+
+		$('body').on('click', '.icon-watch', function(){
+			if(vid.paused){
+				vid.pause();
+			}else{clearTimeout(timeoutVid);}
+
+			$('#video-youtube-id').attr('src', url);
+			$('.modal-video').addClass('open');
+		});
+
+		$('body').on('click', '.hero-modal-close', function(){
+			vid.play();
+			$('#video-youtube-id').attr('src', '');
+			$('.modal-video').removeClass('open');
+		});
+	});
+	var app = angular.module('moduleMain', []);
+	app.controller('ctrlSlide', function($scope){
+		$scope.slideList = [
+			{	
+				active: true,
+				imgUrl: 'images/microsoft.png', 
+				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
+				author: 'Leo Nguyen',
+				position: 'UI/UX Designer'
+			},
+			{
+				active: false,
+				imgUrl: 'images/synaptics.png', 
+				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
+				author: 'Leo Nguyen 2',
+				position: 'UI/UX Designer'
+			},
+			{
+				active: false,
+				imgUrl: 'images/WordPress.png', 
+				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
+				author: 'Leo Nguyen 3',
+				position: 'UI/UX Designer'
+			}
+		];
+
+		$scope.nexSlide = () => {
+			return $scope.slideList.filter(slide => {
+				return slide.active == true;
+			}).
+			map(slide => {
+				slide.active = false;
+				var index = $scope.slideList.indexOf(slide);
+				var nextSlide = (index < $scope.slideList.length - 1) ? index + 1 : 0;
+				$scope.slideList[nextSlide].active = true;
+			});
+		}
+
+		$scope.previousSlide = () => {
+			return $scope.slideList.filter(slide => {
+				return slide.active == true;
+			}).
+			map(slide => {
+				slide.active = false;
+				var index = $scope.slideList.indexOf(slide);
+				var backSlide = (index > 0) ? index - 1 : $scope.slideList.length - 1;
+				$scope.slideList[backSlide].active = true;
+			});
+		}
+	});
+</script>
+</html>
