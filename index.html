@@ -29,7 +29,7 @@
 	<div class="container-fluid">
 	 <!-- Start left side bar-->
 	<div class="row">
-    <nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12">
+    <nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12 left-sidebar">
     	<div class="user-info">
     		<!-- <div id="gsap-test"></div> -->
     		<img src="images/avatar-svg.svg" id="avatar" class="avatar img-responsive center-block img-circle" width="74" height="74" alt="">
@@ -67,14 +67,12 @@
     </nav>
   <!-- End left side bar-->
   <!-- Main content-->
-			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1">
+			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1 main-content">
 				<div id="accordion" role="tablist" aria-multiselectable="true">
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingOne">
 				      <h5 class="panel-title">
-				        <a href="#educationSection" aria-expanded="true" aria-controls="collapseOne">
 				           Education
-				        </a>
 				      </h5>
 				    </div>
 				    <div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -90,11 +88,7 @@
 				  </div>
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h5 class="panel-title">
-				        <a class="collapsed"  data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          Work Experience
-				        </a>
-				      </h5>
+				      <h5 class="panel-title">Work Experience</h5>
 				    </div>
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
 				    <section ng-repeat="k in dataWorkexperience">
@@ -113,21 +107,32 @@
 				  </div>
 				  <div class="panel panel-default">
 				    <div class="panel-heading" role="tab" id="headingThree">
-				      <h5 class="panel-title">
-				        <a  href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				          Activities
-				        </a>
-				      </h5>
+				      <h5 class="panel-title">Activities</h5>
 				    </div>
-				    <div id="collapseThree" class="panel-collapse" role="tabpanel" aria-labelledby="headingThree">
-				    <ul class="activites-streamline">
-				    	<li>
-				    		<small class="text-muted">- 2015-2016</small>
-							<p>
-								Work at Gianty company.
-							</p>	
-				    	</li>
-				    </ul>
+				    <div>
+					    <ul class="activites-streamline">
+					    	<li>
+					    		<small class="text-muted">- 2015-2016</small>
+								<p>
+									Work at Gianty company.
+								</p>	
+					    	</li>
+					    </ul>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				  	<div class="panel-heading" role="tab" id="headingThree">
+				      <h5 class="panel-title">My Projects</h5>
+				    </div>
+				     <div class="panel project-item-wrapper">
+					    <div class="row">
+					    	<div class="col-md-4 proj-item">
+					    		<a href="./pages/full-page/gnt-demo/index.html">
+					    			<img src="./pages/full-page-gnt.png" alt="" class="rounded mx-auto d-block img-thumbnail">
+					    		</a>
+					    		<button class="btn-preview">Preview</button>
+					    	</div>
+					    </div>
 				    </div>
 				  </div>
 				</div><!--end accordion -->

@@ -24,6 +24,17 @@
 			});
 		}, 300);
 	});
+
+	$(document).ready(function(){
+		$(window).scroll(function(e){
+			var scrolled = $(window).scrollTop();
+			if(scrolled > 0){
+				$('#left-sidebar').css({
+					'transform': 'translateY(' + scrolled + 'px)'
+				});
+			}
+		});
+	});
 })();
 
 var app = angular.module('app', []);
