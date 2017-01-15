@@ -58,6 +58,9 @@ a, a:hover{color:#333;text-decoration: none;}
 .proj-item:hover .btn-preview{
     display: block;
 }
+.project-item-wrapper{
+    margin-top: 20px;
+}
 .btn-preview:hover{
     background: #fff;
     color:#333;
