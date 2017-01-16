@@ -39,7 +39,7 @@
 
 var app = angular.module('app', []);
 
-app.controller('infoCtrl', function($scope, $document){
+app.controller('infoCtrl', function($scope, $document, $window){
 	$scope.listOpt = [
 		{name: 'Blog'},
 		{name: 'Shop / Ecommerce'}
@@ -86,4 +86,12 @@ app.controller('infoCtrl', function($scope, $document){
 	}
 
 	$scope.skills = [{name: 'Html', image: 'html.png'}, {name: 'Css', image: 'css3.png'}, {name: 'Javascript', image: 'js.png'}, {name: 'Angular', image: 'angular.png'}, {name: 'Ionic', image: 'ionic.jpg'}, {name: 'NodeJs', image: 'nodejs.png'}]
+	$scope.listProject = [
+		{link: './pages/full-page/gnt-demo/index.html', name: 'Gianty Company PR site', image: './pages/full-page-gnt.png'},
+		{link: './pages/ecommerce/deer/deer.html', name: 'Deer Shopping Demo', image: './pages/deer-shop.png'}
+	]
+	
+	$scope.openPreview = function(data){
+		$window.open(data.link, "_blank")
+	};
 });

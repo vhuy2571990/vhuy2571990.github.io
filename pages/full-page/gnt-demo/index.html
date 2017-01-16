@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="css.css">
 	<link rel="stylesheet" type="text/css" href="full-page-effects/jquery.fullPage.css" />
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="full-page-effects/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 </head>
-<body>
+<body  ng-controller="ctrlSlide">
 	<div class="modal-video">
 		<a href="#" class="hero-modal-close" rel="nofollow">
 			<img src="images/delete.png" alt="">
@@ -21,28 +21,29 @@
 		<section class="header-section section js-full-height overlay-parallax" id="video-section">
 			<header>
 				<nav id="navigation">
-					<img src="images/Logos.png" alt="GNT" class="img-responsive">
-					<ul>
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">News</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Members</a></li>
-						<li><a href="#">Access</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
+					<div class="left">
+						<img src="images/Logos.png" alt="GNT" class="logo-gnt img-responsive">
+						<ul>
+							<li><a href>Services</a></li>
+							<li><a href>Projects</a></li>
+							<li><a href>Technologies</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<a href>Contact Us</a>
+					</div>
 				</nav>
 			</header>
 			
 			<video id="video-gnt-background" class="grayscale" data-keepplaying loop>
-				<source data-src="vid.mp4" type="video/mp4">
+				<source data-src="vid.mp4" src="vid.mp4" type="video/mp4">
 			</video>
 			<div id="gnt-description">	
-				<h2>With you, we challenge infinite possibilites</h2>
-				Provident quod unde saepe aspernatur quo praesentium cupiditate esse!
+				<div class="slogan-text left">With you</div>
+				<div class="slogan-text right">We challenge infinite possibilites</div>
+				<div class="icon-watch"><img src="images/icon-watch.png" alt="Play fullscreen"></div>
 			</div>
-			<div class="icon-watch"><img src="images/icon-watch.png" alt="Play fullscreen"></div>
-			<a class="scroll-down next-section" href="#whatwedo"><span></span></a>
+			<a href="#whatwedo" class="scroll-down next-section"><span></span><span></span><span></span></a>
 		</section>
 		<section class="info-section fp-auto-height section js-full-height" id="section-info">
 			<div class="wrapper-section-whatwedo">
@@ -50,10 +51,10 @@
 					<h2>What we do</h2>
 					<div class="item-info item-1">
 						<div class="item-icon">
-							<img src="images/Icon-services.png" alt="" class="img-responsive">
+							<img src="images/human-resources.png" alt="" class="img-responsive">
 						</div>
 						<div class="item-description">
-							<h3>Offshore Services</h3>
+							<h3>Human Resources</h3>
 							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
 							</span>
 							<p><a href="#" class="read-more"> Read more >></a></p>
@@ -61,10 +62,10 @@
 					</div>
 					<div class="item-info item-2">
 						<div class="item-icon">
-							<img src="images/Icon-services.png" alt="" class="img-responsive">
+							<img src="images/solution.png" alt="" class="img-responsive">
 						</div>
 						<div class="item-description">
-							<h3>UI/UX Design</h3>
+							<h3>Solutions</h3>
 							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
 							</span>
 							<p><a href="#" class="read-more"> Read more >></a></p>
@@ -72,10 +73,10 @@
 					</div>
 					<div class="item-info item-3">
 						<div class="item-icon">
-							<img src="images/Icon-services.png" alt="" class="img-responsive">
+							<img src="images/product.png" alt="" class="img-responsive">
 						</div>
 						<div class="item-description">
-							<h3>Graphic Design</h3>
+							<h3>Products</h3>
 							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nesciunt expedita error tenetur officiis officia numquam velit natus, ratione, fuga voluptas laudantium, consequuntur dicta soluta, veniam adipisci autem dolores voluptatibus.
 							</span>
 							<p><a href="#" class="read-more"> Read more >></a></p>
@@ -90,18 +91,19 @@
 				Trusted by more than <strong>100+ businesses,</strong> <br>
 				with <strong>100+ good reviews</strong>
 			</div>
-			<div class="ng-controller" ng-controller="ctrlSlide">
+			<div class="ng-controller">
 				<div class="feedback-wrapper text-center">
 					<div class="nav next-slide"><img src="images/right-arrow.png" alt="" ng-click="nexSlide()"></div>
 					<div class="nav previous-slide"><img src="images/left-arrow.png" alt="" ng-click="previousSlide()"></div>
 					<div class="feedback-item" ng-class="{'active': f.active}" ng-repeat="f in slideList">
 						<img ng-src="{{f.imgUrl}}" alt="microsoft" class="img-responsive">
+						<div class="text-center m-t-20">
+							<h3>{{f.author}}</h3>
+							<i class="text-muted">{{f.position}}</i>
+						</div>
 						<blockquote class="feedback-description">
 							<span>{{f.feedBackContent}}</span>
 						</blockquote>
-						<div class="text-center">
-							{{f.author}} - <span class="text-muted">{{f.position}}</span>
-						</div>
 					</div>
 				</div>
 				<div class="slide-signal">
@@ -111,122 +113,190 @@
 		</section>
 		<section class="section fp-auto-height" id="section-footer">
 			<div class="logo-company">
-					<img src="images/google.png" alt="">
-					<img src="images/synaptics.png" alt="">
-					<img src="images/WordPress.png" alt="">
-					<img src="images/cisco.png" alt="">
-					<img src="images/fb.png" alt="">
-			</div>
-			<div class="footer-inner">
-				<div class="field-left">
-					<img src="images/Footer-hcm.png" alt="">
-					<div class="text-inner">
-						会 社 名:  株式会社GNT （英文名：GNT Inc.）<br>
-						所 在 地:  〒150-0002 東京都渋谷区渋谷3-11-2 渋谷パインビル5F  <br>
-						Tel:03-5766-6001（代表） <br>
-						Fax:03-5766-6009 <br>
-						代 表 者 :  ホー・トゥン・ラム（代 表取締役社長) <br>
-						事業内容 :  スマートフォン 向けゲームやアプリなどベトナム、ホーチミンを拠点としたオフショア開発サービス事業
+				<div class="logo-item" ng-class="{'active': z.active}" ng-repeat="z in slideList">
+					<div class="center-image">
+						<img ng-src="images/{{z.logoCompany}}" alt="">
 					</div>
 				</div>
-				<div class="field-right">
-					<img src="images/Footer-jp.png" alt="">
-					<div class="text-inner">
-						会 社 名:  GNT VietNam Co.,Ltd <br>
-						所 在 地:  11th Floor, Green Power Tower 35 Ton Duc Thang Street, Dist 1, Ho Chi Minh City  <br>
-						Tel: 84-8-22281111 <br>
-						Fax: 84-8-22282222 <br>
-						事業内容 :  ソフトウェア開発事業 <br>
-						グラフィック制作事業
+			</div>
+			<div class="news-wrapper">
+				<div class="news">
+					<span class="title">Fresh News</span>
+				</div>
+				<div class="news-item" ng-repeat="k in listNews">
+					<div class="image-news">
+						<img ng-src="images/{{k.image}}" alt="">
 					</div>
+					<div class="content-news">
+						<div class="new-title"><span>{{k.title}}</span></div>
+						<div class="text-muted published">Published by: {{k.author}} <img src="images/calendar.png" width="27" alt=""> Date: {{k.date}}</div>
+						<div class="description-new">
+							{{k.description}}
+						</div>
+						<div class="read-more text-muted">Read more >></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-wrapper">
+				<div class="footer-content">
+					<div class="column logo-footer">
+						<img src="images/logo_white.png" alt="">
+						<div class="copy-right text-center">
+							<small>
+								Copyright @ 2017 GNT Inc. <br>
+								All Rights Reserved
+							</small>
+						</div>
+					</div>
+					<div class="column">
+						<span>COMPANY</span>
+						<ul>
+							<li>News</li>
+							<li>About Us</li>
+							<li>Contact Us</li>
+						</ul>
+					</div>
+					<div class="column">
+						<span>SUPPORT</span>
+						<ul>
+							<li>FAQ</li>
+							<li>Privacy Policy</li>
+							<li>Terms of Services</li>
+						</ul>
+					</div>
+					<div class="column">
+						<span>EXPLORE</span>
+						<ul>
+							<li>Testimonials</li>
+							<li>Our Team</li>
+							<li>Current Partners</li>
+						</ul>
+					</div>
+				</div>
+				<div class="social-icon">
+					<a href="#facebook" class="icon icon-fb"></a>
+					<a href="#twitter" class="icon icon-twitter"></a>
+					<a href="#instagram" class="icon icon-instagram"></a>
+					<a href="#pinterset" class="icon icon-pinterset"></a>
+					<a href="#yutub" class="icon icon-yutub"></a>
 				</div>
 			</div>
 		</section>
 	</div>	
 </body>
 <script type="text/javascript">
-	$(document).ready(function() {
-	    $('#fullpage').fullpage({ //init full page js
-	    	anchors: ['video', 'whatwedo', 'feedback', 'footer'],
+	(function($){
+		$(document).ready(function() {
+			setTimeout(function(){
+				$('#gnt-description .slogan-text').addClass('active');	
+			}, 500);
+		    $('#fullpage').fullpage({ //init full page js
+		    	anchors: ['video', 'whatwedo', 'feedback', 'footer'],
 
-	    	scrollBar: true,
-	    	lazyLoading: true,
-	    	autoScrolling: false,
-	    	fitToSection: false,
-	    	afterLoad: function(anchorLink, index){
-	    		console.log(anchorLink, index);
-	    		if(index == 2 && anchorLink == 'whatwedo'){
-	    			$('.wrapper-section-whatwedo .left-field .item-info').addClass('active');
-	    			$('.right-field img').addClass('active');
-	    			$('a.scroll-down').addClass('hide');
-	    		}else if(index == 3 && anchorLink == 'feedback'){
-	    			$('.axeroItro').addClass('active');
-	    			$('.ng-controller').addClass('active');
-	    		}else if(index == 1 && anchorLink == 'video'){
-	    			$('a.scroll-down').removeClass('hide');
-	    		}
-	    	}
-	    });
+		    	scrollBar: true,
+		    	autoScrolling: false,
+		    	lazyLoading: false,
+		    	fitToSection: false,
+		    	afterLoad: function(anchorLink, index){
+		    		console.log(anchorLink, index);
+		    		if(index == 2 && anchorLink == 'whatwedo'){
+		    			$('.wrapper-section-whatwedo .left-field .item-info').addClass('active');
+		    			$('.right-field img').addClass('active');
+		    			$('a.scroll-down').addClass('hide');
+		    			$('section.js-full-height header').addClass('fix-down');
+		    		}else if(index == 3 && anchorLink == 'feedback'){
+		    			$('.axeroItro').addClass('active');
+		    			$('.ng-controller').addClass('active');
+		    			$('section.js-full-height header').addClass('fix-down');
+		    		}else if(index == 1 && anchorLink == 'video'){
+		    			$('a.scroll-down').removeClass('hide');
+		    			$('section.js-full-height header').removeClass('fix-down');
+		    		}else if(index == 4 && anchorLink == 'footer'){
+		    			$('section.js-full-height header').addClass('fix-down');
+		    		}
+		    	}
+		    });
 
-	    //play vid after 3s
-		var vid = document.getElementById('video-gnt-background');
-		var slogan = document.getElementById('gnt-description'); var timeoutVid;
-		vid.addEventListener('canplay', () => {
-			timeoutVid = setTimeout(() => {
-				slogan.setAttribute('class', 'hidden');
-				$(".icon-watch").addClass('blur');
-				//vid.play();
-			}, 5000);
+		    //play vid after 3s
+			var vid = document.getElementById('video-gnt-background');
+			var slogan = document.getElementById('gnt-description'); var timeoutVid;
+			vid.addEventListener('canplay', function(){
+				timeoutVid = setTimeout(function() {
+					//slogan.setAttribute('class', 'hidden');
+					//$(".icon-watch").addClass('blur');
+					//vid.play();
+				}, 5000);
+			});
+
+			var url = 'https://www.youtube.com/embed/axJPdHFTzF4?autoplay=1';
+
+			$('body').on('click', '.icon-watch', function(){
+				if(vid.paused){
+					vid.pause();
+				}else{clearTimeout(timeoutVid);}
+
+				$('#video-youtube-id').attr('src', url);
+				$('.modal-video').addClass('open');
+			});
+
+			$('body').on('click', '.hero-modal-close', function(){
+				vid.play();
+				$('#video-youtube-id').attr('src', '');
+				$('.modal-video').removeClass('open');
+			});
 		});
-
-		var url = 'https://www.youtube.com/embed/axJPdHFTzF4?autoplay=1';
-
-		$('body').on('click', '.icon-watch', function(){
-			if(vid.paused){
-				vid.pause();
-			}else{clearTimeout(timeoutVid);}
-
-			$('#video-youtube-id').attr('src', url);
-			$('.modal-video').addClass('open');
-		});
-
-		$('body').on('click', '.hero-modal-close', function(){
-			vid.play();
-			$('#video-youtube-id').attr('src', '');
-			$('.modal-video').removeClass('open');
-		});
-	});
+	}(jQuery));
+	
 	var app = angular.module('moduleMain', []);
 	app.controller('ctrlSlide', function($scope){
 		$scope.slideList = [
 			{	
 				active: true,
-				imgUrl: 'images/microsoft.png', 
+				imgUrl: 'images/Ava.png', 
 				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
-				author: 'Huy Nguyen',
-				position: 'UI/UX Designer'
+				author: 'Kristen Stewart',
+				position: 'Marketing director at microsoft',
+				logoCompany: 'Logo-microsoft.png'
 			},
 			{
 				active: false,
-				imgUrl: 'images/synaptics.png', 
+				imgUrl: 'images/Ava.png', 
 				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
-				author: 'Huy Nguyen ',
-				position: 'Front end Developer'
+				author: 'Leo Nguyen 2',
+				position: 'Google CEO',
+				logoCompany: 'google.png'
 			},
 			{
 				active: false,
-				imgUrl: 'images/WordPress.png', 
+				imgUrl: 'images/Ava.png', 
 				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
-				author: 'Leo Nguyen',
-				position: 'UI/UX Designer'
+				author: 'Leo Nguyen 3',
+				position: 'UI/UX Designer',
+				logoCompany: 'WordPress.png'
+			},
+			{
+				active: false,
+				imgUrl: 'images/Ava.png', 
+				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
+				author: 'Leo Nguyen 3',
+				position: 'UI/UX Designer',
+				logoCompany: 'cisco.png'
+			},
+			{
+				active: false,
+				imgUrl: 'images/Ava.png', 
+				feedBackContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse a sapiente obcaecati! Facilis, exercitationem similique, nobis quo distinctio possimus accusamus vel? Incidunt aliquam pariatur ratione nisi ullam quas id dolorum!',
+				author: 'Leo Nguyen 3',
+				position: 'UI/UX Designer',
+				logoCompany: 'fb.png'
 			}
 		];
 
-		$scope.nexSlide = () => {
-			return $scope.slideList.filter(slide => {
+		$scope.nexSlide = function(){
+			return $scope.slideList.filter(function(slide){
 				return slide.active == true;
 			}).
-			map(slide => {
+			map(function(slide){
 				slide.active = false;
 				var index = $scope.slideList.indexOf(slide);
 				var nextSlide = (index < $scope.slideList.length - 1) ? index + 1 : 0;
@@ -234,17 +304,41 @@
 			});
 		}
 
-		$scope.previousSlide = () => {
-			return $scope.slideList.filter(slide => {
+		$scope.previousSlide = function(){
+			return $scope.slideList.filter( function(slide) {
 				return slide.active == true;
 			}).
-			map(slide => {
+			map(function(slide) {
 				slide.active = false;
 				var index = $scope.slideList.indexOf(slide);
 				var backSlide = (index > 0) ? index - 1 : $scope.slideList.length - 1;
 				$scope.slideList[backSlide].active = true;
 			});
 		}
+
+		$scope.listNews = [
+			{
+				image: 'News1.jpg', 
+				title: 'Design for reality, not glory', 
+				date: '10-01-2017', 
+				author: 'Hung Nguyen', 
+				description: `What we don’t realize though, is that many of the most well-known products didn’t start with global ambitions. 			Rather, they addressed a small, local need first and grew from there.
+							So if you really want to develop your skills and produce a truly creative product, you’ll be much better off checking your ego and starting small.`
+			},
+			{
+				image: 'News1.jpg',
+				title: 'Design to code: lessions for a unicorn workflow',
+				date: '10-01-2017',
+				author: 'Hung Nguyen',
+				description: 'Design is a process. It involves many people of many skill sets, across many locations, being thrown many curveballs, and using many programs—always accompanied by the endless, inevitable ticking of the project clock.'
+			},{
+				image: 'News3.jpg',
+				title: 'The product roadmap that boosts innovation',
+				date: '10-01-2017',
+				author: 'Hung Nguyen',
+				description: 'When I came around planning with the simple card-based roadmap known as theme-based roadmapping, it was because it just made sense.'
+			}
+		]
 	});
 </script>
 </html>

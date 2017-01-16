@@ -126,12 +126,12 @@
 				    </div>
 				     <div class="panel project-item-wrapper">
 					    <div class="row">
-					    	<div class="col-md-4 proj-item">
-					    		<a href="./pages/full-page/gnt-demo/index.html">
-					    			<img src="./pages/full-page-gnt.png" alt="" class="rounded mx-auto d-block img-thumbnail">
+					    	<div class="col-md-4 proj-item"  ng-repeat="z in listProject"> 
+					    		<a ng-href="{{z.link}}">
+					    			<img ng-src="{{z.image}}" alt="" class="rounded mx-auto d-block img-thumbnail">
 					    		</a>
-					    		<span class="proj-name">Gianty Company PR site</span>
-					    		<button class="btn-preview">Preview</button>
+					    		<span class="proj-name">{{z.name}}</span>
+					    		<button class="btn-preview" ng-click="openPreview(z)">Preview</button>
 					    	</div>
 					    </div>
 				    </div>
