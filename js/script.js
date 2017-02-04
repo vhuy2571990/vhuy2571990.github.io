@@ -92,6 +92,6 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	]
 	
 	$scope.openPreview = function(data){
-		$window.open(data.link, "_blank")
+		$window.open("pages/backMain.html", "_blank")
 	};
 });

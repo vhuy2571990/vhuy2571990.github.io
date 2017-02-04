@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>News</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/project.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<div id="fullpage">
+		<section class="fp-auto-height">
+			<header id="top-header">
+				<nav id="navigation">
+					<div class="left">
+						<img src="images/Logos.png" alt="GNT" class="logo-gnt img-responsive">
+						<ul>
+							<li><a href>Services</a></li>
+							<li class="active"><a href>Projects</a></li>
+							<li><a href>Technologies</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<a href>Contact Us</a>
+					</div>
+				</nav>
+			</header>
+			<div class="slider-wrapper owl-carousel">
+				<div href="#" class="item"><img class="owl-lazy img-responsive" data-src="./images/slide-01.png" 
+				src="./images/News/background.png" alt=""></div>
+			</div>
+		</section>
+	</div>
+	<div class="text-center nav-proj">
+			<div class="nav"> <span class="text-muted">Home </span>\ <span class="current-page">News</span></div>
+			<div class="proj-tt"><span>GNT News</span></div>
+	</div>
+	<article class="news-wrapper" ng-app="newApp" ng-controller="newCtrl">
+		<div class="new-items-wrapper">
+			<div class="new-item" ng-repeat="k in news">
+					<img ng-src="images/News/{{k.image}}" alt="">
+					<span class="new-title">{{k.title}}</span>
+					<div class="author text-muted">
+						By: {{k.author}} - {{k.date}}
+					</div>
+					<div class="tags">
+						<a href="#" ng-repeat="z in k.tags">{{z.name}}</a>
+					</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="text-center load-more-post">
+				<a href="#">Load More Posts</a>
+			</div>
+		</div>
+		<div class="news-item-right">
+			<div class="right-section">
+				<div class="search-field">
+					<input type="text" placeholder="Search">	
+					<a href="#"><img src="images/search-icon.png" alt="" class="search-icon" width="24"></a>
+				</div>
+				<div class="popular-post">
+					<span class="ppl-p">Popular Posts</span>
+					<div class="ppl-item" ng-repeat="m in popularList">
+						<a href="#">{{m.title}}</a>
+					</div>
+				</div>
+				<div class="tags-field">
+					<a href="#" ng-repeat="v in tagsList">{{v.name}}</a>
+				</div>
+			</div>
+		</div>
+	</article>
+	<div class="clearfix"></div>
+	<div class="footer-wrapper">
+			<div class="footer-content">
+				<div class="column logo-footer">
+					<img src="images/logo_white.png" alt="">
+					<div class="copy-right text-center">
+						<small>
+							Copyright @ 2017 GNT Inc. <br>
+							All Rights Reserved
+						</small>
+					</div>
+				</div>
+				<div class="column text-column">
+					<span>COMPANY</span>
+					<ul>
+						<li><a href="#">News</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="column text-column">
+					<span>SUPPORT</span>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms of Services</a></li>
+					</ul>
+				</div>
+				<div class="column text-column">
+					<span>EXPLORE</span>
+					<ul>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Our Team</a></li>
+						<li><a href="#">Current Partners</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="social-icon">
+				<a href="#facebook" class="icon icon-fb"></a>
+				<a href="#twitter" class="icon icon-twitter"></a>
+				<a href="#instagram" class="icon icon-instagram"></a>
+				<a href="#pinterset" class="icon icon-pinterset"></a>
+				<a href="#yutub" class="icon icon-yutub"></a>
+			</div>
+	</div>
+</body>
+<script>
+	var app = angular.module('newApp', []);
+		app.controller('newCtrl', function($scope){
+			$scope.news  = [
+				{
+					image: 'news1.png', 
+					title: '6 key things all UX designer should keep in mind', 
+					author: 'Hung Nguyen', 
+					date: 'January 20, 2017', 
+					tags: [
+						{name: 'UX/UI'}, 
+						{name: 'Design'}
+					],
+				},{
+					image: 'news2.png', 
+					title: 'Creating design-driven date visualization', 
+					author: 'Hung Nguyen', 
+					date: 'January 20, 2017', 
+					tags: [
+						{name: 'Designtalk Recap'},
+						{name: 'UX/UI'}
+					],
+				},{
+					image: 'news3.png', 
+					title: '7 Brilliant Marketing Ideas to Drive Online Sales this Christmas and New Year', 
+					author: 'Hung Nguyen', 
+					date: 'January 20, 2017', 
+					tags: [
+						{name: 'Design'},
+						{name: 'UX/UI'}
+					],
+				}
+			];
+
+			$scope.popularList = [
+				{
+					title: '8 App Store Optimization Best Pratices for Shopify Merchants'
+				},{
+					title: '8 App Store Optimization Best Pratices for Shopify Merchants'
+				},{
+					title: '8 App Store Optimization Best Pratices for Shopify Merchants'
+				}
+			];
+
+			$scope.tagsList = [
+				{name: 'UX/UI'}, {name: 'Web design'}, {name: 'Branding'}, {name: 'VIFA idetity'},
+				{name: 'Freebies'}, {name: 'Designs'}, {name: 'Resources'}, {name: 'Tips & Tricks'},
+				{name: 'Advertising'}, {name: 'Sketch'}
+			]
+		});
+</script>
+</html>
