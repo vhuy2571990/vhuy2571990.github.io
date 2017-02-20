@@ -3,68 +3,105 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/bulma.css">
 	<link rel="stylesheet" href="./css/soin/style.css">
 </head>
-<body>
-	<header>
-		<nav class="nav">
-		  <div class="nav-left">
-		    <a class="nav-item">
-		      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-		    </a>
+<body>	
+	<header id="soin-header">
+		<div class="container">
+			<nav class="nav">
+				<div class="nav-right">
+					<span class="nav-item">
+				  		<p class="control has-icon has-icon-right">
+						  <input class="input" type="email" placeholder="">
+						  <span class="icon is-small">
+						    <i class="fa fa-search"></i>
+						  </span>
+						</p>
+					</span>
+					<span class="nav-item">
+				  		<a class="button ">
+				  			Đăng nhập
+				  		</a>
+				  		<a class="button is-primary">
+				  			Tạo tài khoản
+				  		</a>
+			  		</span>
+			  	</div>
+			</nav>
+			<nav class="nav">
+			  <div class="nav-left">
+			    <a class="nav-item">
+			      <img src="./images/soin/logo.png" alt="Bulma logo">
+			    </a>
+			  </div>
+
+			  <span class="nav-toggle">
+			    <span></span>
+			    <span></span>
+			    <span></span>
+			  </span>
+			  <div class="nav-right nav-menu">
+			    <a class="nav-item is-tab">
+			      Trang chủ
+			    </a>
+			    <a class="nav-item is-tab">
+			      Cổng kiến thức
+			    </a>
+			    <a class="nav-item is-tab">
+			      Cùng sáng tạo
+			    </a>
+			    <a class="nav-item is-tab">
+			      Tư vấn đồng hành
+			    </a>
+			    <a class="nav-item is-tab">
+			      Kết nối nguồn lực
+			    </a>
+			  </div>
+			</nav>
+		</div>
+	</header>
+	<div class="background_slider"></div>
+	
+	<section id="soin_solution">
+		<nav class="level">
+		  <div class="level-item has-text-centered">
+		    <div>
+		      <p class="heading">
+		      	<img src="./images/soin/icon/tv.png" alt="">
+		      	<h4>Thành viên</h4>
+		      </p>
+		      <p class="number_solution">1000+</p>
+		    </div>
 		  </div>
-
-		  <div class="nav-center">
-		    <a class="nav-item">
-		      <span class="icon">
-		        <i class="fa fa-github"></i>
-		      </span>
-		    </a>
-		    <a class="nav-item">
-		      <span class="icon">
-		        <i class="fa fa-twitter"></i>
-		      </span>
-		    </a>
+		  <div class="level-item has-text-centered">
+		    <div>
+		      <p class="heading">
+		      	<img src="./images/soin/icon/yt.png" alt="">
+		      	<h4>Ý tưởng</h4>
+		      </p>
+		      <p class="number_solution">1000+</p>
+		    </div>
 		  </div>
-
-		  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-		  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-		  <span class="nav-toggle">
-		    <span></span>
-		    <span></span>
-		    <span></span>
-		  </span>
-
-		  <!-- This "nav-menu" is hidden on mobile -->
-		  <!-- Add the modifier "is-active" to display it on mobile -->
-		  <div class="nav-right nav-menu">
-		    <a class="nav-item">
-		      Home
-		    </a>
-		    <a class="nav-item">
-		      Documentation
-		    </a>
-		    <a class="nav-item">
-		      Blog
-		    </a>
-
-		    <span class="nav-item">
-		      <a class="button" >
-		        <span class="icon">
-		          <i class="fa fa-twitter"></i>
-		        </span>
-		        <span>Tweet</span>
-		      </a>
-		      <a class="button is-primary">
-		        <span class="icon">
-		          <i class="fa fa-download"></i>
-		        </span>
-		        <span>Download</span>
-		      </a>
-		    </span>
+		  <div class="level-item has-text-centered">
+		    <div>
+		      <p class="heading">
+		      	<img src="./images/soin/icon/gp.png" alt="">
+		      	<h4>Giải pháp</h4>
+		      </p>
+		      <p class="number_solution">1000+</p>
+		    </div>
 		  </div>
 		</nav>
-	</header>
+	</section>
+
+	<section id="soin_knowledge">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title">Cổng Kiến thức</h1>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

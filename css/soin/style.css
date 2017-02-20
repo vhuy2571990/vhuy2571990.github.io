@@ -1,0 +1,38 @@
+#soin-header .nav-left .nav-item img {
+  max-height: inherit;
+}
+#soin-header .control {
+  width: 100%;
+}
+.nav-right .user_field {
+  float: right;
+  display: inline-block;
+}
+.background_slider {
+  background: url("../../images/soin/bg-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 512px;
+  width: 100%;
+  display: block;
+}
+#soin_solution {
+  padding: 80px 0;
+}
+#soin_solution h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #163260;
+}
+#soin_solution .number_solution {
+  font-size: 50px;
+  font-weight: bold;
+  color: #163260;
+}
+#soin_knowledge h1.title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #163260;
+}
