@@ -1,9 +1,17 @@
 $mainColor = #163260
-#soin-header .nav-left .nav-item img
-	max-height: inherit
-
-#soin-header .control
-	width: 100%
+body,html 
+	background: #f4f7f6
+#soin-header 
+	background: white
+	.nav-item a.is-tab:hover, a.nav-item.is-tab:hover
+		border-bottom-color: $mainColor
+	.nav-item a.is-tab, a.nav-item.is-tab
+		border-bottom: 2px solid transparent;
+	.nav-left .nav-item img
+		max-height: inherit
+	
+	.control
+		width: 100%
 
 .nav-right .user_field
 	float: right
@@ -29,9 +37,101 @@ $mainColor = #163260
 		font-weight bold
 		color: $mainColor
 
-#soin_knowledge
+#soin_knowledge, #soin_idea, #soin_news
 	h1.title
 		font-size: 30px
 		text-transform: uppercase
 		font-weight bold
 		color: $mainColor
+		margin-bottom: 4rem
+
+#soin_knowledge .text_mark, #soin_idea .text_mark
+	display:inline-block
+	padding:15px 20px
+	background: red
+	color: white
+	font-weight: bold
+	font-size: 25px
+	position: absolute
+    
+#soin_knowledge .text_mark, #soin_idea .text_mark{
+	top: 0;
+    left: -20px;
+    z-index: 10;
+    margin-top: 50px;
+}
+
+.item_soin_knowledge
+	background: #fff
+	max-height: 500px
+	text-align: left
+	cursor: pointer
+	padding-bottom: 10px
+	.title
+		font-weight: bold
+		tex-transform: capitalize
+		padding: 10px
+		margin-bottom: 0
+	.author, .time
+		color: #5f5e5e
+		font-size: 12px
+		padding: 0px 10px 0px 10px
+		.author_name
+			color: $mainColor
+
+.item_soin_knowledge .time{
+	padding: 10px	
+}
+
+.action_group
+	text-align: right
+	padding: 10px
+	.button
+		border: none
+.owl-carousel .owl-item .action_group img
+	-webkit-transform-style: inherit;
+
+a.view_more
+	margin-top: 40px
+	text-transform: uppercase
+	font-weight: bold
+
+.owl-carousel .owl-item .view_rate
+	font-weight: bold
+	text-align: center
+	padding: 0 10px
+	margin-top: 50px
+
+.owl-carousel .owl-item .view_rate img
+	max-width: 18px
+	display: inline-block
+	-webkit-transform-style: inherit;
+
+.owl-carousel .owl-item .view_rate span
+	display: inline-block
+	vertical-align: top
+
+#soin_news .soin_news_item
+	background: #fff
+	.title
+		color: $mainColor
+		font-weight: bold
+		text-transform: uppercase
+		font-size: 25px
+		padding: 10px
+		margin-bottom: 0rem
+		padding-bottom: 0rem
+	.content
+		padding: 10px
+
+#soin_news .child_soin_news img
+	height: 100%
+
+#soin_news .child_soin_news 
+	.title
+		font-size: 18px
+	.content
+		padding: 10px
+
+#soin_news .tile img
+	width: 100%
