@@ -26,10 +26,10 @@
 						</p>
 					</span>
 					<span class="nav-item">
-				  		<a class="button ">
+				  		<a class="button login-button">
 				  			Đăng nhập
 				  		</a>
-				  		<a class="button is-primary">
+				  		<a class="button is-primary register-button">
 				  			Tạo tài khoản
 				  		</a>
 			  		</span>
@@ -108,7 +108,7 @@
 				<span class="text_mark">
 					Khóa học nổi bật
 				</span>
-				<div class="owl-carousel">
+				<div class="owl-carousel owl-carousel_normal">
 				  <div class="item_soin_knowledge"> 
 						<img src="./images/soin/slide-1.png" alt="">
 						<div class="title">
@@ -171,7 +171,7 @@
 				<span class="text_mark">
 					Ý tưởng nổi bật
 				</span>
-				<div class="owl-carousel">
+				<div class="owl-carousel owl-carousel_normal">
 				  <div class="item_soin_knowledge"> 
 						<img src="./images/soin/slide-1.png" alt="">
 						<div class="title">
@@ -338,8 +338,126 @@
 			</div>
 		</div>
 	</section>
+
+	<section id="profit">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-quarter has-text-centered">
+						<h1 class="title">Đối tác</h1>
+					</div>
+					<div class="column" id="profit_item-wrapper">
+						<div class="owl-carousel owl-carousel-profit">
+							<div>
+								<img src="./images/soin/csip.png" alt="">
+							</div>
+							<div>
+								<img src="./images/soin/hanu.png" alt="">
+							</div>
+							<div>
+								<img src="./images/soin/ipp.png" alt="">
+							</div>
+							<div>
+								<img src="./images/soin/habataku.png" alt="">
+							</div>
+							<div>
+								<img src="./images/soin/hanu.png" alt="">
+							</div>
+							<div>
+								<img src="./images/soin/habataku.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="soin_footer">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-quarter has-text-centered">
+						<h1 class="title">@2016 SOIN</h1>
+						<strong>sangtaoxahoi@csip.vn</strong>
+						<div class="social-icon">
+							<a href="#" class="social_icon fb"></a>
+							<a href="#" class="social_icon yt"></a>
+							<a href="#" class="social_icon mail"></a>
+						</div>
+					</div>
+					<div class="column has-text-centered">
+						<div class="columns">
+							<div class="column">
+								<ul>
+									<li><a href="#">Trang chủ</a></li>
+									<li><a href="">Điều khoản</a></li>
+								</ul>
+							</div>
+							<div class="column">
+								<ul>
+									<li><a href="#">Cổng kiến thức</a></li>
+									<li><a href="">Khóa học trực tuyến</a></li>
+									<li><a href="">Kho tài liệu</a></li>
+								</ul>
+							</div>
+							<div class="column">
+								<ul>
+									<li><a href="#">Cùng sáng tạo</a></li>
+									<li><a href="#">Lên ý tưởng</a></li>
+									<li><a href="#">Đóng góp ý kiến</a></li>
+									<li><a href="#">Công bố giải pháp</a></li>
+								</ul>
+							</div>
+							<div class="column">
+								<a href="#">Tư vấn kinh doanh</a>
+							</div>
+							<div class="column">
+								<ul>
+									<li><a href="#">Kết nối nguồn lực</a></li>
+									<li><a href="#">Tư vấn viên</a></li>
+								</ul>
+							</div>
+							<div class="column">
+								<ul>
+									<li><a href="#">Nhà đầu tư</a></li>
+									<li><a href="#">Thành viên</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal modal-login"> <!-- modal login -->
+	  <div class="modal-background"></div>
+	  <div class="modal-card">
+	  	<header class="modal-card-head">
+		      <p class="modal-card-title"></p>
+		      <button class="delete close-login"></button>
+		</header>
+	    <section class="modal-card-body">
+	      login
+	    </section>
+	  </div>
+	</div>
+
+	<div class="modal modal-register"> <!-- modal register -->
+	  <div class="modal-background"></div>
+	  <div class="modal-card">
+	  	<header class="modal-card-head">
+	      <p class="modal-card-title"></p>
+	      <button class="delete close-register"></button>
+	    </header>
+	    <section class="modal-card-body">
+	      register
+	    </section>
+	  </div>
+	</div>
 	<script>
-      var owl = $('.owl-carousel');
+      var owl = $('.owl-carousel_normal');
       owl.owlCarousel({
         margin: 30,
         loop: true,
@@ -354,7 +472,49 @@
             items: 3
           }
         }
-      })
+      });
+
+      $('.owl-carousel-profit').owlCarousel({
+      	items: 4,
+      	loop: false,
+      	nav: true,
+      	navText: ['', ''],
+      	responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          600: {
+            items: 2,
+            nav: false
+          },
+          1000: {
+            items: 3
+          },
+          1400: {
+          	items: 4
+          }
+        }
+      });
+
+      $(document).ready(function(){
+      	$('.login-button').on('click', function(){
+      		$('.modal-login').addClass('is-active')
+      	});
+
+      	$('.close-login').on('click', function(){
+      		$('.modal-login').removeClass('is-active')
+      	});
+
+      	$('.register-button').on('click', function(){
+      		$('.modal-register').addClass('is-active')
+      	});
+
+      	$('.close-register').on('click', function(){
+      		$('.modal-register').removeClass('is-active')
+      	});
+
+      });
 	</script>
 </body>
 </html>
