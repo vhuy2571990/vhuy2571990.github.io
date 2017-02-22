@@ -8,11 +8,10 @@
 	<link rel="stylesheet" href="./css/soin/owl.theme.default.min.css">
 	<link rel="stylesheet" href="./css/bulma.css">
 	<link rel="stylesheet" href="./css/soin/style.css">
-
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/owl.carousel.min.js"></script>
 </head>
-<body id="home">	
+<body id="e-learning">	
 	<header id="soin-header">
 		<div class="container">
 			<nav class="nav">
@@ -73,44 +72,41 @@
 	</header>
 	<div class="background_slider"></div>
 	
-	<section id="soin_solution">
-		<nav class="level">
-		  <div class="level-item has-text-centered">
-		    <div>
-		      <p class="heading">
-		      	<img src="./images/soin/icon/tv.png" alt="">
-		      	<h4>Thành viên</h4>
-		      </p>
-		      <p class="number_solution">1000+</p>
-		    </div>
-		  </div>
-		  <div class="level-item has-text-centered">
-		    <div>
-		      <p class="heading">
-		      	<img src="./images/soin/icon/yt.png" alt="">
-		      	<h4>Ý tưởng</h4>
-		      </p>
-		      <p class="number_solution">1000+</p>
-		    </div>
-		  </div>
-		  <div class="level-item has-text-centered">
-		    <div>
-		      <p class="heading">
-		      	<img src="./images/soin/icon/gp.png" alt="">
-		      	<h4>Giải pháp</h4>
-		      </p>
-		      <p class="number_solution">1000+</p>
-		    </div>
-		  </div>
-		</nav>
+	<section id="filter_class" class="fitler">
+		<div class="hero-body">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-9 is-pull-left">
+						<div class="tabs">
+						  <ul>
+						    <li class="is-active"><a>Khóa học trực tuyến</a></li>
+						    <li><a >Tài liệu</a></li>
+						  </ul>
+						</div>
+					</div>
+					<div class="column is-3 is-pull-right has-text-right">
+						<div class="control has-icon has-icon-right has-addons">
+						  <input class="input" type="text" placeholder="Tìm theo từ khóa">
+						  <img src="./images/soin/icon/search.png" alt="" id="search-icon">
+						  <a class="button is-info">
+						    	<img src="./images/soin/icon/sort_white.png" alt="">
+						  </a>
+						  <div class="sub_select">
+						  	<div class="select_item"><a href="#">Môi trường</a></div>
+						  	<div class="select_item"><a href="#">Giáo dục</a></div>
+						  	<div class="select_item"><a href="#">Kinh doanh</a></div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-
 	<section id="soin_knowledge" class="soin_knowledge">
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title">Cổng Kiến thức</h1>
 				<span class="text_mark">
-					Khóa học nổi bật
+					Nổi bật
 				</span>
 				<div class="owl-carousel owl-carousel_normal">
 				  <div class="item_soin_knowledge"> 
@@ -183,47 +179,35 @@
 				  		</div>
 				  </div>
 				</div>
-				<a class="button is-medium view_more">Xem thêm</a>
+				<div class="has-text-right m-t-10">
+					<strong><a href="#" class="view_more_elearning">Xem thêm ></a></strong>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="soin_idea" class="soin_knowledge">
+	<section id="soin_knowledge_2" class="soin_knowledge">
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title">Cùng sáng tạo</h1>
 				<span class="text_mark">
-					Ý tưởng nổi bật
+					Vấn đề xã hội
 				</span>
 				<div class="owl-carousel owl-carousel_normal">
-				  <div class="item_soin_knowledge">
+				  <div class="item_soin_knowledge"> 
 				  		<div class="hidden-layer">
 				  			<button class="learn_after"></button>
 				  			<span class="saved">Lưu lại  học sau</span>
 				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
-				  		</div> 
+				  		</div>
 						<img src="./images/soin/slide-1.png" alt="">
 						<div class="title">
 							Sáng tạo xã hội là gì?
 						</div>
 						<div class="author">của 
 				  		<span class="author_name">Đại học Hà Nội</span></div>
-				  		<div class="time">
-				  			vào 23/1/2017
-				  		</div>
-				  		<div class="action_group">
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/like.png" alt="">
-							    </span>
-							 </a>
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/comment.png" alt="">
-							    </span>
-							 </a>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
 				  		</div>
 				  </div>
 				  <div  class="item_soin_knowledge">
@@ -238,22 +222,9 @@
 						</div>
 						<div class="author">của 
 				  		<span class="author_name">Đại học Hà Nội</span></div>
-				  		<div class="time">
-				  			vào 23/1/2017
-				  		</div>
-				  		<div class="action_group">
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/like.png" alt="">
-							    </span>
-							 </a>
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/comment.png" alt="">
-							    </span>
-							 </a>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
 				  		</div>
 				  </div>
 				  <div  class="item_soin_knowledge">
@@ -269,22 +240,9 @@
 				  		<div class="author">của 
 				  			<span class="author_name">Đại học Hà Nội</span>
 				  		</div>
-				  		<div class="time">
-				  			vào 23/1/2017
-				  		</div>
-				  		<div class="action_group">
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/like.png" alt="">
-							    </span>
-							 </a>
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/comment.png" alt="">
-							    </span>
-							 </a>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
 				  		</div>
 				  </div>
 				  <div  class="item_soin_knowledge">
@@ -299,124 +257,272 @@
 				  		</div>
 				  		<div class="author">của 
 				  		<span class="author_name">Đại học Hà Nội</span></div>
-				  		<div class="time">
-				  			vào 23/1/2017
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
 				  		</div>
-				  		<div class="action_group">
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/like.png" alt="">
-							    </span>
-							 </a>
-				  			<a class="button">
-				  				<span>20</span>
-							    <span class="icon is-small">
-							      <img src="./images/soin/icon/comment.png" alt="">
-							    </span>
-							 </a>
+				  </div>
+				</div>	
+				<div class="has-text-right m-t-10">
+					<strong><a href="#" class="view_more_elearning">Xem thêm ></a></strong>
+				</div>		
+			</div>
+		</div>
+	</section>
+
+	<section id="soin_knowledge_3" class="soin_knowledge">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<span class="text_mark">
+					Sáng kiến xã hội
+				</span>
+				<div class="owl-carousel owl-carousel_normal">
+				  <div class="item_soin_knowledge"> 
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+						<img src="./images/soin/slide-1.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+						<img src="./images/soin/slide-2.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+				  		<img src="./images/soin/slide-3.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  			<span class="author_name">Đại học Hà Nội</span>
+				  		</div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+				  		<img src="./images/soin/slide-1.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
 				  		</div>
 				  </div>
 				</div>
-				<a class="button is-medium view_more">Xem thêm</a>
-			</div>
-		</div>
-	</section>
-	
-	<section id="soin_news">
-		<div class="container">
-			<h1 class="title  has-text-centered">Tin tức & Sự kiện</h1>
-			<div class="tile is-ancestor">
-			  <div class="tile is-parent">
-			    <div class="tile is-child soin_news_item">
-			      <img src="./images/soin/one.png" alt="">
-			      <p class="title">
-			      	Khởi nghiệp không khó nếu bạn có tư duy làm giàu
-			      </p>
-			      <p class="content">
-			      	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit illum sapiente, mollitia aspernatur beatae deleniti voluptatibus debitis voluptate id reiciendis, ex consectetur velit in adipisci quo vel ad, blanditiis atque.
-			      </p>
-			    </div>
-			  </div>
-			  <div class="tile is-6 is-vertical is-parent">
-			    <div class="tile is-child soin_news_item">
-			    	<div class="columns child_soin_news">
-			    		<div class="column is-4">
-			    			<img src="./images/soin/four_sm.png" alt="">
-			    		</div>
-			    		<div class="column">
-			    			<p class="title">Khởi nghiệp không khó nếu bạn có tư duy làm giàu</p>
-			    			<p class="content">
-			    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nostrum adipisci placeat laboriosam maiores. Neque quam obcaecati, delectus minima veniam velit reprehenderit ab sint, inventore quis. Esse recusandae cumque quia!
-			    			</p>
-			    		</div>
-			    	</div>
-			    </div>
-			    <div class="tile is-child soin_news_item">
-			      <div class="columns child_soin_news">
-			    		<div class="column is-4">
-			    			<img src="./images/soin/four_sm.png" alt="">
-			    		</div>
-			    		<div class="column">
-			    			<p class="title">Khởi nghiệp không khó nếu bạn có tư duy làm giàu</p>
-			    			<p class="content">
-			    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nostrum adipisci placeat laboriosam maiores. Neque quam obcaecati, delectus minima veniam velit reprehenderit ab sint, inventore quis. Esse recusandae cumque quia!
-			    			</p>
-			    		</div>
-			    	</div>
-			    </div>
-			    <div class="tile is-child soin_news_item">
-			      <div class="columns child_soin_news">
-			    		<div class="column is-4">
-			    			<img src="./images/soin/four_sm.png" alt="">
-			    		</div>
-			    		<div class="column">
-			    			<p class="title">Khởi nghiệp không khó nếu bạn có tư duy làm giàu</p>
-			    			<p class="content">
-			    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nostrum adipisci placeat laboriosam maiores. Neque quam obcaecati, delectus minima veniam velit reprehenderit ab sint, inventore quis. Esse recusandae cumque quia!
-			    			</p>
-			    		</div>
-			    	</div>
-			    </div>
-			  </div>
-			</div>
-		</div>
-	</section>
-
-	<section id="profit">
-		<div class="hero-body">
-			<div class="container">
-				<div class="columns">
-					<div class="column is-one-quarter has-text-centered">
-						<h1 class="title">Đối tác</h1>
-					</div>
-					<div class="column" id="profit_item-wrapper">
-						<div class="owl-carousel owl-carousel-profit">
-							<div>
-								<img src="./images/soin/csip.png" alt="">
-							</div>
-							<div>
-								<img src="./images/soin/hanu.png" alt="">
-							</div>
-							<div>
-								<img src="./images/soin/ipp.png" alt="">
-							</div>
-							<div>
-								<img src="./images/soin/habataku.png" alt="">
-							</div>
-							<div>
-								<img src="./images/soin/hanu.png" alt="">
-							</div>
-							<div>
-								<img src="./images/soin/habataku.png" alt="">
-							</div>
-						</div>
-					</div>
+				<div class="has-text-right m-t-10">
+					<strong><a href="#" class="view_more_elearning">Xem thêm ></a></strong>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<section id="soin_knowledge_4" class="soin_knowledge">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<span class="text_mark">
+					Doanh nghiệp xã hội
+				</span>
+				<div class="owl-carousel owl-carousel_normal">
+				  <div class="item_soin_knowledge"> 
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+						<img src="./images/soin/slide-1.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+						<img src="./images/soin/slide-2.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+				  		<img src="./images/soin/slide-3.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  			<span class="author_name">Đại học Hà Nội</span>
+				  		</div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+				  		<img src="./images/soin/slide-1.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				</div>
+				<div class="has-text-right m-t-10">
+					<strong><a href="#" class="view_more_elearning">Xem thêm ></a></strong>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="has-text-centered">
+		<button class="button is-outlined is-medium view_all_class m-t-20">Xem toàn bộ khóa học</button>
+	</div>
+	<section id="soin_knowledge_4" class="soin_knowledge">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<span class="text_mark mainBg">
+					Video tham khảo
+				</span>
+				<div class="owl-carousel owl-carousel_normal">
+				  <div class="item_soin_knowledge"> 
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+						<img src="./images/soin/slide-1.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+						<img src="./images/soin/slide-2.png" alt="">
+						<div class="title">
+							Sáng tạo xã hội là gì?
+						</div>
+						<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div>
+				  		<img src="./images/soin/slide-3.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  			<span class="author_name">Đại học Hà Nội</span>
+				  		</div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				  <div  class="item_soin_knowledge">
+				  		<div class="hidden-layer">
+				  			<button class="learn_after"></button>
+				  			<span class="saved">Lưu lại  học sau</span>
+				  			<button class="button is-medium is-outline learn_now">Học ngay</button>
+				  		</div> 
+				  		<img src="./images/soin/slide-1.png" alt="">
+				  		<div class="title">
+				  			Sáng tạo xã hội là gì?
+				  		</div>
+				  		<div class="author">của 
+				  		<span class="author_name">Đại học Hà Nội</span></div>
+				  		<div class="view_rate">
+				  			<img src="./images/soin/icon/people.png" alt="">
+				  			<span>20</span>
+				  		</div>
+				  </div>
+				</div>
+				<div class="has-text-right m-t-10">
+					<strong><a href="#" class="view_more_elearning">Xem thêm ></a></strong>
+				</div>
+			</div>
+		</div>
+	</section>
 	<footer id="soin_footer">
 		<div class="hero-body">
 			<div class="container">

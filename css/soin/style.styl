@@ -1,6 +1,19 @@
 $mainColor = #163260
+$blueColor = #2185dd
+$orangeColor = #ef3824
+buttonGenerator()
+	border: none
+	color: #fff
+	border-radius: 0px
+	text-transform: uppercase
+	font-weight: bold
+@font-face
+	font-family: Ubuntu
+	src: url('../../fonts/ubuntu/Ubuntu-R.ttf');
+	
 body,html 
 	background: #f4f7f6
+	font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 #soin-header 
 	background: white
 	.nav-item a.is-tab:hover, a.nav-item.is-tab:hover
@@ -9,9 +22,32 @@ body,html
 		border-bottom: 2px solid transparent;
 	.nav-left .nav-item img
 		max-height: inherit
-	
 	.control
 		width: 100%
+	.login-button
+		margin-right:10px
+
+#soin-header .sub_menu
+	    position: absolute
+	    bottom: -82px
+	    width: 170px
+	    background: #fff
+	    display:none
+	    margin-left: -40px
+
+#soin-header .has_sub_menu
+	cursor: pointer
+
+#soin-header .has_sub_menu:hover
+	border-bottom: 2px solid $mainColor
+
+#soin-header .has_sub_menu:hover .sub_menu
+	display:block
+
+#soin-header .sub_menu a
+	display: block
+	padding: 10px
+	text-align:left
 
 .nav-right .user_field
 	float: right
@@ -37,7 +73,7 @@ body,html
 		font-weight bold
 		color: $mainColor
 
-#soin_knowledge, #soin_idea, #soin_news, #profit
+.soin_knowledge, #soin_idea, #soin_news, #profit
 	h1.title
 		font-size: 30px
 		text-transform: uppercase
@@ -45,22 +81,37 @@ body,html
 		color: $mainColor
 		margin-bottom: 4rem
 
-#soin_knowledge .text_mark, #soin_idea .text_mark
+.soin_knowledge .text_mark, #soin_idea .text_mark
 	display:inline-block
-	padding:15px 20px
-	background: red
+	padding:10px 15px
+	background: $orangeColor
 	color: white
 	font-weight: bold
-	font-size: 25px
+	font-size: 19px
 	position: absolute
-    
-#soin_knowledge .text_mark, #soin_idea .text_mark{
+
+.soin_knowledge .text_mark:after{
+	content: ""
+	padding: 10px 15px
+	position: absolute
+	background: $orangeColor
+	top:0
+	left:-1000px
+	width: 1000px
+	height: 48px
+}
+.soin_knowledge .text_mark.mainBg:after{
+	background: $mainColor
+}
+#home .soin_knowledge .text_mark{
+	top: 15px
+}
+.soin_knowledge .text_mark, #soin_idea .text_mark{
 	top: 0;
     left: -20px;
     z-index: 10;
     margin-top: 50px;
 }
-
 .item_soin_knowledge
 	background: #fff
 	max-height: 500px
@@ -78,11 +129,81 @@ body,html
 		padding: 0px 10px 0px 10px
 		.author_name
 			color: $mainColor
-
+	.hidden-layer
+		position:absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 153px
+		background: rgba(93, 92, 92, 0.59)
+		z-index: 999
+		display: none
+		button.learn_now, button.learn_now:active, button.learn_now:focus
+			position: absolute
+			border-color: white
+			top: 50%
+			left: 50%
+			margin-top: -20px
+			margin-left: -55px
+			z-index: 999
+			color: #fff
+			text-transform: uppercase
+			font-weight: bold
+			background: transparent
+			border-radius: 0px
+#soin_idea .item_soin_knowledge .hidden-layer
+	bottom: 168px
+.learn_after
+	position: absolute
+	top: 5px
+	right: 35px
+	border-radius: 1000px
+	width: 40px
+	height 40px
+	border: 1px solid #fff
+	background: transparent
+	cursor: pointer
+.saved{
+	background: #fff;
+	border-radius: 4px;
+	padding: 3px;
+	position: absolute;
+	right: 5px;
+    top: 55px;
+}
+.saved:after{
+	content: ""
+	width: 5px
+	height: 5px
+	background :#fff
+	transform: rotate(45deg)
+	position: absolute
+	right: 50%
+    top: -2px
+}
+.learn_after:after, .learn_after:before{
+	content: ""
+	height: 2px
+	width: 50%
+	background-color: white
+    display: block
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+}
+.learn_after:after{
+	height: 50%
+	width: 2px
+}  
+.item_soin_knowledge:hover .hidden-layer{
+	display: block;
+}
 .item_soin_knowledge .time{
 	padding: 10px	
 }
-
+#e-learning .soin_knowledge .text_mark
+	margin-top: -25px
 .action_group
 	text-align: right
 	padding: 10px
@@ -90,7 +211,10 @@ body,html
 		border: none
 .owl-carousel .owl-item .action_group img
 	-webkit-transform-style: inherit;
-
+.m-t-10
+	margin-top: 10px
+a.view_more_elearning, a.view_more_elearning:hover
+	color: #888
 a.view_more
 	margin-top: 40px
 	text-transform: uppercase
@@ -217,3 +341,134 @@ a.view_more
 	background: url('../../images/soin/icon/mail.png')
 	background-repeat: no-repeat
 	background-size: contain
+
+.modal-register, .modal-login, .modal-notification
+	.modal-card-head
+		background: white
+		border-bottom: none
+	h1.title
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 20px
+	input, text-area, input:hover, text-area:hover, input:focus, input:active, text-area:focus, text-area:active
+		box-shadow: none
+		border-radius: 0px
+		border:1px solid #333
+	.delete
+		background-color: transparent
+		border: 1px solid #333
+		&:before, &:after
+			background-color: #333
+		
+.modal-background
+	background-color: rgba(20, 33, 70, 0.86)
+.input, .input:focus, .input:active
+	box-shadow: none
+	border-radius: 0px
+	border:1px solid #333
+.modal-register, .modal-notification
+	.modal-card-foot
+		border-top: none
+		background: #fff
+		justify-content: center
+.modal-register .button-login-fb
+	margin-top: 20px
+	background: $blueColor
+	buttonGenerator()
+
+.modal-register .text-muted
+	color: #9a9a9a
+	margin-top: 10px
+
+.modal-register .control-label
+	flex-grow: 2
+
+.modal-register .vertical-radio
+	flex-direction: column
+
+.modal-register, .modal-notification
+	.btn-submit
+		background: $mainColor
+		buttonGenerator()
+.m-b-10
+	margin-bottom: 10px
+.modal-login
+	.modal-card-foot
+		border-top: none
+		background: #fff
+		justify-content: center
+	.btn-login
+		background: $mainColor
+		buttonGenerator()
+a.mainColor, a.mainColor:hover
+	color: $mainColor
+	font-weight: bold
+a.mainColor:hover
+	text-decoration: underline
+.m-t-20
+	margin-top: 20px
+.view_all_class, .view_all_class:hover, .view_all_class:focus
+	text-transform: uppercase
+	border: none
+	background: #fff
+	border: 1px solid #b5b5b5
+	border-radius: 0px
+.text_mark.mainBg
+	background-color: $mainColor
+#filter_class 
+	.tabs a, .tabs ul
+		border-bottom: none
+	.tabs li a
+		text-transform: uppercase
+#filter_class .tabs li.is-active a, #filter_class .tabs li.is-active a:hover
+	font-weight:bold
+	font-weight: bold
+	color: $mainColor
+	position:relative
+	border-bottom: none
+#filter_class .tabs li.is-active a:after
+	content: ""
+	width: 40px;
+	height: 4px
+	background : $mainColor
+	position: absolute
+	bottom:0
+	left: 50%
+	margin-left: -20px
+
+#filter_class .button.is-info{
+	background-color: $mainColor
+	border-radius: 0px
+}
+#filter_class .button.is-info img{
+	width: 20px
+	height: 20px
+}
+#search-icon{
+	width: 15px
+	height: 15px
+	position: absolute
+    right: 80px
+    top: 8px
+    z-index: 999
+}
+.sub_select{
+	background: #163260;
+    position: absolute;
+    left: 0;
+    right: 35px;
+    top: 33px;
+    padding: 1px
+    z-index: 999
+    display: none
+}	
+.sub_select.show{
+	display: block
+}
+.sub_select .select_item a
+	display: block;
+	padding: 5px 10px
+	color: #fff
+.sub_select .select_item a:hover
+	background: #fff
+	color: $mainColor
