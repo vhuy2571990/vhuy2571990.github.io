@@ -67,4 +67,8 @@ $(document).ready(function(){
   $('#filter_class .button.is-info').on('click', function(){
     $('.sub_select').toggleClass('show');
   });
+
+  $('#soin-header .nav-toggle').on('click', function(){
+    $('#soin-header').find('.nav-menu').toggleClass('is-active');
+  });
 });

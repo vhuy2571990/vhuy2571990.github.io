@@ -1,6 +1,7 @@
 $mainColor = #163260
 $blueColor = #2185dd
 $orangeColor = #ef3824
+$colorText = #5f5e5e
 buttonGenerator()
 	border: none
 	color: #fff
@@ -44,10 +45,14 @@ body,html
 	left: 50%
     display:none
 }   
+#profit 
+	h1.title
+		line-height: 100px
 #soin-header .has_sub_menu
 	cursor: pointer
 	position: relative
 	color: #5f5e5e
+	text-align: left
 #soin-header .has_sub_menu:hover > a, #soin-header .nav-item a.is-tab:hover, #soin-header a.nav-item.is-tab:hover
 	color: $mainColor
 	font-weight: bold	
@@ -62,7 +67,8 @@ body,html
 	margin-left: -25px
 #soin-header .has_sub_menu:hover .sub_menu
 	display:block
-
+.nav-item
+	font-size: 14px
 #soin-header .sub_menu a
 	display: block
 	padding: 10px 35px
@@ -178,11 +184,11 @@ body,html
 	bottom: 168px
 .learn_after
 	position: absolute
-	top: 5px
-	right: 38px
+	top: 20px
+	right: 45px
 	border-radius: 1000px
-	width: 40px
-	height 40px
+	width: 25px
+	height 25px
 	border: 1px solid #fff
 	background: transparent
 	cursor: pointer
@@ -242,7 +248,12 @@ a.view_more
 	margin-top: 40px
 	text-transform: uppercase
 	font-weight: bold
-
+	color: $colorText
+	background: transparent
+	width: 150px
+	height: 34px
+	line-height: 34px
+	border-radius: 0px
 .owl-carousel .owl-item .view_rate
 	font-weight: bold
 	text-align: center
