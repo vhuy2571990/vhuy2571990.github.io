@@ -1,6 +1,6 @@
 @font-face {
   font-family: Ubuntu;
-  src: url("../../fonts/ubuntu/Ubuntu-M.ttf");
+  src: url("../../fonts/ubuntu/Ubuntu-R.ttf");
 }
 body,
 html {
@@ -25,6 +25,7 @@ html {
 #soin-header a.nav-item.is-tab {
   border-bottom: 2px solid transparent;
   position: relative;
+  font-size: 16px;
 }
 #soin-header .nav-left .nav-item img {
   max-height: inherit;
@@ -34,6 +35,16 @@ html {
 }
 #soin-header .login-button {
   margin-right: 10px;
+  color: #989898;
+}
+#soin-header .register-button {
+  margin-left: 10px;
+  color: #989898;
+}
+#soin-header .login-button:hover,
+#soin-header .register-button:hover {
+  font-weight: bold;
+  color: #5f5e5e;
 }
 #soin-header .sub_menu {
   position: absolute;
@@ -78,8 +89,12 @@ html {
 }
 #soin-header .sub_menu a {
   display: block;
-  padding: 10px 35px;
+  padding: 10px 39px;
   text-align: left;
+}
+#soin-header .sub_menu a:hover {
+  background: #163260;
+  color: #fff;
 }
 .nav-right .user_field {
   float: right;
@@ -360,7 +375,7 @@ a.view_more {
   color: #fff;
 }
 #soin_footer a {
-  color: #fff;
+  color: #dfdfe0;
 }
 #soin_footer h1.title {
   font-size: 20px;
@@ -370,8 +385,8 @@ a.view_more {
 #soin_footer strong {
   color: #fff;
 }
-#soin_footer ul li a,
-#soin_footer a {
+#soin_footer ul li a:hover,
+#soin_footer a:hover {
   font-weight: bold;
 }
 #soin_footer .social-icon a.social_icon {
@@ -416,11 +431,17 @@ a.view_more {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.modal-register text-area,
+.modal-login text-area,
+.modal-notification text-area {
+  resize: none;
+}
 .modal-register .modal-card-head,
 .modal-login .modal-card-head,
 .modal-notification .modal-card-head {
   background: #fff;
   border-bottom: none;
+  padding: 10px 20px 0px 20px;
 }
 .modal-register h1.title,
 .modal-login h1.title,
@@ -479,7 +500,13 @@ a.view_more {
 .input:active {
   box-shadow: none;
   border-radius: 0px;
-  border: 1px solid #333;
+  border: 1px solid #b5b5b5;
+}
+.nav-verical {
+  flex-direction: column;
+}
+.input:hover {
+  border-color: #5f5e5e;
 }
 .modal-register .modal-card-foot,
 .modal-notification .modal-card-foot {
@@ -489,12 +516,25 @@ a.view_more {
 }
 .modal-register .button-login-fb {
   margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   background: #2185dd;
   border: none;
   color: #fff;
   border-radius: 0px;
   text-transform: uppercase;
   font-weight: bold;
+}
+.modal-login .button-login-fb {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #2185dd;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .modal-register .text-muted {
   color: #9a9a9a;
@@ -508,6 +548,7 @@ a.view_more {
 }
 .modal-register .btn-submit,
 .modal-notification .btn-submit {
+  padding: 0 40px;
   background: #163260;
   border: none;
   color: #fff;
@@ -530,6 +571,8 @@ a.view_more {
   border-radius: 0px;
   text-transform: uppercase;
   font-weight: bold;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 a.mainColor,
 a.mainColor:hover {
@@ -662,4 +705,9 @@ a.mainColor:hover {
   bottom: 20px;
   padding: 10px;
   cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+  .modal-card {
+    width: 500px;
+  }
 }

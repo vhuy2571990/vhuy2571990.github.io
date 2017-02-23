@@ -10,7 +10,7 @@ buttonGenerator()
 	font-weight: bold
 @font-face
 	font-family: Ubuntu
-	src: url('../../fonts/ubuntu/Ubuntu-M.ttf');
+	src: url('../../fonts/ubuntu/Ubuntu-R.ttf');
 	
 body,html 
 	background: #f4f7f6
@@ -29,12 +29,20 @@ body,html
 	.nav-item a.is-tab, a.nav-item.is-tab
 		border-bottom: 2px solid transparent;
 		position: relative
+		font-size: 16px
 	.nav-left .nav-item img
 		max-height: inherit
 	.control
 		width: 100%
 	.login-button
 		margin-right:10px
+		color: #989898
+	.register-button
+		margin-left: 10px
+		color: #989898
+#soin-header .login-button:hover, #soin-header .register-button:hover
+	font-weight: bold
+	color: $colorText
 #soin-header .sub_menu{
 	position: absolute
     bottom: -82px
@@ -71,9 +79,11 @@ body,html
 	font-size: 14px
 #soin-header .sub_menu a
 	display: block
-	padding: 10px 35px
+	padding: 10px 39px
 	text-align:left
-
+#soin-header .sub_menu a:hover
+	background: $mainColor
+	color: #fff
 .nav-right .user_field
 	float: right
 	display: inline-block
@@ -321,7 +331,7 @@ a.view_more
 	background: $mainColor
 	color: white
 	a
-		color: white
+		color: #dfdfe0;
 
 #soin_footer h1.title
 	font-size: 20px
@@ -331,8 +341,8 @@ a.view_more
 #soin_footer strong
 	color: white
 
-#soin_footer ul li a, #soin_footer a
-	font-weight: bold
+#soin_footer ul li a:hover, #soin_footer a:hover
+	font-weight:bold
 
 #soin_footer .social-icon a.social_icon
 	display: inline-block
@@ -377,9 +387,12 @@ a.view_more
 	background-size: contain
 
 .modal-register, .modal-login, .modal-notification
+	text-area
+		resize: none
 	.modal-card-head
 		background: white
 		border-bottom: none
+		padding: 10px 20px 0px 20px
 	h1.title
 		text-transform: uppercase
 		font-weight: bold
@@ -399,17 +412,30 @@ a.view_more
 .input, .input:focus, .input:active
 	box-shadow: none
 	border-radius: 0px
-	border:1px solid #333
+	border:1px solid #b5b5b5
+.nav-verical
+	flex-direction: column
+.input:hover
+	border-color: $colorText
 .modal-register, .modal-notification
 	.modal-card-foot
 		border-top: none
 		background: #fff
 		justify-content: center
-.modal-register .button-login-fb
+.modal-register .button-login-fb {
 	margin-top: 20px
+	padding-left: 40px
+    padding-right: 40px
 	background: $blueColor
 	buttonGenerator()
-
+}
+.modal-login .button-login-fb{
+	padding-left: 20px
+    padding-right: 20px
+	background: $blueColor
+	buttonGenerator()
+	margin-bottom: 20px
+}
 .modal-register .text-muted
 	color: #9a9a9a
 	margin-top: 10px
@@ -422,6 +448,7 @@ a.view_more
 
 .modal-register, .modal-notification
 	.btn-submit
+		padding: 0 40px
 		background: $mainColor
 		buttonGenerator()
 .m-b-10
@@ -434,6 +461,8 @@ a.view_more
 	.btn-login
 		background: $mainColor
 		buttonGenerator()
+		padding-left: 40px
+		padding-right: 40px
 a.mainColor, a.mainColor:hover
 	color: $mainColor
 	font-weight: bold
@@ -545,3 +574,9 @@ a.mainColor:hover
 	bottom: 20px
 	padding: 10px
 	cursor: pointer
+	
+@media screen and (min-width: 769px){
+	.modal-card{
+		width: 500px
+	}
+}

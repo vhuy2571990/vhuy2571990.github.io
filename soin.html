@@ -16,61 +16,67 @@
 	<header id="soin-header">
 		<div class="container">
 			<nav class="nav">
-				<div class="nav-right">
-					<span class="nav-item">
-				  		<p class="control has-icon has-icon-right">
-						  <input class="input" type="email" placeholder="">
-						  <span class="icon is-small">
-						    <i class="fa fa-search"></i>
-						  </span>
-						</p>
-					</span>
-					<span class="nav-item">
-				  		<a class="login-button">
-				  			Đăng nhập
-				  		</a>
-				  		<a class="register-button">
-				  			Tạo tài khoản
-				  		</a>
-			  		</span>
-			  	</div>
-			</nav>
-			<nav class="nav">
-			  <div class="nav-left">
-			    <a class="nav-item">
-			      <img src="./images/soin/logo.png" alt="Bulma logo">
-			    </a>
-			  </div>
+			  
+				  <div class="nav-left logo is-3">
+				    <a class="nav-item">
+				      <img src="./images/soin/logo.png" alt="Bulma logo">
+				    </a>
+				  </div>
 
-			  <span class="nav-toggle">
-			    <span></span>
-			    <span></span>
-			    <span></span>
-			  </span>
-			  <div class="nav-right nav-menu">
-			    <a class="nav-item is-tab">
-			      Trang chủ
-			    </a>
-			    <div class="nav-item is-tab has_sub_menu">
-			      <a href="#">Cổng kiến thức</a>
-			      <div class="sub_menu">
-			      	<a href="#">Khóa học trực tuyến</a>
-			      	<a href="#">Kho tài liệu</a>
-			      </div>
-			    </div>
-			    <a class="nav-item is-tab">
-			      Cùng sáng tạo
-			    </a>
-			    <a class="nav-item is-tab">
-			      Tư vấn đồng hành
-			    </a>
-			    <a class="nav-item is-tab">
-			      Kết nối nguồn lực
-			    </a>
-			    <a class="nav-item is-tab">
-			      Tin tức
-			    </a>
-			  </div>
+				  <span class="nav-toggle">
+				    <span></span>
+				    <span></span>
+				    <span></span>
+				  </span>
+
+				  <div class="nav-right nav-menu nav-verical ">
+					  	<nav class="nav-top">
+							<div class="nav-right m-t-10">
+								<span class="nav-item">
+							  		<p class="control has-icon has-icon-right">
+									  <input class="input" type="email" placeholder="">
+									  <span class="icon is-small">
+									    <i class="fa fa-search"></i>
+									  </span>
+									</p>
+								</span>
+								<span class="nav-item">
+							  		<a class="login-button">
+							  			Đăng nhập
+							  		</a>
+							  		<span>|</span>
+							  		<a class="register-button">
+							  			Tạo tài khoản
+							  		</a>
+						  		</span>
+						  	</div>
+						</nav>
+						<div class="nav nav-right">
+						    <a class="nav-item is-tab">
+						      Trang chủ
+						    </a>
+						    <div class="nav-item is-tab has_sub_menu">
+						      <a href="#">Cổng kiến thức</a>
+						      <div class="sub_menu">
+						      	<a href="#">Khóa học trực tuyến</a>
+						      	<a href="#">Kho tài liệu</a>
+						      </div>
+						    </div>
+						    <a class="nav-item is-tab">
+						      Cùng sáng tạo
+						    </a>
+						    <a class="nav-item is-tab">
+						      Tư vấn đồng hành
+						    </a>
+						    <a class="nav-item is-tab">
+						      Kết nối nguồn lực
+						    </a>
+						    <a class="nav-item is-tab">
+						      Tin tức
+						    </a>
+					    </div>
+				    </div>
+
 			</nav>
 		</div>
 	</header>
@@ -489,6 +495,7 @@
 		</header>
 	    <section class="modal-card-body">
 	      <div class="has-text-centered m-b-10"><h1 class="title">Đăng nhập</h1></div>
+	      <div class="has-text-centered"><button class="button button-login-fb">Tạo tài khoản với facebook</button></div>
 	      	<div class="control is-horizontal">
 			  <div class="control-label">
 			    <label class="label">Tên đăng nhập</label>
@@ -511,8 +518,8 @@
 	    <footer class="modal-card-foot">
 	    	<div class="has-text-centered">
 				<button class="button btn-login m-b-10">Đăng nhập</button>
-				<p class="has-text-centered"><span class="text-muted">Quên mật khẩu?</span><a href="#" class="mainColor">Cấp lại mật khẩu</a></p>
-				<p class="has-text-centered"><span class="text-muted">Chưa có tài khoản?</span><a href="#" class="mainColor">Tạo tài khoản</a></p>
+				<p class="has-text-centered"><span class="text-muted">Quên mật khẩu?</span> <a href="#" class="mainColor">Cấp lại mật khẩu</a></p>
+				<p class="has-text-centered"><span class="text-muted">Chưa có tài khoản?</span> <a href="#" class="mainColor">Tạo tài khoản</a></p>
 			</div>
 	    </footer>
 	  </div>
@@ -589,7 +596,7 @@
 			  </div>
 			</div>
 			<p class="control">
-			  <textarea class="textarea"></textarea>
+			  <textarea class="textarea" disabled="true"></textarea>
 			</p>
 			<p class="m-b-10 has-text-centered">
 			  <label class="checkbox">
@@ -605,7 +612,6 @@
 	    </footer>
 	  </div>
 	</div>
-
 	<div class="modal modal-notification">
 		<div class="modal-background"></div>
 		  <div class="modal-card">
