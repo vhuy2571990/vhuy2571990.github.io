@@ -9,17 +9,25 @@ buttonGenerator()
 	font-weight: bold
 @font-face
 	font-family: Ubuntu
-	src: url('../../fonts/ubuntu/Ubuntu-R.ttf');
+	src: url('../../fonts/ubuntu/Ubuntu-M.ttf');
 	
 body,html 
 	background: #f4f7f6
 	font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 #soin-header 
 	background: white
-	.nav-item a.is-tab:hover, a.nav-item.is-tab:hover
-		border-bottom-color: $mainColor
+	.nav-item a.is-tab:hover:after, a.nav-item.is-tab:hover:after
+		content: ""
+		width: 50px
+		height: 3px
+		background: $mainColor
+		position: absolute
+		bottom: -2px
+		left: 50%
+		margin-left: -25px
 	.nav-item a.is-tab, a.nav-item.is-tab
 		border-bottom: 2px solid transparent;
+		position: relative
 	.nav-left .nav-item img
 		max-height: inherit
 	.control
@@ -30,23 +38,34 @@ body,html
 #soin-header .sub_menu
 	    position: absolute
 	    bottom: -82px
-	    width: 170px
+	    width: 205px
+	    color: #fcfcfc
 	    background: #fff
 	    display:none
 	    margin-left: -40px
 
 #soin-header .has_sub_menu
 	cursor: pointer
-
+	position: relative
+	color: #7a7a7a
 #soin-header .has_sub_menu:hover
-	border-bottom: 2px solid $mainColor
+	color: #363636
+#soin-header .has_sub_menu:hover::after
+	content: ""
+	width: 50px
+	height: 3px
+	background: $mainColor
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: -25px
 
 #soin-header .has_sub_menu:hover .sub_menu
 	display:block
 
 #soin-header .sub_menu a
 	display: block
-	padding: 10px
+	padding: 10px 35px
 	text-align:left
 
 .nav-right .user_field
@@ -60,7 +79,11 @@ body,html
 	height: 512px
 	width: 100%
 	display block
-
+	position: relative
+#e-learning .background_slider
+	background: url('../../images/soin/slider_2.png')
+	background-size: cover
+	position: relative
 #soin_solution
 	padding: 80px 0
 	h4
@@ -156,7 +179,7 @@ body,html
 .learn_after
 	position: absolute
 	top: 5px
-	right: 35px
+	right: 38px
 	border-radius: 1000px
 	width: 40px
 	height 40px
@@ -472,3 +495,42 @@ a.mainColor:hover
 .sub_select .select_item a:hover
 	background: #fff
 	color: $mainColor
+.soin_register_stick{
+	display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -53px;
+    margin-right: -26px;
+}
+.sort_soin:after{
+	content: "";
+    background: url(../../images/soin/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    transform: translateY(50%);
+    margin-top: -4px;
+}
+.sort_soin
+	position: relative
+	
+.control.has-addons .sort_soin .input:last-child
+	border-radius: 0px
+#soin_footer
+	.column
+		padding: 0.75rem 0
+	ul li
+		margin-bottom: 8px
+.btn_sendto_soin
+	buttonGenerator()
+	background: $blueColor
+	position: absolute
+	right: 120px
+	bottom: 20px
+	padding: 10px
+	cursor: pointer
