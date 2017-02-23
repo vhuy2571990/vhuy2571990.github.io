@@ -34,22 +34,23 @@ body,html
 		width: 100%
 	.login-button
 		margin-right:10px
-
-#soin-header .sub_menu
-	    position: absolute
-	    bottom: -82px
-	    width: 205px
-	    color: #fcfcfc
-	    background: #fff
-	    display:none
-	    margin-left: -40px
-
+#soin-header .sub_menu{
+	position: absolute
+    bottom: -82px
+    width: 205px
+    color: #fcfcfc
+    background: #fff
+	margin-left: -86px
+	left: 50%
+    display:none
+}   
 #soin-header .has_sub_menu
 	cursor: pointer
 	position: relative
-	color: #7a7a7a
-#soin-header .has_sub_menu:hover
-	color: #363636
+	color: #5f5e5e
+#soin-header .has_sub_menu:hover > a, #soin-header .nav-item a.is-tab:hover, #soin-header a.nav-item.is-tab:hover
+	color: $mainColor
+	font-weight: bold	
 #soin-header .has_sub_menu:hover::after
 	content: ""
 	width: 50px
@@ -59,7 +60,6 @@ body,html
 	bottom: 0
 	left: 50%
 	margin-left: -25px
-
 #soin-header .has_sub_menu:hover .sub_menu
 	display:block
 

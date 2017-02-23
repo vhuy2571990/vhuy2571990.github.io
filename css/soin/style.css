@@ -41,16 +41,20 @@ html {
   width: 205px;
   color: #fcfcfc;
   background: #fff;
+  margin-left: -86px;
+  left: 50%;
   display: none;
-  margin-left: -40px;
 }
 #soin-header .has_sub_menu {
   cursor: pointer;
   position: relative;
-  color: #7a7a7a;
+  color: #5f5e5e;
 }
-#soin-header .has_sub_menu:hover {
-  color: #363636;
+#soin-header .has_sub_menu:hover > a,
+#soin-header .nav-item a.is-tab:hover,
+#soin-header a.nav-item.is-tab:hover {
+  color: #163260;
+  font-weight: bold;
 }
 #soin-header .has_sub_menu:hover::after {
   content: "";
