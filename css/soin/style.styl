@@ -124,9 +124,9 @@ body,html
 	display:inline-block
 	padding:10px 15px
 	background: $orangeColor
-	color: white
+	color: #fcfcfc
 	font-weight: bold
-	font-size: 19px
+	font-size: 18px
 	position: absolute
 
 .soin_knowledge .text_mark:after{
@@ -137,7 +137,7 @@ body,html
 	top:0
 	left:-1000px
 	width: 1000px
-	height: 48px
+	height: 47px
 }
 .soin_knowledge .text_mark.mainBg:after{
 	background: $mainColor
@@ -153,13 +153,14 @@ body,html
 }
 .item_soin_knowledge
 	background: #fff
-	max-height: 500px
 	text-align: left
 	cursor: pointer
 	padding-bottom: 10px
 	.title
 		font-weight: bold
-		tex-transform: capitalize
+		font-size: 18px
+		color: #colorText
+		line-spacing: 22px
 		padding: 10px
 		margin-bottom: 0
 	.author, .time
@@ -173,7 +174,7 @@ body,html
 		top: 0
 		left: 0
 		right: 0
-		bottom: 153px
+		bottom: 0
 		background: rgba(93, 92, 92, 0.59)
 		z-index: 999
 		display: none
@@ -191,7 +192,7 @@ body,html
 			background: transparent
 			border-radius: 0px
 #soin_idea .item_soin_knowledge .hidden-layer
-	bottom: 168px
+	bottom: 0px
 .learn_after
 	position: absolute
 	top: 20px
@@ -264,21 +265,38 @@ a.view_more
 	height: 34px
 	line-height: 34px
 	border-radius: 0px
-.owl-carousel .owl-item .view_rate
+.view_rate
 	font-weight: bold
 	text-align: center
 	padding: 0 10px
 	margin-top: 50px
-
-.owl-carousel .owl-item .view_rate img
-	max-width: 18px
+.item_soin_knowledge .img-wrapper
+	position: relative
+	width: 100%
+.item_soin_knowledge .img-wrapper img
+	width: 100%
+.item_soin_knowledge .img-wrapper:after
+	content: ""
+	display: block
+	width: 20px
+	height: 20px
+	background: #fff
+	left: 50%
+	bottom: 0
+	position: absolute
+	transform: rotate(45deg)
+	margin-left: -10px
+	margin-bottom: -10px
+.view_rate img
+	max-width: 25px
 	display: inline-block
 	-webkit-transform-style: inherit;
 
 .owl-carousel .owl-item .view_rate span
 	display: inline-block
 	vertical-align: top
-
+	font-size: 18px
+	color: $colorText
 #soin_news .soin_news_item
 	background: #fff
 	.title
@@ -322,11 +340,13 @@ a.view_more
 #profit_item-wrapper .owl-prev
 	background: url('../../images/soin/icon/soin-arrow-move.png')
 	background-repeat: no-repeat
-
+	background-size: cover
+	transform: rotate(180deg)
 #profit_item-wrapper .owl-next
 	background: url('../../images/soin/icon/soin-arrow-move.png')
 	background-repeat: no-repeat
-
+	background-size: cover
+	
 #soin_footer
 	background: $mainColor
 	color: white
@@ -524,6 +544,8 @@ a.mainColor:hover
     padding: 1px
     z-index: 999
     display: none
+    font-size: 12px
+    color: #989898
 }	
 .sub_select.show{
 	display: block
@@ -537,12 +559,37 @@ a.mainColor:hover
 	color: $mainColor
 .soin_register_stick{
 	display: block;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 50%;
     margin-top: -53px;
     margin-right: -26px;
+    z-index: 9
 }
+.soin_register_child {
+	background: #fff;
+	border-radius: 3px
+	color: $colorText
+	padding: 4px
+	top: 50%
+	position: fixed
+	right:0
+	z-index: 9
+	margin-top: 35px
+	display: none
+}
+.soin_register_child.animated
+	display: block
+.soin_register_child:after{
+	content: ""
+	width: 5px
+	height: 5px
+	background: #fff
+	transform: rotate(45deg)
+	top: -3px
+    right: 20px
+    position: absolute  
+}  
 .sort_soin:after{
 	content: "";
     background: url(../../images/soin/search.png);
@@ -561,6 +608,7 @@ a.mainColor:hover
 	
 .control.has-addons .sort_soin .input:last-child
 	border-radius: 0px
+	border-color: $colorText
 #soin_footer
 	.column
 		padding: 0.75rem 0
@@ -571,7 +619,7 @@ a.mainColor:hover
 	background: $blueColor
 	position: absolute
 	right: 120px
-	bottom: 20px
+	bottom: 50px
 	padding: 10px
 	cursor: pointer
 	
@@ -581,6 +629,137 @@ a.mainColor:hover
 #soin_footer .column ul li a > span{
 	font-size: 14px
 }
+
+.owl-slide.owl_slide_1{
+		background-image: url('../../images/soin/slide/slider_1.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_2{
+		background-image: url('../../images/soin/slide/slider_2.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_3{
+		background-image: url('../../images/soin/slide/slider_3.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_4{
+		background-image: url('../../images/soin/slide/slider_4.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_5{
+		background-image: url('../../images/soin/slide/slider_5.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_1 .owl--text{
+	float: right
+	width: 500px
+	height: 100%
+	position: relative
+	background: rgba(22, 50, 96, 0.78)
+}
+.owl-slide.owl_slide_1 .owl--text .text-wrapper
+	font-size: 16px
+	color: white
+	padding: 20px 25px
+	margin-top: 50px
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title
+	color: white
+	position: relative
+	height: 80px
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .soin
+	font-size: 50px
+	position: absolute
+	left: 0
+	bottom: 25px
+	font-weight: bold
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .lg
+	font-size: 80px
+	left: 120px
+	font-weight: bold
+	position : absolute
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .sau_in
+	font-size: 30px
+	position: absolute
+	left: 0
+	bottom: 0
+	font-weight: bold
+.owl_slider{
+	height: 512px
+}
+.owl_slider .owl-dots {
+	height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 200px;
+    margin-left: -100px
+}
+.owl_slider .owl-dots .owl-dot{
+	display:inline-block
+	width 15px
+	height 15px
+	border-radius 252123px
+	background: $mainColor
+	margin-right: 5px
+}
+.owl_slider .owl-dots .owl-dot.active{
+	background: $colorText
+}
+.owl-carousel {
+	position: relative;
+	height: 100%;
+}
+.owl-carousel .owl-nav .owl-prev{
+	background: url('../../images/soin/left-arrow.png');
+	background-repeat: no-repeat
+	width: 48px
+	height 48px
+	position: absolute
+	left: 0
+	margin-top: -24px
+	top: 50%
+}
+.owl-carousel .owl-nav .owl-next{
+	background: url('../../images/soin/right-arrow.png');
+	background-repeat: no-repeat
+	width: 48px
+	height 48px
+	position: absolute
+	right: 0
+	top: 50%
+	margin-top: -24px
+}
+.breadcrumbs ul li
+	display: inline-block
+.breadcrumbs ul li:after
+	content: ">>"
+	display: inline-block
+	font-size: 10px
+	color :#989898
+	margin: 0 5px
+.breadcrumbs ul li:last-child:after
+	display: none
+.breadcrumbs ul li a
+	color: $colorText
+#filter_class .button.is-info.clear
+	background-color: transparent
+#filter_class .control.has-addons.flex-end
+	justify-content: flex-end
 @media screen and (min-width: 769px){
 	.modal-card{
 		width: 500px

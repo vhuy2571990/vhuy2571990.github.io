@@ -2,6 +2,8 @@ var owl = $('.owl-carousel_normal');
 owl.owlCarousel({
   margin: 30,
   loop: true,
+  nav: true,
+  navText: ['', ''],
   responsive: {
     0: {
       items: 1
@@ -17,7 +19,7 @@ owl.owlCarousel({
 
 $('.owl-carousel-profit').owlCarousel({
 	items: 4,
-	loop: false,
+	loop: true,
 	nav: true,
 	navText: ['', ''],
 	responsive: {
@@ -38,6 +40,15 @@ $('.owl-carousel-profit').owlCarousel({
   }
 });
 
+  $("#owl-example").owlCarousel({
+    items: 1,
+    navigation : true, 
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem: true,
+      pagination: false,
+      rewindSpeed: 500
+  });
 
 $(document).ready(function(){
 	function openModal(ele){
@@ -70,5 +81,13 @@ $(document).ready(function(){
 
   $('#soin-header .nav-toggle').on('click', function(){
     $('#soin-header').find('.nav-menu').toggleClass('is-active');
+  });
+
+  $('.soin_register_stick').on('mouseenter', function(){
+    $('.soin_register_child').addClass('animated bounceInUp');
+  });
+
+  $('.soin_register_stick').on('mouseleave', function(){
+    $('.soin_register_child').removeClass('animated bounceInUp');
   });
 });
