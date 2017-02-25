@@ -668,7 +668,7 @@ a.mainColor:hover {
   background: #163260;
   position: absolute;
   left: 0;
-  right: 35px;
+  right: 0px;
   top: 33px;
   padding: 1px;
   z-index: 999;
@@ -734,6 +734,7 @@ a.mainColor:hover {
   right: 0;
   transform: translateY(50%);
   margin-top: -4px;
+  z-index: 9;
 }
 .sort_soin {
   position: relative;
@@ -889,6 +890,9 @@ a.mainColor:hover {
 .breadcrumbs ul li {
   display: inline-block;
 }
+.breadcrumbs ul li:last-child a {
+  font-weight: bold;
+}
 .breadcrumbs ul li:after {
   content: ">>";
   display: inline-block;
@@ -907,6 +911,80 @@ a.mainColor:hover {
 }
 #filter_class .control.has-addons.flex-end {
   justify-content: flex-end;
+  display: inline-flex;
+}
+.detail-class .wrapper-detail-content {
+  background: #fff;
+  padding: 15px;
+  color: #5f5e5e;
+  position: relative;
+}
+.detail-class .wrapper-detail-content:before {
+  content: "";
+  width: 95%;
+  height: 5px;
+  background: #dedede;
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+}
+.detail-class .wrapper-detail-content:after {
+  content: "";
+  height: 95%;
+  width: 5px;
+  background: #dedede;
+  position: absolute;
+  right: -8px;
+  bottom: 0;
+}
+.detail-class .wrapper-detail-content .button {
+  width: 120px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-radius: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  margin: 130px 10px;
+}
+.detail-class .wrapper-detail-content .button.button-red {
+  background: #ef3824;
+}
+.detail-class .wrapper-detail-content .button.button-grey {
+  background: #989898;
+}
+#filter_class .tabs_detail_class ul li a {
+  text-transform: none;
+}
+#filter_class .tabs_detail_class {
+  width: 350px;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 10px 20px;
+}
+#filter_class .content-tabs {
+  background: #fff;
+  padding: 20px 35px;
+}
+.detail-class .wrapper-detail-content .title {
+  font-size: 16px;
+  font-weight: normal;
+  color: #5f5e5e;
+  line-height: 1.5;
+}
+.detail-class .wrapper-detail-content .title .class-name {
+  color: #163260;
+  font-weight: bold;
+}
+.detail-class .wrapper-detail-content .info,
+.detail-class .wrapper-detail-content .time,
+.detail-class .wrapper-detail-content .grade,
+.detail-class .wrapper-detail-content .cost,
+.detail-class .wrapper-detail-content .people {
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 769px) {
   .modal-card {
