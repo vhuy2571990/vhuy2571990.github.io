@@ -191,6 +191,10 @@ html {
   font-size: 18px;
   position: absolute;
 }
+.soin_knowledge .text_mark.small-type,
+#soin_idea .text_mark.small-type {
+  padding: 5px 10px;
+}
 .soin_knowledge .text_mark:after {
   content: "";
   padding: 10px 15px;
@@ -201,13 +205,17 @@ html {
   width: 1000px;
   height: 47px;
 }
+.soin_knowledge .text_mark.small-type:after {
+  padding: 5px 10px;
+  height: 37px;
+}
 .soin_knowledge .text_mark.mainBg:after {
   background: #163260;
 }
 .soin_knowledge .text_mark,
 #soin_idea .text_mark {
   top: 0;
-  left: -20px;
+  left: 15px;
   z-index: 10;
   margin-top: -25px;
 }
@@ -389,6 +397,7 @@ a.view_more {
 }
 #soin_news .soin_news_item {
   background: #fff;
+  position: relative;
 }
 #soin_news .soin_news_item .title {
   color: #163260;
@@ -401,6 +410,17 @@ a.view_more {
 }
 #soin_news .soin_news_item .content {
   padding: 10px;
+}
+#soin_news .soin_news_item .text_mark {
+  background: #ef3824;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 15px;
+  color: #fff;
+  margin-top: -15px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #soin_news .child_soin_news img {
   height: 100%;
