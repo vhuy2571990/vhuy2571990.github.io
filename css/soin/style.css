@@ -49,7 +49,7 @@ html {
 #soin-header .sub_menu {
   position: absolute;
   bottom: -82px;
-  width: 205px;
+  width: 235px;
   color: #fcfcfc;
   background: #fff;
   margin-left: -86px;
@@ -64,6 +64,7 @@ html {
   position: relative;
   color: #5f5e5e;
   text-align: left;
+  font-size: 16px;
 }
 #soin-header .has_sub_menu:hover > a,
 #soin-header .nav-item a.is-tab:hover,
@@ -203,15 +204,12 @@ html {
 .soin_knowledge .text_mark.mainBg:after {
   background: #163260;
 }
-#home .soin_knowledge .text_mark {
-  top: 15px;
-}
 .soin_knowledge .text_mark,
 #soin_idea .text_mark {
   top: 0;
   left: -20px;
   z-index: 10;
-  margin-top: 50px;
+  margin-top: -25px;
 }
 .item_soin_knowledge {
   background: #fff;
@@ -284,6 +282,10 @@ html {
   position: absolute;
   right: 5px;
   top: 55px;
+  display: none;
+}
+.saved.animated {
+  display: block;
 }
 .saved:after {
   content: "";
@@ -376,10 +378,10 @@ a.view_more {
 }
 .view_rate img {
   max-width: 25px;
-  display: inline-block;
-  -webkit-transform-style: inherit;
+  display: inline-block !important;
+  -webkit-transform-style: inherit !important;
 }
-.owl-carousel .owl-item .view_rate span {
+.view_rate span {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -1028,6 +1030,20 @@ a.mainColor:hover {
 .detail-class .wrapper-detail-content .cost,
 .detail-class .wrapper-detail-content .people {
   margin-bottom: 10px;
+}
+.m-b-50 {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 769px) {
+  #soin-header .nav-item a.is-tab:hover:after,
+  #soin-header a.nav-item.is-tab:hover:after,
+  #soin-header .has_sub_menu:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  #soin-header .has_sub_menu:hover .sub_menu {
+    display: none;
+  }
 }
 @media screen and (min-width: 769px) {
   .modal-card {
