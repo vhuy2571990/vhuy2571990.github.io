@@ -100,6 +100,44 @@ html {
   float: right;
   display: inline-block;
 }
+#seed_graph {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#seed_graph .item {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+#seed_graph .item.line-dotted {
+  color: #5f5e5e;
+  letter-spacing: 4px;
+}
+#seed_graph .item img {
+  width: 80px;
+}
+#seed_graph .on-ideal {
+  position: absolute;
+  width: 180px;
+  left: 50%;
+  margin-left: -90px;
+  opacity: 0.8;
+}
+#seed_graph .item.active .on-ideal {
+  opacity: 1;
+}
+#seed_graph .on-ideal img {
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#seed_graph .item span {
+  font-size: 16px;
+  color: #163260;
+}
+#seed_graph .item.active span {
+  font-weight: bold;
+}
 .background_slider {
   background: url("../../images/soin/bg-home.png");
   background-repeat: no-repeat;
@@ -109,10 +147,14 @@ html {
   display: block;
   position: relative;
 }
-#e-learning .background_slider {
+.background_slider.e-learning {
   background: url("../../images/soin/slider_2.png");
   background-size: cover;
   position: relative;
+}
+.background_slider.list-ideal {
+  background: url("../../images/soin/slide/slider_3.png");
+  background-size: cover;
 }
 #soin_solution {
   padding: 80px 0;
@@ -918,6 +960,7 @@ a.mainColor:hover {
   padding: 15px;
   color: #5f5e5e;
   position: relative;
+  height: 422px;
 }
 .detail-class .wrapper-detail-content:before {
   content: "";
