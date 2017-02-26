@@ -1,0 +1,928 @@
+$mainColor = #163260
+$blueColor = #2185dd
+$orangeColor = #ef3824
+$colorText = #5f5e5e
+buttonGenerator()
+	border: none
+	color: #fff
+	border-radius: 0px
+	text-transform: uppercase
+	font-weight: bold
+@font-face
+	font-family: Ubuntu
+	src: url('../../fonts/ubuntu/Ubuntu-R.ttf');
+	
+body,html 
+	background: #f4f7f6
+	font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+#soin-header 
+	background: white
+	.nav-item a.is-tab:hover:after, a.nav-item.is-tab:hover:after
+		content: ""
+		width: 50px
+		height: 3px
+		background: $mainColor
+		position: absolute
+		bottom: -2px
+		left: 50%
+		margin-left: -25px
+	.nav-item a.is-tab, a.nav-item.is-tab
+		border-bottom: 2px solid transparent;
+		position: relative
+		font-size: 16px
+	.nav-left .nav-item img
+		max-height: inherit
+	.control
+		width: 100%
+	.login-button
+		margin-right:10px
+		color: #989898
+	.register-button
+		margin-left: 10px
+		color: #989898
+#soin-header .login-button:hover, #soin-header .register-button:hover
+	font-weight: bold
+	color: $colorText
+#soin-header .sub_menu{
+	position: absolute
+    bottom: -82px
+    width: 235px
+    color: #fcfcfc
+    background: #fff
+	margin-left: -86px
+	left: 50%
+    display:none
+}   
+#profit 
+	h1.title
+		line-height: 100px
+#soin-header .has_sub_menu
+	cursor: pointer
+	position: relative
+	color: #5f5e5e
+	text-align: left
+	font-size: 16px
+#soin-header .has_sub_menu:hover > a, #soin-header .nav-item a.is-tab:hover, #soin-header a.nav-item.is-tab:hover
+	color: $mainColor
+	font-weight: bold	
+#soin-header .has_sub_menu:hover::after
+	content: ""
+	width: 50px
+	height: 3px
+	background: $mainColor
+	position: absolute
+	bottom: 0
+	left: 50%
+	margin-left: -25px
+#soin-header .has_sub_menu:hover .sub_menu
+	display:block
+.nav-item
+	font-size: 14px
+#soin-header .sub_menu a
+	display: block
+	padding: 10px 39px
+	text-align:left
+#soin-header .sub_menu a:hover
+	background: $mainColor
+	color: #fff
+.nav-right .user_field
+	float: right
+	display: inline-block
+#seed_graph
+	margin-top: 40px
+	margin-bottom: 40px
+#seed_graph .item
+	display: inline-block
+	vertical-align: middle
+	position: relative
+#seed_graph .item.line-dotted
+	color: $colorText
+	letter-spacing: 4px
+#seed_graph .item img
+	width: 80px
+#seed_graph .on-ideal
+	position: absolute
+	width: 180px
+	left: 50%
+	margin-left: -90px
+	opacity: 0.8
+#seed_graph .item.active .on-ideal
+	opacity: 1
+#seed_graph .on-ideal img
+	width: 30px
+	display: inline-block;
+	vertical-align: middle
+#seed_graph .item span
+	font-size: 16px
+	color: $mainColor
+#seed_graph .item.active span
+	font-weight: bold
+.background_slider
+	background: url('../../images/soin/bg-home.png')
+	background-repeat: no-repeat
+	background-size: cover
+	height: 512px
+	width: 100%
+	display block
+	position: relative
+.background_slider.e-learning
+	background: url('../../images/soin/slider_2.png')
+	background-size: cover
+	position: relative
+.background_slider.list-ideal
+	background: url('../../images/soin/slide/slider_3.png')
+	background-size: cover
+.background_slider.connect
+	background: url('../../images/soin/slide/slider_5.png')
+	background-size: cover
+#soin_solution
+	padding: 80px 0
+	h4
+		font-size: 20px
+		text-transform: uppercase
+		font-weight: bold
+		color: $mainColor
+	.number_solution
+		font-size 50px
+		font-weight bold
+		color: $mainColor
+#soin_idea, #soin_news
+	border-top: 1px solid $orangeColor
+.soin_knowledge, #soin_idea, #soin_news, #profit
+	h1.title
+		font-size: 30px
+		text-transform: uppercase
+		font-weight bold
+		color: $mainColor
+		margin-bottom: 4rem
+
+.soin_knowledge .text_mark, #soin_idea .text_mark
+	display:inline-block
+	height: 34px
+	line-height: 34px
+	background: $orangeColor
+	color: #fcfcfc
+	font-weight: bold
+	font-size: 18px
+	position: absolute
+.soin_knowledge .text_mark.small-type, #soin_idea .text_mark.small-type
+	line-height: 34px
+	padding-right: 15px
+.soin_knowledge .text_mark:after{
+	content: ""
+	position: absolute
+	background: $orangeColor
+	top:0
+	left:-1000px
+	width: 1000px
+	height: 34px
+}
+.soin_knowledge .text_mark.small-type:after
+	height: 34px
+.soin_knowledge .text_mark.mainBg:after{
+	background: $mainColor
+}
+.soin_knowledge .text_mark, #soin_idea .text_mark{
+	top: 0;
+    left: 15px;
+    z-index: 10;
+    margin-top: -17px;
+    padding-right: 15px;
+}
+.item_soin_knowledge
+	background: #fff
+	text-align: left
+	cursor: pointer
+	padding-bottom: 10px
+	.title
+		font-weight: bold
+		font-size: 18px
+		color: #colorText
+		line-spacing: 22px
+		padding: 10px
+		margin-bottom: 0
+	.author, .time
+		color: #5f5e5e
+		font-size: 12px
+		padding: 0px 10px 0px 10px
+		.author_name
+			color: $mainColor
+	.hidden-layer
+		position:absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(93, 92, 92, 0.59)
+		z-index: 999
+		display: none
+		button.learn_now, button.learn_now:active, button.learn_now:focus
+			position: absolute
+			border-color: white
+			top: 50%
+			left: 50%
+			margin-top: -20px
+			margin-left: -55px
+			z-index: 999
+			color: #fff
+			text-transform: uppercase
+			font-weight: bold
+			background: transparent
+			border-radius: 0px
+#soin_idea .item_soin_knowledge .hidden-layer
+	bottom: 0px
+.learn_after
+	position: absolute
+	top: 20px
+	right: 45px
+	border-radius: 1000px
+	width: 25px
+	height 25px
+	border: 1px solid #fff
+	background: transparent
+	cursor: pointer
+.saved{
+	background: #fff
+	border-radius: 4px
+	padding: 3px
+	position: absolute
+	right: 5px
+    top: 55px
+    display: none
+}
+.saved.animated
+	display: block
+.saved:after{
+	content: ""
+	width: 5px
+	height: 5px
+	background :#fff
+	transform: rotate(45deg)
+	position: absolute
+	right: 50%
+    top: -2px
+}
+.learn_after:after, .learn_after:before{
+	content: ""
+	height: 2px
+	width: 50%
+	background-color: white
+    display: block
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+}
+.learn_after:after{
+	height: 50%
+	width: 2px
+}  
+.item_soin_knowledge:hover .hidden-layer{
+	display: block;
+}
+.item_soin_knowledge .time{
+	padding: 10px	
+}
+#e-learning .soin_knowledge .text_mark
+	margin-top: -25px
+.action_group
+	text-align: right
+	padding: 10px
+	.button
+		border: none
+.owl-carousel .owl-item .action_group img
+	-webkit-transform-style: inherit;
+.m-t-10
+	margin-top: 10px
+a.view_more_elearning, a.view_more_elearning:hover
+	color: #888
+a.view_more
+	margin-top: 40px
+	text-transform: uppercase
+	font-weight: bold
+	color: $colorText
+	background: transparent
+	width: 150px
+	height: 34px
+	line-height: 34px
+	border-radius: 0px
+.view_rate
+	font-weight: bold
+	text-align: center
+	padding: 0 10px
+	margin-top: 50px
+.item_soin_knowledge .img-wrapper
+	position: relative
+	width: 100%
+.item_soin_knowledge .img-wrapper img
+	width: 100%
+.item_soin_knowledge .img-wrapper:after
+	content: ""
+	display: block
+	width: 20px
+	height: 20px
+	background: #fff
+	left: 50%
+	bottom: 0
+	position: absolute
+	transform: rotate(45deg)
+	margin-left: -10px
+	margin-bottom: -10px
+.view_rate img
+	max-width: 25px
+	display: inline-block!important
+	-webkit-transform-style: inherit!important
+.view_rate span
+	display: inline-block
+	vertical-align: top
+	font-size: 18px
+	color: $colorText
+#soin_news .soin_news_item
+	background: #fff
+	position: relative
+	.title
+		color: $mainColor
+		font-weight: bold
+		text-transform: uppercase
+		font-size: 25px
+		padding: 10px
+		margin-bottom: 0rem
+		padding-bottom: 0rem
+	.content
+		padding: 10px
+	.text_mark
+		background: $orangeColor
+		font-size: 18px
+		font-weight: bold
+		padding: 5px 15px
+		color: white
+		margin-top: -15px
+		position: absolute
+		top: 0
+		left: 0
+#soin_news .child_soin_news img
+	height: 100%
+
+#soin_news .child_soin_news 
+	.title
+		font-size: 18px
+	.content
+		padding: 10px
+
+#soin_news .tile img
+	width: 100%
+
+#profit_item-wrapper 
+	width: 500px
+	height: 111px
+	background: #fff
+	margin: 10px
+
+#profit_item-wrapper .owl-carousel .owl-item img
+	width: auto;
+	max-width: 100px
+	max-height: 100px
+	margin: 0 auto
+
+#profit_item-wrapper .owl-carousel .owl-item div
+	text-align:center
+
+#profit_item-wrapper .owl-prev
+	background: url('../../images/soin/icon/soin-arrow-move.png')
+	background-repeat: no-repeat
+	background-size: cover
+	transform: rotate(180deg)
+#profit_item-wrapper .owl-next
+	background: url('../../images/soin/icon/soin-arrow-move.png')
+	background-repeat: no-repeat
+	background-size: cover
+	
+#soin_footer
+	background: $mainColor
+	color: white
+	a
+		color: #dfdfe0;
+
+#soin_footer h1.title
+	font-size: 20px
+	font-weight:bold
+	color : white
+
+#soin_footer strong
+	color: white
+
+#soin_footer ul li a:hover, #soin_footer a:hover
+	font-weight:bold
+
+#soin_footer .social-icon a.social_icon
+	display: inline-block
+	width: 20px
+	height: 20px
+
+#soin_footer .social-icon
+	margin-top: 20px
+
+#soin_footer .social-icon a.social_icon img
+	width: 20px
+	height: 20px
+
+#soin_footer .social-icon a.social_icon.fb
+	background: url('../../images/soin/icon/facebook-logo_white.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+#soin_footer .social-icon a.social_icon.fb:hover
+	background: url('../../images/soin/icon/facebook-logo.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+#soin_footer .social-icon a.social_icon.yt
+	background: url('../../images/soin/icon/youtube_white.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+#soin_footer .social-icon a.social_icon.yt:hover
+	background: url('../../images/soin/icon/youtube.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+#soin_footer .social-icon a.social_icon.mail
+	background: url('../../images/soin/icon/mail_white.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+#soin_footer .social-icon a.social_icon.mail:hover
+	background: url('../../images/soin/icon/mail.png')
+	background-repeat: no-repeat
+	background-size: contain
+
+.modal-register, .modal-login, .modal-notification
+	text-area
+		resize: none
+	.modal-card-head
+		background: white
+		border-bottom: none
+		padding: 10px 20px 0px 20px
+	h1.title
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 20px
+	input, text-area, input:hover, text-area:hover, input:focus, input:active, text-area:focus, text-area:active
+		box-shadow: none
+		border-radius: 0px
+		border:1px solid #333
+	.delete
+		background-color: transparent
+		border: 1px solid #333
+		&:before, &:after
+			background-color: #333
+		
+.modal-background
+	background-color: rgba(20, 33, 70, 0.86)
+.input, .input:focus, .input:active
+	box-shadow: none
+	border-radius: 0px
+	border:1px solid #b5b5b5
+.nav-verical
+	flex-direction: column
+.input:hover
+	border-color: $colorText
+.modal-register, .modal-notification
+	.modal-card-foot
+		border-top: none
+		background: #fff
+		justify-content: center
+.modal-register .button-login-fb {
+	margin-top: 20px
+	padding-left: 40px
+    padding-right: 40px
+	background: $blueColor
+	buttonGenerator()
+}
+.modal-login .button-login-fb{
+	padding-left: 20px
+    padding-right: 20px
+	background: $blueColor
+	buttonGenerator()
+	margin-bottom: 20px
+}
+.modal-register .text-muted
+	color: #9a9a9a
+	margin-top: 10px
+
+.modal-register .control-label
+	flex-grow: 2
+
+.modal-register .vertical-radio
+	flex-direction: column
+
+.modal-register, .modal-notification
+	.btn-submit
+		padding: 0 40px
+		background: $mainColor
+		buttonGenerator()
+.m-b-10
+	margin-bottom: 10px
+.modal-login
+	.modal-card-foot
+		border-top: none
+		background: #fff
+		justify-content: center
+	.btn-login
+		background: $mainColor
+		buttonGenerator()
+		padding-left: 40px
+		padding-right: 40px
+a.mainColor, a.mainColor:hover
+	color: $mainColor
+	font-weight: bold
+a.mainColor:hover
+	text-decoration: underline
+.m-t-20
+	margin-top: 20px
+.view_all_class, .view_all_class:hover, .view_all_class:focus
+	text-transform: uppercase
+	border: none
+	background: #fff
+	border: 1px solid #b5b5b5
+	border-radius: 0px
+.text_mark.mainBg
+	background-color: $mainColor
+#filter_class 
+	.tabs a, .tabs ul
+		border-bottom: none
+	.tabs li a
+		text-transform: uppercase
+#filter_class .tabs li.is-active a, #filter_class .tabs li.is-active a:hover
+	font-weight:bold
+	font-weight: bold
+	color: $mainColor
+	position:relative
+	border-bottom: none
+#filter_class .tabs li.is-active a:after
+	content: ""
+	width: 40px;
+	height: 4px
+	background : $mainColor
+	position: absolute
+	bottom:0
+	left: 50%
+	margin-left: -20px
+
+#filter_class .button.is-info{
+	background-color: $mainColor
+	border-radius: 0px
+}
+#filter_class .button.is-info img{
+	width: 20px
+	height: 20px
+}
+#search-icon{
+	width: 15px
+	height: 15px
+	position: absolute
+    right: 80px
+    top: 8px
+    z-index: 999
+}
+.sub_select{
+	background: #163260;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    top: 33px;
+    padding: 1px
+    z-index: 999
+    display: none
+    font-size: 12px
+    color: #989898
+}	
+.sub_select.show{
+	display: block
+}
+.sub_select .select_item a
+	display: block;
+	padding: 5px 10px
+	color: #fff
+.sub_select .select_item a:hover
+	background: #fff
+	color: $mainColor
+.soin_register_stick{
+	display: block;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -53px;
+    margin-right: -26px;
+    z-index: 9
+}
+.soin_register_child {
+	background: #fff;
+	border-radius: 3px
+	color: $colorText
+	padding: 4px
+	top: 50%
+	position: fixed
+	right:0
+	z-index: 9
+	margin-top: 35px
+	display: none
+}
+.soin_register_child.animated
+	display: block
+.soin_register_child:after{
+	content: ""
+	width: 5px
+	height: 5px
+	background: #fff
+	transform: rotate(45deg)
+	top: -3px
+    right: 20px
+    position: absolute  
+}  
+.sort_soin:after{
+	content: "";
+    background: url(../../images/soin/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    transform: translateY(50%);
+    margin-top: -4px;
+    z-index: 9
+}
+.sort_soin
+	position: relative
+	
+.control.has-addons .sort_soin .input:last-child
+	border-radius: 0px
+	border-color: $colorText
+#soin_footer
+	.column
+		padding: 0.75rem 0
+	ul li
+		margin-bottom: 8px
+.btn_sendto_soin
+	buttonGenerator()
+	background: $blueColor
+	position: absolute
+	right: 120px
+	bottom: 50px
+	padding: 10px
+	cursor: pointer
+	
+#soin_footer .column ul li a{
+	font-size: 12px
+}	
+#soin_footer .column ul li a > span{
+	font-size: 14px
+}
+
+.owl-slide.owl_slide_1{
+		background-image: url('../../images/soin/slide/slider_1.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_2{
+		background-image: url('../../images/soin/slide/slider_2.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_3{
+		background-image: url('../../images/soin/slide/slider_3.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_4{
+		background-image: url('../../images/soin/slide/slider_4.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_5{
+		background-image: url('../../images/soin/slide/slider_5.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 512px
+}
+.owl-slide.owl_slide_1 .owl--text{
+	float: right
+	width: 500px
+	height: 100%
+	position: relative
+	background: rgba(22, 50, 96, 0.78)
+}
+.owl-slide.owl_slide_1 .owl--text .text-wrapper
+	font-size: 16px
+	color: white
+	padding: 20px 25px
+	margin-top: 50px
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title
+	color: white
+	position: relative
+	height: 80px
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .soin
+	font-size: 50px
+	position: absolute
+	left: 0
+	bottom: 25px
+	font-weight: bold
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .lg
+	font-size: 80px
+	left: 120px
+	font-weight: bold
+	position : absolute
+.owl-slide.owl_slide_1 .owl--text .text-wrapper .title .sau_in
+	font-size: 30px
+	position: absolute
+	left: 0
+	bottom: 0
+	font-weight: bold
+.owl_slider{
+	height: 512px
+}
+.owl_slider .owl-dots {
+	height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 200px;
+    margin-left: -100px
+}
+.owl_slider .owl-dots .owl-dot{
+	display:inline-block
+	width 15px
+	height 15px
+	border-radius 252123px
+	background: $mainColor
+	margin-right: 5px
+}
+.owl_slider .owl-dots .owl-dot.active{
+	background: $colorText
+}
+.owl-carousel {
+	position: relative;
+	height: 100%;
+}
+.owl-carousel .owl-nav .owl-prev{
+	background: url('../../images/soin/left-arrow.png');
+	background-repeat: no-repeat
+	width: 48px
+	height 48px
+	position: absolute
+	left: 0
+	margin-top: -24px
+	top: 50%
+}
+.owl-carousel .owl-nav .owl-next{
+	background: url('../../images/soin/right-arrow.png');
+	background-repeat: no-repeat
+	width: 48px
+	height 48px
+	position: absolute
+	right: 0
+	top: 50%
+	margin-top: -24px
+}
+.breadcrumbs ul li
+	display: inline-block
+.breadcrumbs ul li:last-child a
+	font-weight: bold
+.breadcrumbs ul li:after
+	content: ">>"
+	display: inline-block
+	font-size: 10px
+	color :#989898
+	margin: 0 5px
+.breadcrumbs ul li:last-child:after
+	display: none
+.breadcrumbs ul li a
+	color: $colorText
+#filter_class .button.is-info.clear
+	background-color: transparent
+#filter_class .control.has-addons.flex-end
+	justify-content: flex-end
+	display: inline-flex
+.detail-class .wrapper-detail-content
+	background: #fff
+	padding: 15px
+	color: $colorText
+	position: relative
+	height: 422px
+.detail-class .wrapper-detail-content:before
+	content: ""
+	width: 95%
+	height: 5px
+	background: #dedede
+	position: absolute
+	bottom: 0
+	right: -8px
+.detail-class .wrapper-detail-content:after
+	content: ""
+	height: 95%
+	width: 5px
+	background: #dedede
+	position: absolute
+	right: -8px
+	bottom: 0
+.detail-class .wrapper-detail-content .button
+	width: 130px
+	height: 34px
+	background: none
+	border:none
+	border-radius: 0px
+	color: white
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 16px
+	display: inline-block
+	margin: 130px 10px
+.detail-class .wrapper-detail-content .button.button-red
+	background: $orangeColor
+.detail-class .wrapper-detail-content .button.button-grey
+	background: #989898
+#filter_class .tabs_detail_class ul li a
+	text-transform: none
+#filter_class .tabs_detail_class
+	width: 350px
+	background: #fff
+	margin-bottom: 0
+	padding: 0 20px
+	height: 55px
+#filter_class .content-tabs
+	background: #fff
+	padding: 20px 35px
+.detail-class .wrapper-detail-content .title
+	font-size: 16px
+	font-weight: normal	
+	color: $colorText
+	line-height: 1.5
+.detail-class .wrapper-detail-content .title .class-name
+	color: $mainColor
+	font-weight: bold
+.detail-class .wrapper-detail-content 
+	.info, .time, .grade, .cost, .people
+		margin-bottom: 10px
+.m-b-50
+	margin-bottom: 50px
+.list-connect-member
+	.columns:last-child
+		margin-bottom: 0!important
+	.hero-body
+		margin-top: 100px
+	.item-member
+		background: white
+	.img-member
+		margin: 0 auto
+		position: absolute
+		border-radius: 1023200px
+		overflow: hidden
+	.img-member img
+		width: 100%
+		height: 100%
+	.time, .number_cn
+		padding-left: 10px
+	.time img, .number_cn img
+		width: 20px
+	.name-member
+		padding-top: 10px
+		font-size: 18px
+		font-weight: bold
+.list-connect-member .column{
+	position: relative;
+	margin: 0.75rem;
+    padding: 0rem;
+    background: #fff;
+}
+@media screen and (max-width: 769px) {
+	#soin-header .nav-item a.is-tab:hover:after, #soin-header a.nav-item.is-tab:hover:after, #soin-header .has_sub_menu:hover:after{
+		width: 100%
+		left: 0
+	}
+	#soin-header .has_sub_menu:hover .sub_menu{
+		display: none
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.modal-card{
+		width: 500px
+	}
+	#soin_footer .column.is-9 .columns{
+		margin-left: 60px
+	}
+	#soin_footer .column.is-9 .columns .first{
+		margin-left: 80px
+	}	
+}

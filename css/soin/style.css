@@ -157,17 +157,21 @@ html {
   background: url("../../images/soin/slide/slider_3.png");
   background-size: cover;
 }
+.background_slider.connect {
+  background: url("../../images/soin/slide/slider_5.png");
+  background-size: cover;
+}
 #soin_solution {
   padding: 80px 0;
 }
 #soin_solution h4 {
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   color: #163260;
 }
 #soin_solution .number_solution {
-  font-size: 50px;
+  font-size: 60pt;
   font-weight: bold;
   color: #163260;
 }
@@ -188,7 +192,8 @@ html {
 .soin_knowledge .text_mark,
 #soin_idea .text_mark {
   display: inline-block;
-  padding: 10px 15px;
+  height: 34px;
+  line-height: 34px;
   background: #ef3824;
   color: #fcfcfc;
   font-weight: bold;
@@ -197,21 +202,20 @@ html {
 }
 .soin_knowledge .text_mark.small-type,
 #soin_idea .text_mark.small-type {
-  padding: 5px 10px;
+  line-height: 34px;
+  padding-right: 15px;
 }
 .soin_knowledge .text_mark:after {
   content: "";
-  padding: 10px 15px;
   position: absolute;
   background: #ef3824;
   top: 0;
   left: -1000px;
   width: 1000px;
-  height: 47px;
+  height: 34px;
 }
 .soin_knowledge .text_mark.small-type:after {
-  padding: 5px 10px;
-  height: 37px;
+  height: 34px;
 }
 .soin_knowledge .text_mark.mainBg:after {
   background: #163260;
@@ -221,7 +225,8 @@ html {
   top: 0;
   left: 15px;
   z-index: 10;
-  margin-top: -25px;
+  margin-top: -17px;
+  padding-right: 15px;
 }
 .item_soin_knowledge {
   background: #fff;
@@ -406,14 +411,18 @@ a.view_more {
 #soin_news .soin_news_item .title {
   color: #163260;
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 25px;
+  text-transform: capitalize;
+  font-size: 23px;
   padding: 10px;
   margin-bottom: 0rem;
   padding-bottom: 0rem;
+  line-height: 30px;
 }
 #soin_news .soin_news_item .content {
   padding: 10px;
+  font-size: 16px;
+  color: #5f5e5e;
+  line-height: 30px;
 }
 #soin_news .soin_news_item .text_mark {
   background: #ef3824;
@@ -430,10 +439,14 @@ a.view_more {
   height: 100%;
 }
 #soin_news .child_soin_news .title {
-  font-size: 18px;
+  font-size: 16px;
+  text-transform: capitalize;
 }
 #soin_news .child_soin_news .content {
   padding: 10px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #5f5e5e;
 }
 #soin_news .tile img {
   width: 100%;
@@ -612,7 +625,7 @@ a.view_more {
   margin-top: 20px;
   padding-left: 40px;
   padding-right: 40px;
-  background: #2185dd;
+  background: #2a9bd6;
   border: none;
   color: #fff;
   border-radius: 0px;
@@ -622,7 +635,7 @@ a.view_more {
 .modal-login .button-login-fb {
   padding-left: 20px;
   padding-right: 20px;
-  background: #2185dd;
+  background: #2a9bd6;
   border: none;
   color: #fff;
   border-radius: 0px;
@@ -823,18 +836,26 @@ a.mainColor:hover {
   border-radius: 0px;
   text-transform: uppercase;
   font-weight: bold;
-  background: #2185dd;
+  background: #2a9bd6;
   position: absolute;
   right: 120px;
   bottom: 50px;
   padding: 10px;
   cursor: pointer;
+  height: 34px;
+  color: #fcfcfc;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
 }
 #soin_footer .column ul li a {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #dfdfe0;
 }
 #soin_footer .column ul li a > span {
-  font-size: 14px;
+  font-size: 16px;
+  color: #dfdfe0;
 }
 .owl-slide.owl_slide_1 {
   background-image: url("../../images/soin/slide/slider_1.png");
@@ -1007,8 +1028,8 @@ a.mainColor:hover {
   bottom: 0;
 }
 .detail-class .wrapper-detail-content .button {
-  width: 120px;
-  height: 30px;
+  width: 130px;
+  height: 34px;
   background: none;
   border: none;
   border-radius: 0px;
@@ -1032,7 +1053,8 @@ a.mainColor:hover {
   width: 350px;
   background: #fff;
   margin-bottom: 0;
-  padding: 10px 20px;
+  padding: 0 20px;
+  height: 55px;
 }
 #filter_class .content-tabs {
   background: #fff;
@@ -1057,6 +1079,44 @@ a.mainColor:hover {
 }
 .m-b-50 {
   margin-bottom: 50px;
+}
+.list-connect-member .columns:last-child {
+  margin-bottom: 0 !important;
+}
+.list-connect-member .hero-body {
+  margin-top: 100px;
+}
+.list-connect-member .item-member {
+  background: #fff;
+}
+.list-connect-member .img-member {
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 1023200px;
+  overflow: hidden;
+}
+.list-connect-member .img-member img {
+  width: 100%;
+  height: 100%;
+}
+.list-connect-member .time,
+.list-connect-member .number_cn {
+  padding-left: 10px;
+}
+.list-connect-member .time img,
+.list-connect-member .number_cn img {
+  width: 20px;
+}
+.list-connect-member .name-member {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.list-connect-member .column {
+  position: relative;
+  margin: 0.75rem;
+  padding: 0rem;
+  background: #fff;
 }
 @media screen and (max-width: 769px) {
   #soin-header .nav-item a.is-tab:hover:after,
