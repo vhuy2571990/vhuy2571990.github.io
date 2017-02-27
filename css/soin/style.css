@@ -237,6 +237,8 @@ html {
   text-align: left;
   cursor: pointer;
   padding-bottom: 10px;
+  height: 450px;
+  overflow: hidden;
 }
 .item_soin_knowledge .title {
   font-weight: bold;
@@ -376,6 +378,10 @@ a.view_more {
   text-align: center;
   padding: 0 10px;
   margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
 }
 .item_soin_knowledge .img-wrapper {
   position: relative;
@@ -832,7 +838,7 @@ a.mainColor:hover {
   padding: 0.75rem 0;
 }
 #soin_footer ul li {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .btn_sendto_soin {
   border: none;

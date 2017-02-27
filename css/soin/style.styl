@@ -197,6 +197,8 @@ body,html
 	text-align: left
 	cursor: pointer
 	padding-bottom: 10px
+	height: 450px
+	overflow: hidden
 	.title
 		font-weight: bold
 		font-size: 18px
@@ -309,11 +311,16 @@ a.view_more
 	height: 34px
 	line-height: 34px
 	border-radius: 0px
-.view_rate
+.view_rate{
 	font-weight: bold
 	text-align: center
 	padding: 0 10px
 	margin-top: 50px
+	position: absolute
+	bottom: 0
+    left: 50%
+    margin-left: -25px
+}	
 .item_soin_knowledge .img-wrapper
 	position: relative
 	width: 100%
@@ -674,7 +681,7 @@ a.mainColor:hover
 	.column
 		padding: 0.75rem 0
 	ul li
-		margin-bottom: 5px
+		margin-bottom: 0px
 .btn_sendto_soin
 	buttonGenerator()
 	background: $blueColor
