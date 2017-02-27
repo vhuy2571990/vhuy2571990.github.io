@@ -162,6 +162,12 @@ $(document).ready(function(){
     });
   });
 
+  //news html
+  var heightMainImage = $('.main-news img').innerHeight();
+  $('#special-news img').css({
+    height: heightMainImage + 'px'
+  });
+
   $(window).resize(function(){
     var itemMemberWrapper = $('.list-connect-member').find('.item-member');
     itemMemberWrapper.each(function(){

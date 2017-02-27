@@ -48,7 +48,7 @@ html {
 }
 #soin-header .sub_menu {
   position: absolute;
-  bottom: -82px;
+  top: 49px;
   width: 235px;
   color: #fcfcfc;
   background: #fff;
@@ -159,6 +159,10 @@ html {
 }
 .background_slider.connect {
   background: url("../../images/soin/slide/slider_5.png");
+  background-size: cover;
+}
+.background_slider.news {
+  background: url("../../images/soin/slide/slider_3.png");
   background-size: cover;
 }
 #soin_solution {
@@ -1117,6 +1121,67 @@ a.mainColor:hover {
   margin: 0.75rem;
   padding: 0rem;
   background: #fff;
+}
+.news .main-news,
+.news .child-news {
+  background: #fff;
+  position: relative;
+}
+.news .main-news .text_mark {
+  background: #ef3824;
+  text-transform: uppercase;
+  color: #dedef0;
+  font-size: 18px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  height: 34px;
+  line-height: 34px;
+}
+.news .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #163260;
+  padding: 10px 10px 0px 30px;
+  margin-bottom: 10px;
+}
+.news .content {
+  padding: 0px 10px 10px 30px;
+  font-size: 16px;
+}
+.child-news .title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #163260;
+  font-weight: bold;
+  padding: 0px 10px 0px 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.child-news .content {
+  font-size: 14px;
+  padding: 0px 10px 10px 20px;
+}
+.news-detail .title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #163260;
+  margin-bottom: 5px;
+}
+.news-detail .date {
+  color: #b5b5b5;
+  font-size: 12px;
+}
+.news-detail .content {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.news-detail .content img {
+  display: block;
+  margin: 20px auto;
 }
 @media screen and (max-width: 769px) {
   #soin-header .nav-item a.is-tab:hover:after,
