@@ -454,12 +454,31 @@ a.button.view_more:hover
 	color: white
 	a
 		color: #dfdfe0;
-
+.item-ideal
+	background: white
+	height: 156px
+.item-ideal img
+	width: 156px
+	height: 156px
+	display: inline-block
+.item-ideal .content
+	display: inline-block
+	margin-left: 10px
+	vertical-align: top
+	width: calc(100% - 170px)
+.item-ideal .content .title
+	font-size: 18px
+	font-family: 'Ubuntu-bold', sans-serif
+	text-transform: uppercase
+	color: $mainColor
+	margin-top: 20px
+	margin-bottom: 5px
+.item-ideal .content .time
+	color: $colorText
 #soin_footer h1.title
 	font-size: 20px
 	font-weight:bold
 	color : white
-
 #soin_footer strong
 	color: white
 
@@ -544,6 +563,14 @@ a.button.view_more:hover
 		border-top: none
 		background: #fff
 		justify-content: center
+.create-ideal, .create-ideal:hover
+	margin-bottom: 20px
+	buttonGenerator()
+	background: $orangeColor
+	color: white
+	width: 150px
+	font-weight: normal
+	font-family: 'Ubuntu-bold', sans-serif;
 .modal-register .button-login-fb {
 	margin-top: 20px
 	padding-left: 40px
@@ -551,6 +578,12 @@ a.button.view_more:hover
 	background: $blueColor
 	buttonGenerator()
 }
+h1.text-no-ideal
+	font-size: 20px
+	text-transform: uppercase
+	color: $mainColor
+	margin-bottom: 20px
+	font-family: 'Ubuntu-bold', sans-serif;
 .modal-login .button-login-fb{
 	padding-left: 20px
     padding-right: 20px

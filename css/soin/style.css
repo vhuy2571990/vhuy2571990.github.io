@@ -541,6 +541,32 @@ a.button.view_more:hover {
 #soin_footer a {
   color: #dfdfe0;
 }
+.item-ideal {
+  background: #fff;
+  height: 156px;
+}
+.item-ideal img {
+  width: 156px;
+  height: 156px;
+  display: inline-block;
+}
+.item-ideal .content {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  width: calc(100% - 170px);
+}
+.item-ideal .content .title {
+  font-size: 18px;
+  font-family: 'Ubuntu-bold', sans-serif;
+  text-transform: uppercase;
+  color: #163260;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.item-ideal .content .time {
+  color: #5f5e5e;
+}
 #soin_footer h1.title {
   font-size: 20px;
   font-weight: bold;
@@ -678,6 +704,20 @@ a.button.view_more:hover {
   background: #fff;
   justify-content: center;
 }
+.create-ideal,
+.create-ideal:hover {
+  margin-bottom: 20px;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #ef3824;
+  color: #fff;
+  width: 150px;
+  font-weight: normal;
+  font-family: 'Ubuntu-bold', sans-serif;
+}
 .modal-register .button-login-fb {
   margin-top: 20px;
   padding-left: 40px;
@@ -688,6 +728,13 @@ a.button.view_more:hover {
   border-radius: 0px;
   text-transform: uppercase;
   font-weight: bold;
+}
+h1.text-no-ideal {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #163260;
+  margin-bottom: 20px;
+  font-family: 'Ubuntu-bold', sans-serif;
 }
 .modal-login .button-login-fb {
   padding-left: 20px;
