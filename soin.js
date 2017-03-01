@@ -41,10 +41,12 @@ $('.owl-carousel_4item').owlCarousel({
   }
 });
 
-$('.owl-carousel-profit').owlCarousel({
+var owlProfit = $('.owl-carousel-profit').owlCarousel({
 	items: 4,
 	loop: true,
-	nav: true,
+	nav: false,
+  touchDrag: false,
+  mouseDrag: false,
 	navText: ['', ''],
 	responsive: {
     0: {
@@ -174,6 +176,14 @@ $(document).ready(function(){
   $("#creat-account-link").click(function(){
     $('.modal-notification').removeClass('is-active');
     $(".modal-register").addClass('is-active');
+  });
+
+  $("#profit_item-wrapper .owl-next").click(function(){
+    owlProfit.trigger('next.owl.carousel');
+  });
+
+  $("#profit_item-wrapper .owl-prev").click(function(){
+    owlProfit.trigger('prev.owl.carousel');
   });
 
   $(window).resize(function(){

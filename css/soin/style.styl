@@ -413,25 +413,42 @@ a.button.view_more:hover
 	background: #fff
 	margin: 10px
 	height: 178px
+	position: relative
 #profit_item-wrapper .owl-carousel .owl-item img
-	width: auto;
+	width: auto
 	max-width: 100px
 	max-height: 100px
 	margin: 35px auto
-
 #profit_item-wrapper .owl-carousel .owl-item div
-	text-align:center
-
+	text-align: right
 #profit_item-wrapper .owl-prev
+	width: 34px
+	height: 34px
 	background: url('../../images/soin/icon/soin-arrow-move.png')
 	background-repeat: no-repeat
 	background-size: cover
 	transform: rotate(180deg)
+	position: absolute
+	left: 5%
+	top: 50%
+	margin-top: -17px
+	cursor: pointer
+#profit_item-wrapper .owl-carousel .owl-item img#img-soin-ipp
+	margin-top: 45px
 #profit_item-wrapper .owl-next
+	width: 34px 
+	height: 34px
 	background: url('../../images/soin/icon/soin-arrow-move.png')
 	background-repeat: no-repeat
 	background-size: cover
-	
+	position: absolute
+	right: 5%
+	top: 50%
+	margin-top: -17px
+	cursor: pointer
+.owl-carousel-wrapper-profit
+	width: 70%
+	margin: 0 auto	
 #soin_footer
 	background: $mainColor
 	color: white
