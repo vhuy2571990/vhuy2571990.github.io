@@ -155,7 +155,7 @@ $(document).ready(function(){
   });
 
   $("body").on('mouseleave', '.hidden-layer .learn_after', function(){
-      $(this).parent('.hidden-layer').find('.saved').addClass('animated');
+      $(this).parent('.hidden-layer').find('.saved').removeClass('animated');
   });
 
   var itemMemberWrapper = $('.list-connect-member').find('.item-member');
