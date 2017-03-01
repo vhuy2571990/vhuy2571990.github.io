@@ -120,11 +120,11 @@ $(document).ready(function(){
   });
 
   $('.soin_register_stick').on('mouseenter', function(){
-    $('.soin_register_child').addClass('animated bounceInUp');
+    $('.soin_register_child').addClass('animated');
   });
 
   $('.soin_register_stick').on('mouseleave', function(){
-    $('.soin_register_child').removeClass('animated bounceInUp');
+    $('.soin_register_child').removeClass('animated');
   });
 
   var heightDetailClass = $('.img-detail-class').find('img').innerHeight();
@@ -149,11 +149,11 @@ $(document).ready(function(){
   });
 
   $("body").on('mouseenter', '.hidden-layer .learn_after', function(){
-      $(this).parent('.hidden-layer').find('.saved').addClass('animated bounceInUp');
+      $(this).parent('.hidden-layer').find('.saved').addClass('animated');
   });
 
   $("body").on('mouseleave', '.hidden-layer .learn_after', function(){
-      $(this).parent('.hidden-layer').find('.saved').addClass('animated bounceInUp');
+      $(this).parent('.hidden-layer').find('.saved').addClass('animated');
   });
 
   var itemMemberWrapper = $('.list-connect-member').find('.item-member');

@@ -11,7 +11,9 @@ buttonGenerator()
 @font-face
 	font-family: Ubuntu
 	src: url('../../fonts/ubuntu/ubuntu-regular.ttf');
-	
+@font-face	
+	font-family: Ubuntu-bold
+	src: url('../../fonts/ubuntu/ubuntu-bold.ttf');
 body,html 
 	background: #f4f7f6
 	font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
@@ -55,7 +57,12 @@ body,html
 }   
 #profit 
 	h1.title
-		line-height: 100px
+		line-height: 178px
+		font-size: 30px
+		text-transform: uppercase
+		font-weight bold
+		color: $mainColor
+		font-family: Ubuntu-bold, sans-serif
 #soin-header .has_sub_menu
 	cursor: pointer
 	position: relative
@@ -128,9 +135,10 @@ body,html
 	display block
 	position: relative
 .background_slider.e-learning
-	background: url('../../images/soin/slider_2.png')
-	background-size: cover
+	background: url('../../images/soin/slide/slider_2.png')
+	background-size: contain
 	position: relative
+	background-repeat: no-repeat
 .background_slider.list-ideal
 	background: url('../../images/soin/slide/slider_3.png')
 	background-size: cover
@@ -153,14 +161,14 @@ body,html
 		color: $mainColor
 #soin_idea, #soin_news
 	border-top: 1px solid $orangeColor
-.soin_knowledge, #soin_idea, #soin_news, #profit
+.soin_knowledge, #soin_idea, #soin_news
 	h1.title
 		font-size: 30px
 		text-transform: uppercase
 		font-weight bold
 		color: $mainColor
 		margin-bottom: 4rem
-
+		font-family: Ubuntu-bold, sans-serif
 .soin_knowledge .text_mark, #soin_idea .text_mark
 	display:inline-block
 	height: 34px
@@ -319,7 +327,8 @@ a.button.view_more
 	line-height: 34px
 	border-radius: 0px
 a.button.view_more:hover
-	color: #888
+	background: $colorText
+	color: #fcfcfc
 .view_rate{
 	font-weight: bold
 	text-align: center
@@ -403,12 +412,12 @@ a.button.view_more:hover
 	height: 111px
 	background: #fff
 	margin: 10px
-
+	height: 178px
 #profit_item-wrapper .owl-carousel .owl-item img
 	width: auto;
 	max-width: 100px
 	max-height: 100px
-	margin: 0 auto
+	margin: 35px auto
 
 #profit_item-wrapper .owl-carousel .owl-item div
 	text-align:center
@@ -679,7 +688,7 @@ a.mainColor:hover
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 0;
+    right: 5px;
     transform: translateY(50%);
     margin-top: -4px;
     z-index: 9
@@ -708,6 +717,7 @@ a.mainColor:hover
 	text-transform: uppercase
 	font-size: 14px
 	font-weight: normal
+	font-family: 'Ubuntu', sans-serif
 #soin_footer .column ul li a{
 	font-size: 14px
 	line-height: 22px
@@ -790,12 +800,13 @@ a.mainColor:hover
 	height: 512px
 }
 .owl_slider .owl-dots {
-	height: 40px;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 200px;
+	height: 40px
+    position: absolute
+    left: 50%
+    bottom: 0
+    width: 200px
     margin-left: -100px
+    text-align: center
 }
 .owl_slider .owl-dots .owl-dot{
 	display:inline-block
@@ -815,8 +826,8 @@ a.mainColor:hover
 .owl-carousel .owl-nav .owl-prev{
 	background: url('../../images/soin/left-arrow.png');
 	background-repeat: no-repeat
-	width: 48px
-	height 48px
+	width: 34px
+	height 34px
 	position: absolute
 	left: 0
 	margin-top: -24px
@@ -825,8 +836,8 @@ a.mainColor:hover
 .owl-carousel .owl-nav .owl-next{
 	background: url('../../images/soin/right-arrow.png');
 	background-repeat: no-repeat
-	width: 48px
-	height 48px
+	width: 34px
+	height 34px
 	position: absolute
 	right: 0
 	top: 50%
