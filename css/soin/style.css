@@ -66,6 +66,9 @@ html {
   text-align: left;
   font-size: 16px;
 }
+#soin-header .has_sub_menu a {
+  color: #5f5e5e;
+}
 #soin-header .has_sub_menu:hover > a,
 #soin-header .nav-item a.is-tab:hover,
 #soin-header a.nav-item.is-tab:hover {
@@ -232,13 +235,20 @@ html {
   margin-top: -17px;
   padding-right: 15px;
 }
+.content-list-ideal {
+  margin-bottom: 40px;
+}
+#soin_knowledge .item_soin_knowledge {
+  height: 450px;
+}
 .item_soin_knowledge {
   background: #fff;
   text-align: left;
   cursor: pointer;
   padding-bottom: 10px;
-  height: 450px;
   overflow: hidden;
+  position: relative;
+  height: 370px;
 }
 .item_soin_knowledge .title {
   font-weight: bold;
@@ -290,7 +300,7 @@ html {
 .learn_after {
   position: absolute;
   top: 20px;
-  right: 45px;
+  right: 20px;
   border-radius: 1000px;
   width: 25px;
   height: 25px;
@@ -317,7 +327,7 @@ html {
   background: #fff;
   transform: rotate(45deg);
   position: absolute;
-  right: 50%;
+  right: 25%;
   top: -2px;
 }
 .learn_after:after,
@@ -362,7 +372,7 @@ a.view_more_elearning,
 a.view_more_elearning:hover {
   color: #888;
 }
-a.view_more {
+a.button.view_more {
   margin-top: 40px;
   text-transform: uppercase;
   font-weight: bold;
@@ -372,6 +382,9 @@ a.view_more {
   height: 34px;
   line-height: 34px;
   border-radius: 0px;
+}
+a.button.view_more:hover {
+  color: #888;
 }
 .view_rate {
   font-weight: bold;
@@ -565,7 +578,7 @@ a.view_more {
 .modal-notification h1.title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
 }
 .modal-register input,
 .modal-login input,
@@ -720,6 +733,11 @@ a.mainColor:hover {
 }
 #filter_class .tabs li a {
   text-transform: uppercase;
+  color: #163260;
+}
+.text-info {
+  color: #163260;
+  font-size: 18px;
 }
 #filter_class .tabs li.is-active a,
 #filter_class .tabs li.is-active a:hover {
@@ -1157,9 +1175,6 @@ a.mainColor:hover {
 .news .content {
   padding: 0px 10px 10px 30px;
   font-size: 16px;
-}
-.child-news img {
-  min-height: 100px;
 }
 .child-news .title {
   font-size: 16px;

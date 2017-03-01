@@ -2,7 +2,8 @@ var owl = $('.owl-carousel_normal');
 owl.owlCarousel({
   margin: 30,
   loop: true,
-  nav: true,
+  touchDrag: false,
+  mouseDrag: false,
   navText: ['', ''],
   responsive: {
     0: {
@@ -20,7 +21,9 @@ owl.owlCarousel({
 $('.owl-carousel_4item').owlCarousel({
   margin: 30,
   loop: true,
-  nav: true,
+  nav: false,
+  touchDrag: false,
+  mouseDrag: false,
   navText: ['', ''],
   responsive: {
     0: {
@@ -61,15 +64,15 @@ $('.owl-carousel-profit').owlCarousel({
   }
 });
 
-  $("#owl-example").owlCarousel({
-    items: 1,
-    navigation : true, 
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem: true,
-      pagination: false,
-      rewindSpeed: 500
-  });
+$("#owl-example").owlCarousel({
+  items: 1,
+  navigation : true, 
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem: true,
+    pagination: false,
+    rewindSpeed: 500
+});
 
 $(document).ready(function(){
   //news html
@@ -168,7 +171,10 @@ $(document).ready(function(){
     });
   });
 
-  
+  $("#creat-account-link").click(function(){
+    $('.modal-notification').removeClass('is-active');
+    $(".modal-register").addClass('is-active');
+  });
 
   $(window).resize(function(){
     var itemMemberWrapper = $('.list-connect-member').find('.item-member');

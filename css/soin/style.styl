@@ -62,6 +62,8 @@ body,html
 	color: #5f5e5e
 	text-align: left
 	font-size: 16px
+#soin-header .has_sub_menu a
+	color: #5f5e5e
 #soin-header .has_sub_menu:hover > a, #soin-header .nav-item a.is-tab:hover, #soin-header a.nav-item.is-tab:hover
 	color: $mainColor
 	font-weight: bold	
@@ -192,13 +194,18 @@ body,html
     margin-top: -17px;
     padding-right: 15px;
 }
+.content-list-ideal 
+	margin-bottom: 40px
+#soin_knowledge .item_soin_knowledge
+	height: 450px
 .item_soin_knowledge
 	background: #fff
 	text-align: left
 	cursor: pointer
 	padding-bottom: 10px
-	height: 450px
 	overflow: hidden
+	position: relative
+	height: 370px
 	.title
 		font-weight: bold
 		font-size: 18px
@@ -239,7 +246,7 @@ body,html
 .learn_after
 	position: absolute
 	top: 20px
-	right: 45px
+	right: 20px
 	border-radius: 1000px
 	width: 25px
 	height 25px
@@ -264,7 +271,7 @@ body,html
 	background :#fff
 	transform: rotate(45deg)
 	position: absolute
-	right: 50%
+	right: 25%
     top: -2px
 }
 .learn_after:after, .learn_after:before{
@@ -301,7 +308,7 @@ body,html
 	margin-top: 10px
 a.view_more_elearning, a.view_more_elearning:hover
 	color: #888
-a.view_more
+a.button.view_more
 	margin-top: 40px
 	text-transform: uppercase
 	font-weight: bold
@@ -311,6 +318,8 @@ a.view_more
 	height: 34px
 	line-height: 34px
 	border-radius: 0px
+a.button.view_more:hover
+	color: #888
 .view_rate{
 	font-weight: bold
 	text-align: center
@@ -483,7 +492,7 @@ a.view_more
 	h1.title
 		text-transform: uppercase
 		font-weight: bold
-		font-size: 20px
+		font-size: 19px
 	input, text-area, input:hover, text-area:hover, input:focus, input:active, text-area:focus, text-area:active
 		box-shadow: none
 		border-radius: 0px
@@ -570,6 +579,10 @@ a.mainColor:hover
 		border-bottom: none
 	.tabs li a
 		text-transform: uppercase
+		color: $mainColor
+.text-info
+	color: $mainColor
+	font-size:18px
 #filter_class .tabs li.is-active a, #filter_class .tabs li.is-active a:hover
 	font-weight:bold
 	font-weight: bold
@@ -954,8 +967,6 @@ a.mainColor:hover
 .news .content
 	padding: 0px 10px 10px 30px
 	font-size: 16px
-.child-news img
-	min-height: 100px
 .child-news .title
 	font-size: 16px
 	text-transform: uppercase
