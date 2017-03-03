@@ -101,7 +101,7 @@ $(document).ready(function(){
 	loginButton.on('click', function(){openModal('.modal-login')});
 	registerButton.on('click', function(){openModal('.modal-register')});
 
-	closeRegister.on('click', function(){closeModal('.modal-register')});
+	closeRegister.on('click', function(){closeModal('.modal-register'); closeModal('.modal-login')});
 	closeLogin.on('click', function(){closeModal('.modal-login')});
 
 	subMenu.on('click', function(){openModal('.modal-notification')});
