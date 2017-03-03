@@ -173,7 +173,7 @@ $(document).ready(function(){
     });
   });
 
-  $("#creat-account-link").click(function(){
+  $("#creat-account-link, .modal-login .mainColor").click(function(){
     $('.modal-notification').removeClass('is-active');
     $(".modal-register").addClass('is-active');
   });
