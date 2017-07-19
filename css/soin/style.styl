@@ -127,7 +127,6 @@ body,html
 #seed_graph .item.active span
 	font-weight: bold
 .background_slider
-	background: url('../../images/soin/bg-home.png')
 	background-repeat: no-repeat
 	background-size: cover
 	height: 512px
@@ -777,47 +776,29 @@ a.mainColor:hover
 	font-size: 16px
 	color:  #dfdfe0
 }
-
-.owl-slide.owl_slide_1{
-		background-image: url('../../images/soin/slide/slider_1.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 512px
+.owl-slide.owl_slide_1 img,
+.owl-slide.owl_slide_2 img,
+.owl-slide.owl_slide_3 img,
+.owl-slide.owl_slide_4 img,
+.owl-slide.owl_slide_5 img{
+	height: 100%
 }
-.owl-slide.owl_slide_2{
-		background-image: url('../../images/soin/slide/slider_2.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 512px
-}
-.owl-slide.owl_slide_3{
-		background-image: url('../../images/soin/slide/slider_3.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 512px
-}
-.owl-slide.owl_slide_4{
-		background-image: url('../../images/soin/slide/slider_4.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 512px
-}
+.owl-slide.owl_slide_1,
+.owl-slide.owl_slide_2,
+.owl-slide.owl_slide_3,
+.owl-slide.owl_slide_4,
 .owl-slide.owl_slide_5{
-		background-image: url('../../images/soin/slide/slider_5.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 512px
+	position: relative
+	width: 100%
+	height: 512px
 }
 .owl-slide.owl_slide_1 .owl--text{
 	float: right
 	width: 500px
 	height: 100%
-	position: relative
+	position: absolute
+	right: 0
+	top: 0
 	background: rgba(22, 50, 96, 0.78)
 }
 .owl-slide.owl_slide_1 .owl--text .text-wrapper

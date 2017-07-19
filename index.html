@@ -10,7 +10,7 @@
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!--gsap-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/tether.min.js"></script>
@@ -20,10 +20,10 @@
 	<script src="js/script.js"></script>
 </head>
 <body data-ajax-transitions="true" ng-controller="infoCtrl">
-<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" 
+<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard"
 		data-method="standard" style=" opacity: 0;  display: none; ">
-		<span class="loading-icon none"> 
-			<span class="default-loading-icon spin"></span> 
+		<span class="loading-icon none">
+			<span class="default-loading-icon spin"></span>
 		</span>
 </div>
 	<div class="container-fluid">
@@ -42,7 +42,7 @@
     			<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
     			<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
     		</ul>
-    	</div><!--end user info--> 	
+    	</div><!--end user info-->
     	<div id="target">
     		<h3>Objective</h3>
     		<p>
@@ -93,7 +93,7 @@
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
 				    <section ng-repeat="k in dataWorkexperience">
 					  <div class="work-experience m-t-1">
-						  <i class="icon-check icons text-success"></i> 
+						  <i class="icon-check icons text-success"></i>
 						  <span class="company-name">{{k.company}}</span>
 						  <span class="_time"><time>({{k.time}})</time></span>
 					  </div>
@@ -115,26 +115,13 @@
 					    		<small class="text-muted">- 2015</small>
 								<p>
 									Work at Gianty company.
-								</p>	
+								</p>
 					    	</li>
 					    </ul>
 				    </div>
 				  </div>
 				  <div class="panel panel-default">
-				  	<div class="panel-heading" role="tab" id="headingThree">
-				      <h5 class="panel-title">My Projects</h5>
-				    </div>
-				     <div class="panel project-item-wrapper">
-					    <div class="row">
-					    	<div class="col-md-4 proj-item"  ng-repeat="z in listProject"> 
-					    		<a ng-href="pages/backMain.html">
-					    			<img ng-src="{{z.image}}" alt="" class="rounded mx-auto d-block img-thumbnail">
-					    		</a>
-					    		<span class="proj-name">{{z.name}}</span>
-					    		<button class="btn-preview" ng-click="openPreview(z)">Preview</button>
-					    	</div>
-					    </div>
-				    </div>
+				  	
 				  </div>
 				</div><!--end accordion -->
 		</div>
