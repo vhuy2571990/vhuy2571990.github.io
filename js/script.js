@@ -44,10 +44,10 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		{name: 'Blog'},
 		{name: 'Shop / Ecommerce'}
 	];
-	
+
 	var ele = $('#avatar');
 	var tween = TweenLite.to(ele, 1, {scaleX: 1.5, scaleY:1.5, ease:Power1.easeInOut, y: 0});
-	
+
 	$document.bind('click', function(e){
 		if(!$('.vixs-2').is(angular.element(e.target))
 			&& $('.vixs-2 ').has(e.target).length === 0){
@@ -65,7 +65,7 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	$scope.dataWorkexperience = [
 		{
 			company: 'Gianty Co.Ltd',
-			time: '2 years until now',
+			time: '2015-3/2017',
 			works: [
 				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
 				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS.'},
@@ -73,6 +73,14 @@ app.controller('infoCtrl', function($scope, $document, $window){
 				{content: 'Fixed front end bugs.'},
 				{content: 'Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.'},
 				{content: 'Experience with Angular , Ionic, Tweenlite.'}
+			]
+		},
+		{
+			company: 'BlueCom Ecommerce Expert',
+			time: '3/2017 until now',
+			works: [
+				{content: 'Front-end developer for Magento platform theme UI.'},
+				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'}
 			]
 		}
 	]
@@ -90,7 +98,7 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		{link: './pages/full-page/gnt-demo/index.html', name: 'Gianty Company PR site', image: './pages/full-page-gnt.png'},
 		{link: './pages/ecommerce/deer/deer.html', name: 'Deer Shopping Demo', image: './pages/deer-shop.jpg'}
 	]
-	
+
 	$scope.openPreview = function(data){
 		$window.open("pages/backMain.html", "_blank")
 	};

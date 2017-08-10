@@ -4,7 +4,7 @@
 }
 body, html{
     font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.8;    
+    line-height: 1.8;
 }
 a, a:hover{color:#333;text-decoration: none;}
 /*.panel-title a{border-bottom: 2px solid #34495e;}*/
@@ -34,7 +34,7 @@ a, a:hover{color:#333;text-decoration: none;}
     right: 0;
     bottom: 0;
     background: transparent;
-    transition: all .2s ease-in-out;    
+    transition: all .2s ease-in-out;
 }
 .proj-item:hover a::after{
     background: rgba(51, 51, 51, 0.53);
@@ -251,7 +251,7 @@ rotate_circle{
         }
         100%{
             transform: rotate(-30deg);
-            -o-transform: rotate(-30deg);   
+            -o-transform: rotate(-30deg);
         }
 }
 
@@ -302,6 +302,6 @@ rotate_circle{
 ._optd ._item:last-child{ border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
 ._optd ._item:hover{background: #ff6000; color:#fff; cursor: pointer; border-color: #ff6000;}
 
-._skill-container img{margin: 2px; 
-    /*-webkit-transform-origin-y: top; transform-origin-y: top; -webkit-animation: rotate_circle 2s infinite;*/}
+._skill-container img{margin: 2px;}
+._skill-container img:hover {-webkit-transform-origin-y: top; transform-origin-y: top; -webkit-animation: rotate_circle 2s infinite; cursor: pointer;}
 a:focus, a:visited{outline: none;}
