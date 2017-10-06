@@ -76,12 +76,13 @@ app.controller('infoCtrl', function($scope, $document, $window){
 			]
 		},
 		{
-			company: 'BlueCom Ecommerce Expert',
+			company: 'Isobar Ecommerce Expert',
 			time: '3/2017 until now',
 			works: [
 				{content: 'Front-end developer for Magento platform theme UI.'},
 				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'}
-			]
+			],
+			process: true
 		}
 	]
 

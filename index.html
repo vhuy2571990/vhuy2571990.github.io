@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Huy Nguyen - Curriculum Vitae</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/simple-lineicons.css">
+	<link rel="stylesheet" href="css/hover.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -52,7 +53,7 @@
 		<div id="skills">
 			<h3>Skills</h3>
 			<div class="_skill-container">
-				<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive img-circle" width="50" height="50" ng-repeat="s in skills">
+				<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50" ng-repeat="s in skills">
 			</div>
 		</div>
 
@@ -93,7 +94,14 @@
 				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
 				    <section ng-repeat="k in dataWorkexperience">
 					  <div class="work-experience m-t-1">
-						  <i class="icon-check icons text-success"></i>
+						  <i class="icon-check icons text-success" ng-if="!k.process"></i>
+							<div class="spinner" ng-if="k.process">
+							  <div class="rect1"></div>
+							  <div class="rect2"></div>
+							  <div class="rect3"></div>
+							  <!-- <div class="rect4"></div>
+							  <div class="rect5"></div> -->
+							</div>
 						  <span class="company-name">{{k.company}}</span>
 						  <span class="_time"><time>({{k.time}})</time></span>
 					  </div>
@@ -118,9 +126,9 @@
 								</p>
 					    	</li>
 								<li>
-									<small class="text-mute"></small>
+									<small class="text-muted">- 3/2017 - now</small>
 									<p>
-										Work at BlueCom Ecommerce Expert (Magento FrontEnd Developer).
+										Work at Isobar Ecommerce VN (Magento FrontEnd Developer).
 									</p>
 								</li>
 					    </ul>
