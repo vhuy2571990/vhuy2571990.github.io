@@ -22,15 +22,10 @@
 	});
 
 	$(document).ready(function(){
-		$(window).scroll(function(e){
-			var scrolled = $(window).scrollTop();
-			if(scrolled > 0){
-				$('#left-sidebar').css({
-					'transform': 'translateY(' + scrolled + 'px)'
-				});
-			}
-		});
+		TweenLite.to(".timeline-group.first", 1, {css: {height:"327px", overflow: "visible"}, delay: 1, ease: Power1.easeInOut});
+		TweenLite.to(".timeline-group.second", 1, {css: {height:"133px", overflow: "visible"}, delay: 2, ease: Power2.easeInOut});
 	});
+
 })();
 
 var app = angular.module('app', []);
@@ -42,7 +37,9 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	];
 
 	var ele = $('#avatar');
-	var tween = TweenLite.to(ele, 1, {scaleX: 1.5, scaleY:1.5, ease:Power1.easeInOut, y: 0});
+	var tween = TweenLite.to(ele, 1, {scaleX: 1.2, scaleY:1.2, ease:Power1.easeInOut, y: 0});
+
+	TweenLite.to(".header-timeline", 2, {opacity: 1, ease:Power1.easeInOut});
 
 	$document.bind('click', function(e){
 		if(!$('.vixs-2').is(angular.element(e.target))

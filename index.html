@@ -36,7 +36,7 @@
 					<div class="user-name text-xs-center">
 						Huy Nguyễn
 					</div>
-					<div class="text-xs-center text-muted"><small>{{currentInfo.helloText}}</small></div>
+					<div class="text-xs-center text-muted"><small class="tip-text">{{currentInfo.helloText}}</small></div>
 					<ul class="list-group list-group-info">
 						<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
 						<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
@@ -95,7 +95,7 @@
 							<header class="header-timeline">
 								<span>Start</span>
 							</header>
-							<section ng-repeat="k in dataWorkexperience" class="timeline-group" ng-if="k.years == '2015'">
+							<section ng-repeat="k in dataWorkexperience" class="timeline-group first" ng-if="k.years == '2015'">
 								<div class="item-marker"><i class="icon-check icons text-success" ng-if="!k.process"></i></div>
 								<div class="item-content">
 									<div class="work-experience m-t-1">
@@ -112,7 +112,7 @@
 							<header class="header-timeline">
 								<span class="small">2017</span>
 							</header>
-							<section ng-repeat="k in dataWorkexperience" class="timeline-group" ng-if="k.years == '2017'">
+							<section ng-repeat="k in dataWorkexperience" class="timeline-group second" ng-if="k.years == '2017'">
 								<div class="item-marker process">
 										<div class="spinner" ng-if="k.process">
 											<div class="rect1"></div>
