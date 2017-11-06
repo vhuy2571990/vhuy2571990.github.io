@@ -605,6 +605,10 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
   position: relative;
 }
 
+#disqus_thread {
+  opacity: 0;
+}
+
 .tip-text {
   color: #fff;
   background: #E74C3C;

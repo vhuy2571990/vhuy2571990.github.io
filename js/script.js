@@ -24,6 +24,8 @@
 	$(document).ready(function(){
 		TweenLite.to(".timeline-group.first", 1, {css: {height:"327px", overflow: "visible"}, delay: 1, ease: Power1.easeInOut});
 		TweenLite.to(".timeline-group.second", 1, {css: {height:"133px", overflow: "visible"}, delay: 2, ease: Power2.easeInOut});
+		TweenLite.to("#disqus_thread", 1, {opacity: 1, delay: 3, ease: Power2.easeInOut});
+
 	});
 
 })();
