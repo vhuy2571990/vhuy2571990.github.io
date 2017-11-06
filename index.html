@@ -1,145 +1,175 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Huy Nguyen - Curriculum Vitae</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/simple-lineicons.css">
 	<link rel="stylesheet" href="css/hover.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script><!--gsap-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<!--gsap-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/tether.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
+
 <body data-ajax-transitions="true" ng-controller="infoCtrl">
-<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard"
-		data-method="standard" style=" opacity: 0;  display: none; ">
+	<div id="ajax-loading-screen" data-disable-fade-on-click="1" data-effect="standard" data-method="standard" style=" opacity: 0;  display: none; ">
 		<span class="loading-icon none">
 			<span class="default-loading-icon spin"></span>
 		</span>
-</div>
+	</div>
 	<div class="container-fluid">
-	 <!-- Start left side bar-->
-	<div class="row">
-    <nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12 left-sidebar">
-    	<div class="user-info">
-    		<!-- <div id="gsap-test"></div> -->
-    		<img src="images/avatar-svg.svg" id="avatar" class="avatar img-responsive center-block img-circle" width="74" height="74" alt="">
-    		<div class="user-name text-xs-center">
-    			Huy Nguyễn
-    		</div>
-    		<div class="text-xs-center text-muted"><small>{{currentInfo.helloText}}</small></div>
-    		<ul class="list-group list-group-info">
-    			<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
-    			<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
-    			<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
-    		</ul>
-    	</div><!--end user info-->
-    	<div id="target">
-    		<h3>Objective</h3>
-    		<p>
-    			{{currentInfo.objective}}
-    		</p>
-    	</div>
-		<div id="skills">
-			<h3>Skills</h3>
-			<div class="_skill-container">
-				<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50" ng-repeat="s in skills">
-			</div>
-		</div>
+		<!-- Start left side bar-->
+		<div class="row">
+			<nav id="left-sidebar" class="col-sm-6 col-md-4 col-lg-3 col-xs-12 left-sidebar">
+				<div class="user-info">
+					<!-- <div id="gsap-test"></div> -->
+					<img src="images/avatar-svg.svg" id="avatar" class="avatar img-responsive center-block img-circle" width="74" height="74" alt="">
+					<div class="user-name text-xs-center">
+						Huy Nguyễn
+					</div>
+					<div class="text-xs-center text-muted"><small>{{currentInfo.helloText}}</small></div>
+					<ul class="list-group list-group-info">
+						<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
+						<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
+						<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
+					</ul>
+				</div>
+				<!--end user info-->
+				<div id="target">
+					<h3>Objective</h3>
+					<p>
+						{{currentInfo.objective}}
+					</p>
+				</div>
+				<div id="skills">
+					<h3>Skills</h3>
+					<div class="_skill-container">
+						<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50" ng-repeat="s in skills">
+					</div>
+				</div>
 
-		<div id="interests">
-			<h3>Interests</h3>
-			<ul>
-				<li>Footballs</li>
-				<li>Music</li>
-				<li>Coding</li>
-			</ul>
-		</div>
-    </nav>
-  <!-- End left side bar-->
-  <!-- Main content-->
+				<div id="interests">
+					<h3>Interests</h3>
+					<ul>
+						<li>Footballs</li>
+						<li>Music</li>
+						<li>Coding</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- End left side bar-->
+			<!-- Main content-->
 			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1 main-content">
 				<div id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h5 class="panel-title">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h5 class="panel-title">
 				           Education
 				      </h5>
-				    </div>
-				    <div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-					  	<ul>
-					  		<li>
-						  		<span>Li Tu Trong High School - Nha Trang - Khanh Hoa (<small class="time text-muted">2005-2008</small>)</span>
-					  		</li>
-					  		<li>
-					  			<span>Ho Chi Minh City University of Science (<small class="time text-muted">2008-2011</small>)</span>
-					  		</li>
-					  	</ul>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h5 class="panel-title">Work Experience</h5>
-				    </div>
-				    <div id="collapseTwo"  role="tabpanel" aria-labelledby="headingTwo">
-				    <section ng-repeat="k in dataWorkexperience">
-					  <div class="work-experience m-t-1">
-						  <i class="icon-check icons text-success" ng-if="!k.process"></i>
-							<div class="spinner" ng-if="k.process">
-							  <div class="rect1"></div>
-							  <div class="rect2"></div>
-							  <div class="rect3"></div>
-							  <!-- <div class="rect4"></div>
-							  <div class="rect5"></div> -->
-							</div>
-						  <span class="company-name">{{k.company}}</span>
-						  <span class="_time"><time>({{k.time}})</time></span>
-					  </div>
-					  	<ul class="m-t-1">
-					  		<li ng-repeat="z in k.works">
-					  			{{z.content}}
-					  		</li>
-					  	</ul>
-					</section>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingThree">
-				      <h5 class="panel-title">Activities</h5>
-				    </div>
-				    <div>
-					    <ul class="activites-streamline">
-					    	<li>
-					    		<small class="text-muted">- 2015-3/2017</small>
-								<p>
-									Work at Gianty company (FrontEnd Developer)
-								</p>
-					    	</li>
+						</div>
+						<div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<ul>
 								<li>
-									<small class="text-muted">- 3/2017 - now</small>
-									<p>
-										Work at Isobar Ecommerce VN (Magento FrontEnd Developer).
-									</p>
+									<span>Li Tu Trong High School - Nha Trang - Khanh Hoa (<small class="time text-muted">2005-2008</small>)</span>
 								</li>
-					    </ul>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
+								<li>
+									<span>Ho Chi Minh City University of Science (<small class="time text-muted">2008-2011</small>)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h5 class="panel-title">Activity</h5>
+						</div>
+						<div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="timeline">
+							<header class="header-timeline">
+								<span>Start</span>
+							</header>
+							<section ng-repeat="k in dataWorkexperience" class="timeline-group" ng-if="k.years == '2015'">
+								<div class="item-marker"><i class="icon-check icons text-success" ng-if="!k.process"></i></div>
+								<div class="item-content">
+									<div class="work-experience m-t-1">
+										<span class="company-name">{{k.company}}</span>
+										<span class="_time"><time>({{k.time}})</time></span>
+									</div>
+									<ul class="m-t-1">
+										<li ng-repeat="z in k.works">
+											{{z.content}}
+										</li>
+									</ul>
+								</div>
+							</section>
+							<header class="header-timeline">
+								<span class="small">2017</span>
+							</header>
+							<section ng-repeat="k in dataWorkexperience" class="timeline-group" ng-if="k.years == '2017'">
+								<div class="item-marker process">
+										<div class="spinner" ng-if="k.process">
+											<div class="rect1"></div>
+											<div class="rect2"></div>
+											<div class="rect3"></div>
+										</div>
+								</div>
+								<div class="item-content">
+									<div class="work-experience m-t-1">
+										<span class="company-name">{{k.company}}</span>
+										<span class="_time"><time>({{k.time}})</time></span>
+									</div>
+									<ul class="m-t-1">
+										<li ng-repeat="z in k.works">
+											{{z.content}}
+										</li>
+									</ul>
+								</div>
+							</section>
+							<div class="header-timeline">
+								<span>End</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end accordion -->
+				<a href="index.html#disqus_thread"></a>
+				<div id="disqus_thread"></div>
+				<script>
+				/**
+				* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				*/
+				/*
+				var disqus_config = function () {
+				this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
 
-				  </div>
-				</div><!--end accordion -->
+				s.src = '//vhuy2571990.disqus.com/embed.js';
+
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+							</div><!-- end col 8-->
+						</div>
+				</div>
+				  <!-- End content-->
+			</div>
 		</div>
-	</div><!-- end containter -->
-</div>
+		<!-- end containter -->
+	</div>
 </body>
+<script id="dsq-count-scr" src="//vhuy2571990.disqus.com/count.js" async></script><!--disq comment count -->
 </html>

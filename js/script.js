@@ -1,9 +1,5 @@
 (function(){
 	'use strict';
-	$('[data-toggle="popover"]').popover({
-			    container: 'body'
-	});
-
 	$(window).load(function(){
 		$('body').attr('data-ajax-transitions', false);
 		$('#ajax-loading-screen').hide();
@@ -65,7 +61,8 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	$scope.dataWorkexperience = [
 		{
 			company: 'Gianty Co.Ltd',
-			time: '2015-3/2017',
+			time: 'July 2015',
+			years: '2015',
 			works: [
 				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
 				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS.'},
@@ -77,7 +74,8 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		},
 		{
 			company: 'Isobar Ecommerce Expert',
-			time: '3/2017 until now',
+			time: 'March 2017',
+			years: '2017',
 			works: [
 				{content: 'Front-end developer for Magento platform theme UI.'},
 				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'}
@@ -91,10 +89,10 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		address: '666/47 (3/2 Street, Q.10, tp.HCM)',
 		mail: 'vhuy271990@gmail.com',
 		phone: '01223636224',
-		objective: 'Executed and contributed to full-stack web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
+		objective: 'Executed and contributed to front-end web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
 	}
 
-	$scope.skills = [{name: 'Html', image: 'html.png'}, {name: 'Css', image: 'css3.png'}, {name: 'Javascript', image: 'js.png'}, {name: 'Angular', image: 'angular.png'}, {name: 'Ionic', image: 'ionic.jpg'}, {name: 'NodeJs', image: 'nodejs.png'}]
+	$scope.skills = [{name: 'Html', image: 'html.png'}, {name: 'Css', image: 'css3.png'}, {name: 'Javascript', image: 'js.png'}, {name: 'Angular', image: 'angular.png'}, {name: 'Ionic', image: 'ionic.jpg'}]
 	$scope.listProject = [
 		{link: './pages/full-page/gnt-demo/index.html', name: 'Gianty Company PR site', image: './pages/full-page-gnt.png'},
 		{link: './pages/ecommerce/deer/deer.html', name: 'Deer Shopping Demo', image: './pages/deer-shop.jpg'}
