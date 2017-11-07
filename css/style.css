@@ -34,10 +34,7 @@ a, a:hover {
 }
 
 .row {
-	display: -ms-flex;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+  display: block;
 }
 
 #left-sidebar .user-name {
@@ -53,11 +50,9 @@ a, a:hover {
 }
 
 .left-sidebar {
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
-	max-width: 400px;
-	text-align: center;
-  padding-top: 1.5em;
+  display: block;
+  max-width: 100%;
+  text-align: center;
 }
 
 .proj-item a {
@@ -237,6 +232,10 @@ a, a:hover {
 	font-size: 12px;
 }
 
+.main-content {
+  padding: 0 1em;
+}
+
 .main-content-cv {
   margin-top: 10px;
 }
@@ -373,8 +372,6 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-  height: 0px;
-  overflow: hidden;
 }
 
 .timeline-group .item-marker {

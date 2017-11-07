@@ -22,10 +22,18 @@
 	});
 
 	$(document).ready(function(){
-		TweenLite.to(".timeline-group.first", 1, {css: {height:"327px", overflow: "visible"}, delay: 1, ease: Power1.easeInOut});
-		TweenLite.to(".timeline-group.second", 1, {css: {height:"133px", overflow: "visible"}, delay: 2, ease: Power2.easeInOut});
+		var _innerHeight1 = $('.timeline-group.first').innerHeight(),
+		    _innerHeight2 = $('.timeline-group.second').innerHeight();
+		TweenLite.fromTo(".timeline-group.first", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight1, overflow: "visible"}, delay: 1, ease: Power2.easeInOut});
+		TweenLite.fromTo(".timeline-group.second", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight2, overflow: "visible"}, delay: 2, ease: Power2.easeInOut});
+		TweenLite.to(".timeline-group.first .item-content", 1, {opacity: 1, delay: 3, ease: Power1.easeInOut});
+		TweenLite.to(".timeline-group.second .item-content", 1, {opacity: 1, delay: 4, ease: Power1.easeInOut});
 		TweenLite.to("#disqus_thread", 1, {opacity: 1, delay: 3, ease: Power2.easeInOut});
+	});
 
+	$(window).resize(function() {
+			$(".timeline-group.first").css("height", "auto");
+			$(".timeline-group.second").css("height", "auto");
 	});
 
 })();
