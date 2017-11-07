@@ -43,6 +43,7 @@
 						<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
 						<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
 						<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
+						<li><i class="icon-social-facebook icons"></i><a ng-href="{{currentInfo.fb}}">{{currentInfo.fb}}</a></li>
 					</ul>
 				</div>
 				<!--end user info-->
@@ -58,7 +59,6 @@
 						<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50" ng-repeat="s in skills">
 					</div>
 				</div>
-
 				<div id="interests">
 					<h3>Interests</h3>
 					<ul>
@@ -72,7 +72,7 @@
 			<!-- Main content-->
 			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1 main-content">
 				<div id="accordion" role="tablist" aria-multiselectable="true">
-					<div class="panel panel-default">
+					<div class="panel panel-default first">
 						<div class="panel-heading" role="tab" id="headingOne">
 							<h5 class="panel-title">
 				           Education
@@ -94,7 +94,7 @@
 							<h5 class="panel-title">Activity</h5>
 						</div>
 						<div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="timeline">
-							<header class="header-timeline">
+							<header class="header-timeline first">
 								<span>Start</span>
 							</header>
 							<section ng-repeat="k in dataWorkexperience" class="timeline-group first" ng-if="k.years == '2015'">
@@ -111,7 +111,7 @@
 									</ul>
 								</div>
 							</section>
-							<header class="header-timeline">
+							<header class="header-timeline second">
 								<span class="small">2017</span>
 							</header>
 							<section ng-repeat="k in dataWorkexperience" class="timeline-group second" ng-if="k.years == '2017'">
@@ -134,7 +134,7 @@
 									</ul>
 								</div>
 							</section>
-							<div class="header-timeline">
+							<div class="header-timeline third">
 								<span>End</span>
 							</div>
 						</div>
@@ -172,6 +172,16 @@
 		</div>
 		<!-- end containter -->
 	</div>
+
+<div class="popup google-map" id="googlemap-address">
+		<iframe
+			width="600"
+			height="450"
+			frameborder="0" style="border:0"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDduW921vsA0NTh6tI85Cg06VCN_Ll7st8
+				&q=Space+Needle,Seattle+WA" allowfullscreen>
+		</iframe>
+</div>
 </body>
 <script id="dsq-count-scr" src="//vhuy2571990.disqus.com/count.js" async></script><!--disq comment count -->
 </html>

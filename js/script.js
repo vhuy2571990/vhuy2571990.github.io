@@ -1,5 +1,6 @@
 (function(){
 	'use strict';
+	// google api key: AIzaSyDduW921vsA0NTh6tI85Cg06VCN_Ll7st8
 	$(window).load(function(){
 		$('body').attr('data-ajax-transitions', false);
 		$('#ajax-loading-screen').hide();
@@ -24,10 +25,11 @@
 	$(document).ready(function(){
 		var _innerHeight1 = $('.timeline-group.first').innerHeight(),
 		    _innerHeight2 = $('.timeline-group.second').innerHeight();
-		TweenLite.fromTo(".timeline-group.first", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight1, overflow: "visible"}, delay: 1, ease: Power2.easeInOut});
-		TweenLite.fromTo(".timeline-group.second", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight2, overflow: "visible"}, delay: 2, ease: Power2.easeInOut});
-		TweenLite.to(".timeline-group.first .item-content", 1, {opacity: 1, delay: 3, ease: Power1.easeInOut});
-		TweenLite.to(".timeline-group.second .item-content", 1, {opacity: 1, delay: 4, ease: Power1.easeInOut});
+		TweenLite.fromTo("#accordion .panel.first", 2, {css: {opacity:0}}, {css: {opacity: 1}, ease: Sine});
+		TweenLite.fromTo(".timeline-group.first", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight1, overflow: "visible"}, delay: 1, ease: Sine});
+		TweenLite.fromTo(".timeline-group.second", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight2, overflow: "visible"}, delay: 3, ease: Elastic});
+		TweenLite.to(".timeline-group.first .item-content", 1, {opacity: 1, delay: 4, ease: Power1.easeInOut});
+		TweenLite.to(".timeline-group.second .item-content", 1, {opacity: 1, delay: 5, ease: Power1.easeInOut});
 		TweenLite.to("#disqus_thread", 1, {opacity: 1, delay: 3, ease: Power2.easeInOut});
 	});
 
@@ -49,7 +51,9 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	var ele = $('#avatar');
 	var tween = TweenLite.to(ele, 1, {scaleX: 1.2, scaleY:1.2, ease:Power1.easeInOut, y: 0});
 
-	TweenLite.to(".header-timeline", 2, {opacity: 1, ease:Power1.easeInOut});
+	TweenLite.to(".header-timeline.first", 2, {opacity: 1, ease:Power1.easeInOut});
+	TweenLite.to(".header-timeline.second", 1, {opacity: 1, ease:Power1.easeInOut, delay: 2});
+	TweenLite.to(".header-timeline.third", 1, {opacity: 1, ease:Power1.easeInOut, delay: 4});
 
 	$document.bind('click', function(e){
 		if(!$('.vixs-2').is(angular.element(e.target))
@@ -96,6 +100,7 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		address: '666/47 (3/2 Street, Q.10, tp.HCM)',
 		mail: 'vhuy271990@gmail.com',
 		phone: '01223636224',
+		fb: 'https://www.facebook.com/nolove2571990',
 		objective: 'Executed and contributed to front-end web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
 	}
 
