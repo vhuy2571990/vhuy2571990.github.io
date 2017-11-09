@@ -47,7 +47,6 @@ iframe {
 }
 
 #left-sidebar .user-name {
-  margin-top: 1rem;
   text-transform: capitalize;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -199,6 +198,7 @@ iframe {
   line-height: 1.8rem;
   list-style: none;
   margin-bottom: 15px;
+  font-size: 1.16rem;
 }
 
 #target, #skills, #interests {
@@ -217,7 +217,7 @@ iframe {
 
 .work-experience ._time {
   color: #888;
-  font-size: 15px;
+  font-size: .9rem;
   margin-left: 10px;
 }
 

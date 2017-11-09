@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Huy Nguyen - Curriculum Vitae</title>
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <!--link style sheet -->
 	<link rel="stylesheet" href="css/simple-lineicons.css">
 	<link rel="stylesheet" href="css/hover.css">
+	<link rel="stylesheet" href="css/bulma.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -18,7 +18,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/tether.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 
@@ -40,7 +39,7 @@
 					</div>
 					<div class="text-xs-center text-muted"><small class="tip-text">{{currentInfo.helloText}}</small></div>
 					<ul class="list-group list-group-info">
-						<li><i class="icon-location-pin icons"></i>{{currentInfo.address}}</li>
+						<li><i class="icon-location-pin icons"></i><a ng-click="openModal()" href>{{currentInfo.address}}</a></li>
 						<li><i class="icon-envelope icons"></i>{{currentInfo.mail}}</li>
 						<li><i class="icon-phone icons"></i>{{currentInfo.phone}}</li>
 						<li><i class="icon-social-facebook icons"></i><a ng-href="{{currentInfo.fb}}">{{currentInfo.fb}}</a></li>
@@ -48,19 +47,19 @@
 				</div>
 				<!--end user info-->
 				<div id="target">
-					<h3>Objective</h3>
+					<h3>#Objective</h3>
 					<p>
 						{{currentInfo.objective}}
 					</p>
 				</div>
 				<div id="skills">
-					<h3>Skills</h3>
+					<h3>#Skills</h3>
 					<div class="_skill-container">
-						<img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50" ng-repeat="s in skills">
+						<a ng-repeat="s in skills" ng-href="{{s.href}}" target="_blank"><img ng-src="images/{{s.image}}" alt="{{s.name}}" class="img-responsive hvr-float" width="50" height="50"></a>
 					</div>
 				</div>
 				<div id="interests">
-					<h3>Interests</h3>
+					<h3>#Interests</h3>
 					<ul>
 						<li>Footballs</li>
 						<li>Music</li>
@@ -73,9 +72,9 @@
 			<div class="col-md-8 col-sm-6 col-lg-9 col-xs-12 m-t-1 main-content">
 				<div id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default first">
-						<div class="panel-heading" role="tab" id="headingOne">
+						<div class="panel-header" role="tab" id="headingOne">
 							<h5 class="panel-title">
-				           Education
+				           #Education
 				      </h5>
 						</div>
 						<div id="educationSection" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -90,8 +89,8 @@
 						</div>
 					</div>
 					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingTwo">
-							<h5 class="panel-title">Activity</h5>
+						<div class="panel-header" role="tab" id="headingTwo">
+							<h5 class="panel-title">#Activity</h5>
 						</div>
 						<div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="timeline">
 							<header class="header-timeline first">
@@ -172,15 +171,15 @@
 		</div>
 		<!-- end containter -->
 	</div>
-
-<div class="popup google-map" id="googlemap-address">
-		<iframe
-			width="600"
-			height="450"
-			frameborder="0" style="border:0"
-			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDduW921vsA0NTh6tI85Cg06VCN_Ll7st8
-				&q=Space+Needle,Seattle+WA" allowfullscreen>
-		</iframe>
+<div class="modal">
+  <div class="modal-background" ng-click="closeModal()"></div>
+  <div class="modal-content">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.605617216708!2d106.65924561489182!3d10.764847292329435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee9286da001%3A0xb27f9bacd2eb8c17!2zNjY2IMSQxrDhu51uZyAzIFRow6FuZyAyLCBwaMaw4budbmcgMTQsIFF14bqtbiAxMCwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1510201216378"
+		  width="600" height="450"
+		  frameborder="0" style="border:0" allowfullscreen>
+		 </iframe>
+  </div>
+  <button class="modal-close is-large" ng-click="closeModal()" aria-label="close"></button>
 </div>
 </body>
 <script id="dsq-count-scr" src="//vhuy2571990.disqus.com/count.js" async></script><!--disq comment count -->

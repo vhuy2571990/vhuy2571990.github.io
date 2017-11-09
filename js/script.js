@@ -28,9 +28,9 @@
 		TweenLite.fromTo("#accordion .panel.first", 2, {css: {opacity:0}}, {css: {opacity: 1}, ease: Sine});
 		TweenLite.fromTo(".timeline-group.first", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight1, overflow: "visible"}, delay: 1, ease: Sine});
 		TweenLite.fromTo(".timeline-group.second", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight2, overflow: "visible"}, delay: 3, ease: Elastic});
-		TweenLite.to(".timeline-group.first .item-content", 1, {opacity: 1, delay: 4, ease: Power1.easeInOut});
+		TweenLite.to(".timeline-group.first .item-content", 1, {opacity: 1, delay: 2, ease: Power1.easeInOut});
 		TweenLite.to(".timeline-group.second .item-content", 1, {opacity: 1, delay: 5, ease: Power1.easeInOut});
-		TweenLite.to("#disqus_thread", 1, {opacity: 1, delay: 3, ease: Power2.easeInOut});
+		TweenLite.to("#disqus_thread", 1, {opacity: 1, delay: 6, ease: Power2.easeInOut});
 	});
 
 	$(window).resize(function() {
@@ -69,6 +69,14 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		$scope.showOpt = !$scope.showOpt;
 	}
 
+	$scope.openModal = function() {
+			$('.modal').addClass('is-active');
+	}
+
+	$scope.closeModal = function() {
+		$('.modal').removeClass('is-active');
+	}
+
 	$scope.dataWorkexperience = [
 		{
 			company: 'Gianty Co.Ltd',
@@ -89,7 +97,8 @@ app.controller('infoCtrl', function($scope, $document, $window){
 			years: '2017',
 			works: [
 				{content: 'Front-end developer for Magento platform theme UI.'},
-				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'}
+				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'},
+				{content: 'Fix FrontEnd Bugs, JavaScript, HTML, CSS.'}
 			],
 			process: true
 		}
@@ -104,7 +113,7 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		objective: 'Executed and contributed to front-end web development projects, with an emphasis on front end features, browser manipulation, and cross-browser compatibility.'
 	}
 
-	$scope.skills = [{name: 'Html', image: 'html.png'}, {name: 'Css', image: 'css3.png'}, {name: 'Javascript', image: 'js.png'}, {name: 'Angular', image: 'angular.png'}, {name: 'Ionic', image: 'ionic.jpg'}]
+	$scope.skills = [{name: 'Html', image: 'html.png', href: 'http://w3school.info'}, {name: 'Css', image: 'css3.png', href: 'http://bulma.io'}, {name: 'Javascript', image: 'js.png', href: 'https://www.javascript.com/'}, {name: 'Angular', image: 'angular.png', href: 'http://angular.io'}, {name: 'Ionic', image: 'ionic.jpg', href: 'https://ionicframework.com/'}]
 	$scope.listProject = [
 		{link: './pages/full-page/gnt-demo/index.html', name: 'Gianty Company PR site', image: './pages/full-page-gnt.png'},
 		{link: './pages/ecommerce/deer/deer.html', name: 'Deer Shopping Demo', image: './pages/deer-shop.jpg'}
