@@ -42,7 +42,7 @@
 
 var app = angular.module('app', []);
 
-app.controller('infoCtrl', function($scope, $document, $window){
+app.controller('infoCtrl', function($scope){
 	$scope.listOpt = [
 		{name: 'Blog'},
 		{name: 'Shop / Ecommerce'}
@@ -54,15 +54,6 @@ app.controller('infoCtrl', function($scope, $document, $window){
 	TweenLite.to(".header-timeline.first", 2, {opacity: 1, ease:Power1.easeInOut});
 	TweenLite.to(".header-timeline.second", 1, {opacity: 1, ease:Power1.easeInOut, delay: 2});
 	TweenLite.to(".header-timeline.third", 1, {opacity: 1, ease:Power1.easeInOut, delay: 4});
-
-	$document.bind('click', function(e){
-		if(!$('.vixs-2').is(angular.element(e.target))
-			&& $('.vixs-2 ').has(e.target).length === 0){
-			$scope.$apply(function(){
-				$scope.showOpt = false;
-			});
-		}
-	});
 
 	$scope.showOpt = false;
 	$scope.toggleShowOpt = function(){
@@ -118,8 +109,4 @@ app.controller('infoCtrl', function($scope, $document, $window){
 		{link: './pages/full-page/gnt-demo/index.html', name: 'Gianty Company PR site', image: './pages/full-page-gnt.png'},
 		{link: './pages/ecommerce/deer/deer.html', name: 'Deer Shopping Demo', image: './pages/deer-shop.jpg'}
 	]
-
-	$scope.openPreview = function(data){
-		$window.open("pages/backMain.html", "_blank")
-	};
 });
