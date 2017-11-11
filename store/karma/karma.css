@@ -1,0 +1,11 @@
+*,
+html,
+body {
+  font-size: 1rem;
+}
+
+.text-logo {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
