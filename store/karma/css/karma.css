@@ -48,7 +48,7 @@ body {
 }
 
 .top.slider .item-list-item img {
-  filter: grayscale(100%);
+  filter: grayscale(70%);
 }
 
 .top.slider .item-list-item.active {
@@ -62,7 +62,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   z-index: 9;
-  min-width: 100%;
+  width: 100%;
 }
 
 .top.slider .item-list-item .item-description a,
@@ -128,5 +128,12 @@ body {
   }
   .top.slider .item-list-item .item-description h3{
     font-size: 35px;
+  }
+  .top.slider .item-list-item .item-description.is-center {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .top-header {
+    position: fixed;
   }
 }
