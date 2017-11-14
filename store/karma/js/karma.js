@@ -4,7 +4,7 @@ var app = new Vue({
     images: [
       {
         imgSrc: './images/54.png',
-        description: `<h3>Summer Boy</h3>
+        description: `<h3>Summer Set Collection</h3>
         <p>Hot item collection, let make a choice now.</p>
         `,
         classDes: 'is-left'},

@@ -13,13 +13,27 @@ body {
 .top.slider {
   position: relative;
   overflow: hidden;
-  height: 681px;
+  height: 281px;
   max-width: 1800px;
   margin: 0 auto;
 }
 
 .menu-list a.logo-item{
   background-color: #f0e68c;
+}
+
+.menu-list .navbar::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.menu-list .navbar-burger {
+  float: left;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 10px;
+  border: none;
 }
 
 .top.slider .item-list-item{
@@ -48,6 +62,7 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   z-index: 9;
+  min-width: 100%;
 }
 
 .top.slider .item-list-item .item-description a,
@@ -78,7 +93,7 @@ body {
 
 .top.slider .item-list-item .item-description h3 {
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .top.slider .item-list-item .item-description.is-right {
@@ -98,4 +113,20 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.menu-list .navbar-item.wrapperlogo {
+  float: right;
+}
+
+@media (min-width: 1024px) {
+  .menu-list .navbar-burger {
+    display: none;
+  }
+  .top.slider {
+    height: 681px;
+  }
+  .top.slider .item-list-item .item-description h3{
+    font-size: 35px;
+  }
 }
