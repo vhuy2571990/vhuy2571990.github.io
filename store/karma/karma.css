@@ -9,3 +9,28 @@ body {
   font-size: 30px;
   text-transform: uppercase;
 }
+
+.top.slider {
+  position: relative;
+  overflow: hidden;
+  height: 681px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.top.slider .item-list{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.top.slider .transition-item {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.top.slider .transition-item.active {
+  opacity: 1;
+}

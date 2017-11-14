@@ -36,5 +36,21 @@
     </div>
   </div>
 </header>
+<div class="container-wrapper">
+  <div class="top slider">
+    <slider-wrapper>
+      <div class="item-list" v-for="(item, index) in images">
+          <div class="transition-item" v-bind:class="{active: isActive(index)}">
+              <img
+                :src="item"
+                v-on:mouseover="stopRotation"
+                v-on:mouseout="startRotation"
+              />
+          </div>
+      </div>
+    </slider-wrapper>
+  </div>
+</div>
+<script src="karma.js"></script>
 </body>
 </html>
