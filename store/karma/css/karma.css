@@ -15,7 +15,7 @@ body {
   overflow: hidden;
   height: 281px;
   max-width: 1800px;
-  margin: 0 auto;
+  margin: 77px auto 0;
 }
 
 .menu-list a.logo-item{
@@ -65,6 +65,15 @@ body {
   width: 100%;
 }
 
+.item-title {
+  margin: 1em auto;
+  display: inline-block;
+  text-align: left;
+  color: #363636;
+  font-weight: 700;
+  border-bottom: 2px solid #363636;
+}
+
 .top.slider .item-list-item .item-description a,
 .top.slider .item-list-item .item-description .inverted {
   color: #333;
@@ -73,6 +82,15 @@ body {
 
 .top.slider .item-list-item .item-description a:hover {
   color: #fff;
+}
+
+.mobile-icon {
+  float: right;
+  margin-top: 20px;
+}
+
+.mobile-icon ul li {
+  display: inline-block;
 }
 
 .top.slider .item-list-item .item-description a.btn {
@@ -133,7 +151,13 @@ body {
     max-width: 700px;
     margin: 0 auto;
   }
-  .top-header {
+  #top-header {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    background: #fff;
   }
 }
