@@ -8,7 +8,6 @@ const routes = [{
 }]
 
 const router = new VueRouter({
-  mode: 'history',
   routes
 });
 
@@ -16,26 +15,8 @@ const appVue = new Vue({
   router,
   el: '#app-wrapper',
   data: {
-    images: [{
-          imgSrc: './images/tinified/54.png',
-          description: `<h3>Summer Set Collection</h3>
-          <p>Hot item collection, let make a choice now.</p>
-          `,
-          classDes: 'is-left'
-        },
-        {
-          imgSrc: './images/tinified/154.png',
-          description: '<h3>Donnie Karma build on this November</h3> <p>Free shipping from 3 orders item more. </p><a href="#" class="btn outline-border">View detail</a>',
-          classDes: 'is-center'
-        },
-        {
-          imgSrc: './images/tinified/824.png',
-          description: `<h3>Top Fashion hot Melanie item</h3>
-          <p>Sale off 5% from 20 Nov to 29 Nov. </p>
-          <a href="#" class="btn outline-border">View detail</a>`,
-          classDes: 'is-right'
-        }
-    ],
+    images: listImage,
+    slimShirts: listSlimShirt,
     currentNumber: 0,
     timer: null,
   },
@@ -64,6 +45,19 @@ const appVue = new Vue({
 
     isActive: function(index) {
       return (index === this.currentNumber) ? true : false;
+    },
+
+    startSlide: function(item) {
+      if (item.listImages) {
+        item.imageTmp = item.image;
+        item.image = item.listImages[0];
+      }
+    },
+
+    stopSlide: function(item) {
+      if (item.imageTmp) {
+        item.image = item.imageTmp;
+      }
     }
   }
 });

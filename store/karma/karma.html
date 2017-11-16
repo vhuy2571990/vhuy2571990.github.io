@@ -12,6 +12,7 @@
 </head>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
 <body>
   <div class="app-wrapper" id="app-wrapper">
     <header id="top-header">
@@ -62,15 +63,26 @@
           </div>
         </slider-wrapper>
       </div>
-      <div class="container">
+      <div class="container" id="main-content">
         <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
-        <div class="item-list">
-          <router-view></router-view>
+        <div class="item-list columns">
+          <div class="column" v-for="item in slimShirts">
+            <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
+              <img :src="item.image" alt=""><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt="">
+              <a class="button is-black is-inverted is-outlined">Add to cart</a>
+            </div>
+            <div class="item-name">{{item.name}}</div>
+            <div class="item-price">{{item.price}}</div>
+            <div class="button-wrapper is-hidden-desktop">
+              <a class="button is-outlined">Add to cart</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-<script src="./js/karma.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/karma.js"></script>
 </body>
 
 </html>
