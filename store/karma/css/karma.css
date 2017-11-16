@@ -205,6 +205,10 @@ body {
   border-radius: 0;
 }
 
+.item-list .img-wrapper .button.addtocart {
+  margin-left: 0;
+}
+
 .button-wrapper {
   margin-top: 1em;
   text-align: center;

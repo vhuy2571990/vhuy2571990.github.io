@@ -25,6 +25,6 @@ const listSlimShirt = [
    {name: 'Casual Slim Fit Navy Red Gingham Egyptian Cotton Collar Shirt', image: './images/men-shirt/58423.jpg', price: '$39.95'},
    {name: 'Casual Slim Indigo Brushed Egyptian Cotton Collar Shirt', image: './images/men-shirt/58572.jpg', listImages: ['./images/men-shirt/56868_alt1.jpg', './images/men-shirt/56868_alt2.jpg'], price: '$39.95'},
    {name: 'Non-Iron Casual Slim Blue Stripe Cotton Slim Fit Shirt', image: './images/men-shirt/58573.jpg', price: '$39.95'},
-   {name: 'Casual Slim Red Navy Check Egyptian Cotton  Collar Shirt', image: './images/men-shirt/58580.jpg', price: '$39.95'},
-   {name: 'Casual Slim Country Check Brushed Egyptian Cotton  Shirt', image: './images/men-shirt/images.jpg', price: '$39.95'}
+   // {name: 'Casual Slim Red Navy Check Egyptian Cotton  Collar Shirt', image: './images/men-shirt/58580.jpg', price: '$39.95'},
+   // {name: 'Casual Slim Country Check Brushed Egyptian Cotton  Shirt', image: './images/men-shirt/images.jpg', price: '$39.95'}
 ]

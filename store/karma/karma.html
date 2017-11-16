@@ -79,7 +79,8 @@
           <div class="column" v-for="item in slimShirts">
             <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
               <img :src="item.image" alt=""><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt="">
-              <a class="button is-black is-inverted is-outlined">Add to cart</a>
+              <a class="button is-black is-inverted is-outlined previewitem"><i class="icon-magnifier-add"></i></a>
+              <a class="button is-black is-inverted is-outlined addtocart"><i class="icon-basket"></i></a>
             </div>
             <div class="item-name">{{item.name}}</div>
             <div class="item-price">{{item.price}}</div>
