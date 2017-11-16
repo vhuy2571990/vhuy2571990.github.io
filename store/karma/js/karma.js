@@ -17,6 +17,7 @@ const appVue = new Vue({
   data: {
     images: listImage,
     slimShirts: listSlimShirt,
+    toggleVar: false,
     currentNumber: 0,
     timer: null,
   },

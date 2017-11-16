@@ -42,13 +42,23 @@
                 <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
               </ul>
             </div>
-            <button class="button navbar-burger" data-target="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+            <button class="button navbar-burger" data-target="navMenu" v-on:click="toggleVar = !toggleVar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </nav>
         </div>
+      </div>
+      <div class="mobile-sidebarmenu is-hidden-desktop" v-bind:class="{actived: toggleVar}">
+        <ul class="navbar-start">
+          <li class="navbar-item">
+            <router-link to="/foo">Foo</router-link>
+          </li>
+          <li class="navbar-item"><a href="#">Men</a></li>
+          <li class="navbar-item"><a href="#">Women</a></li>
+          <li class="navbar-item"><a href="#">Contact Us</a></li>
+        </ul>
       </div>
     </header>
     <div class="container-wrapper">
