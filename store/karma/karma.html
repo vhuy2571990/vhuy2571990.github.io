@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="./css/simple-lineicons.css">
   <link rel="stylesheet" href="../../css/bulma.css">
   <link rel="stylesheet" href="./css/karma.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
-<body>
+<body id="app-wrapper">
 <header id="top-header">
   <div class="container">
     <div class="menu-list">
@@ -25,7 +24,7 @@
         </div>
         <div class="navbar-menu navbar-brand">
           <ul class="navbar-start navbar-item">
-            <li><a href="#">Hot Item</a></li>
+            <li><router-link to="/foo">Foo</router-link></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -62,11 +61,14 @@
     </slider-wrapper>
   </div>
   <div class="container">
-    <h1 class="item-title"># Men Shirts Hot Collection</h1>
+    <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
     <div class="item-list">
+      <router-view></router-view>
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script src="./js/karma.js"></script>
 </body>
 </html>

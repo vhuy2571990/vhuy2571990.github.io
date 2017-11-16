@@ -1,4 +1,12 @@
+const Foo = { template: '<div>foo</div>' }
+
+const routes = [
+    {path: '/foo', component: Foo}
+]
+
+const router = new VueRouter({routes});
 var app = new Vue({
+  router,
   el: 'slider-wrapper',
   data: {
     images: [
@@ -49,4 +57,4 @@ var app = new Vue({
       return (index === this.currentNumber) ? true: false;
     }
   }
-});
+}).$mount('#app-wrapper');
