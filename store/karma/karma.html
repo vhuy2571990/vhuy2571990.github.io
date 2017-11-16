@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,66 +10,67 @@
   <link rel="stylesheet" href="../../css/bulma.css">
   <link rel="stylesheet" href="./css/karma.css">
 </head>
-<body id="app-wrapper">
-<header id="top-header">
-  <div class="container">
-    <div class="menu-list">
-      <nav class="navbar">
-        <div class="navbar-item wrapperlogo"><a href="../karma/karma.html" class="logo-item"><span class="text-logo">Karma</span></a></div>
-        <div class="mobile-icon is-hidden-desktop">
-          <ul>
-            <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
-            <li><a href="#"><i class="icon-user icons"></i> </a></li>
-            <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
-          </ul>
-        </div>
-        <div class="navbar-menu navbar-brand">
-          <ul class="navbar-start navbar-item">
-            <li><router-link to="/foo">Foo</router-link></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-          <ul class="navbar-end navbar-item">
-            <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
-            <li><a href="#"><i class="icon-user icons"></i> </a></li>
-            <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
-          </ul>
-        </div>
-        <button class="button navbar-burger" data-target="navMenu">
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<body>
+  <div class="app-wrapper" id="app-wrapper">
+    <header id="top-header">
+      <div class="container">
+        <div class="menu-list">
+          <nav class="navbar">
+            <div class="navbar-item wrapperlogo"><a href="../karma/karma.html" class="logo-item"><span class="text-logo">Karma</span></a></div>
+            <div class="mobile-icon is-hidden-desktop">
+              <ul>
+                <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
+                <li><a href="#"><i class="icon-user icons"></i> </a></li>
+                <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
+              </ul>
+            </div>
+            <div class="navbar-menu navbar-brand">
+              <ul class="navbar-start navbar-item">
+                <li>
+                  <router-link to="/foo">Foo</router-link>
+                </li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+              <ul class="navbar-end navbar-item">
+                <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
+                <li><a href="#"><i class="icon-user icons"></i> </a></li>
+                <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
+              </ul>
+            </div>
+            <button class="button navbar-burger" data-target="navMenu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-      </nav>
-    </div>
-  </div>
-</header>
-<div class="container-wrapper">
-  <div class="top slider">
-    <slider-wrapper>
-      <div class="item-list-item" v-for="(item, index) in images"  v-bind:class="{active: isActive(index)}">
-          <div class="item-content">
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container-wrapper">
+      <div class="top slider">
+        <slider-wrapper>
+          <div class="item-list-item" v-for="(item, index) in images" v-bind:class="{active: isActive(index)}">
+            <div class="item-content">
               <div class="item-description" v-bind:class="item.classDes" v-html="item.description">
               </div>
-              <img
-                :src="item.imgSrc"
-                v-on:mouseover="stopRotation"
-                v-on:mouseout="startRotation"
-              />
+              <img :src="item.imgSrc" v-on:mouseover="stopRotation" v-on:mouseout="startRotation" />
+            </div>
           </div>
+        </slider-wrapper>
       </div>
-    </slider-wrapper>
-  </div>
-  <div class="container">
-    <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
-    <div class="item-list">
-      <router-view></router-view>
+      <div class="container">
+        <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
+        <div class="item-list">
+          <router-view></router-view>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script src="./js/karma.js"></script>
 </body>
+
 </html>
