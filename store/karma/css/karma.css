@@ -36,7 +36,7 @@ body {
 
 .mobile-sidebarmenu {
   position: fixed;
-  left: -750px;
+  left: -2750px;
   top: 77px;
   width: 100%;
   background: #fff;
@@ -205,6 +205,10 @@ body {
   border-radius: 0;
 }
 
+.item-list .img-wrapper .button i {
+  min-width: 18px;
+}
+
 .item-list .img-wrapper .button.addtocart {
   margin-left: 0;
 }
@@ -219,11 +223,13 @@ body {
   border-radius: 0;
 }
 
-.item-list .img-wrapper:hover .button {
+.item-list .img-wrapper:hover .button,
+.item-list .item.adding .button {
   opacity: 1;
 }
 
-.item-list .img-wrapper:hover img {
+.item-list .img-wrapper:hover img,
+.item-list .item.adding img {
   opacity: 0.5;
 }
 
@@ -259,8 +265,33 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 99;
+  z-index: 19;
   background: #fff;
+}
+
+.notification {
+  padding: .5em;
+  margin-top: 1em;
+  display: none;
+}
+
+.notification._show {
+  display: block;
+}
+
+.modal-content, .modal-card {
+  text-align: center;
+}
+
+.minicart {
+  position: relative;
+}
+
+.minicart .cart-number{
+  position: absolute;
+  right: 0;
+  top: -5px;
+  color: #ff3860;
 }
 
 @media (min-width: 480px) {

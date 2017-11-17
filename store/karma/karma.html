@@ -37,9 +37,9 @@
                 <li><a href="#">Contact Us</a></li>
               </ul>
               <ul class="navbar-end navbar-item">
-                <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
-                <li><a href="#"><i class="icon-user icons"></i> </a></li>
-                <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
+                <li><a><i class="icon-magnifier icons"></i></a></li>
+                <li><a><i class="icon-user icons"></i></a></li>
+                <li><a class="minicart"><span class="cart-number" v-if="cartLength !== 0">{{cartLength}}</span><i class="icon-handbag icons"></i></a></li>
               </ul>
             </div>
             <button class="button navbar-burger" data-target="navMenu" v-on:click="toggleVar = !toggleVar">
@@ -74,13 +74,14 @@
         </slider-wrapper>
       </div>
       <div class="container" id="main-content">
+        <div class="notification is-primary" v-bind:class="{'_show': showMessage}">{{message}}</div>
         <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
-        <div class="item-list columns">
-          <div class="column" v-for="item in slimShirts">
+        <div class="item-list columns" v-for="v in newArr">
+          <div class="column item" v-for="item in v" v-bind:class="{'adding': item.isLoading}">
             <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
-              <img :src="item.image" alt=""><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt="">
-              <a class="button is-black is-inverted is-outlined previewitem"><i class="icon-magnifier-add"></i></a>
-              <a class="button is-black is-inverted is-outlined addtocart"><i class="icon-basket"></i></a>
+              <img :src="item.image" alt=""/><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt=""/>
+              <a class="button is-black is-inverted is-outlined previewitem" v-on:click="zoomIn(item)" :disabled="item.isLoading"><i class="icon-magnifier-add"></i></a>
+              <a class="button is-black is-inverted is-outlined addtocart" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}"><i class="icon-basket"></i></a>
             </div>
             <div class="item-name">{{item.name}}</div>
             <div class="item-price">{{item.price}}</div>
@@ -91,6 +92,15 @@
         </div>
       </div>
     </div>
+    <!-- modal image zoom in -->
+    <div class="modal" v-bind:class="{'is-active': modalToggle}">
+  		<div class="modal-background" v-on:click="closeModal"></div>
+  		<div class="modal-content">
+  			<img :src="imgZoom" alt="">
+  		</div>
+  		<button class="modal-close is-large" v-on:click="closeModal" aria-label="close"></button>
+  	</div>
+    <!-- end -->
   </div>
   <script src="./js/data.js"></script>
   <script src="./js/karma.js"></script>

@@ -16,10 +16,15 @@ const appVue = new Vue({
   el: '#app-wrapper',
   data: {
     images: listImage,
-    slimShirts: listSlimShirt,
+    slimShirts: newArr,
     toggleVar: false,
     currentNumber: 0,
     timer: null,
+    imgZoom: '',
+    modalToggle: false,
+    message: '',
+    showMessage: false,
+    cartLength: (JSON.parse(localStorage.getItem('cart-storage')) && JSON.parse(localStorage.getItem('cart-storage')).length) || 0
   },
 
   mounted: function() {
@@ -59,6 +64,39 @@ const appVue = new Vue({
       if (item.imageTmp) {
         item.image = item.imageTmp;
       }
+    },
+
+    zoomIn: function(item) {
+      this.modalToggle = true;
+      this.imgZoom = item.image;
+    },
+
+    closeModal: function() {
+      this.modalToggle = false;
+    },
+
+    addTocart: function(item) {
+      item.isLoading = true;
+      this.showMessageFnc(item);
+      this.clearMessage();
+    },
+
+    showMessageFnc: function(item){
+      setTimeout(() => {
+        this.message = `${item.name} added to cart successfully.`;
+        item.isLoading = false;
+        this.showMessage = true;
+        var arr = JSON.parse(localStorage.getItem('cart-storage')) || [];
+        arr.push(item);
+        localStorage.setItem('cart-storage', JSON.stringify(arr));
+        this.cartLength += 1 ;
+      }, 3000)
+    },
+
+    clearMessage: function(){
+      setTimeout(() => {
+        this.showMessage = false;
+      }, 7000)
     }
   }
 });
