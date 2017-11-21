@@ -50,7 +50,7 @@
                     <div class="minicart-itemcontent">
                       <ul>
                         <li><span>{{ic.name}}</span></li>
-                        <li><span><span>Qty:</span>{{ic.qty}} * {{ic.price}} => {{ic.qty * ic.price}}</span></li>
+                        <li><span><span>Qty:</span>{{ic.qty}} * {{ic.price}} => <span>$</span>{{Math.round(ic.qty * ic.price)}}</span></li>
                       </ul>
                     </div>
                   </li>
@@ -92,14 +92,14 @@
         <div class="notification is-primary" v-bind:class="{'_show': showMessage}">{{message}}</div>
         <h1 class="item-title"># Men Casual Slim Shirts Hot Collection</h1>
         <div class="item-list columns" v-for="v in newArr">
-          <div class="column item" v-for="item in v" v-bind:class="{'adding': item.isLoading}">
+          <div class="column item" v-for="(item, i) in v" :key="item.id" v-bind:class="{'adding': item.isLoading}">
             <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
               <img :src="item.image" alt=""/><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt=""/>
               <a class="button is-black is-inverted is-outlined previewitem" v-on:click="zoomIn(item)" :disabled="item.isLoading"><i class="icon-magnifier-add"></i></a>
               <a class="button is-black is-inverted is-outlined addtocart" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}"><i class="icon-basket"></i></a>
             </div>
             <div class="item-name">{{item.name}}</div>
-            <div class="item-price">{{item.price}}</div>
+            <div class="item-price"><span>$</span>{{item.price}}</div>
             <div class="button-wrapper is-hidden-desktop">
               <a class="button is-outlined">Add to cart</a>
             </div>

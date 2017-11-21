@@ -296,6 +296,9 @@ body {
   right: 0;
   padding: 1em;
   background: #fff;
+  border-bottom: 2px solid #23d160;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .cart-mini h4 {

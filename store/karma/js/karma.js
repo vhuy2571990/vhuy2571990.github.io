@@ -24,7 +24,7 @@ const appVue = new Vue({
     modalToggle: false,
     message: '',
     showMessage: false,
-    cartObj: JSON.parse(localStorage.getItem('cart-storage'))
+    cartObj: JSON.parse(localStorage.getItem('cart-storage')) || []
   },
 
   mounted: function() {
@@ -87,16 +87,16 @@ const appVue = new Vue({
         item.isLoading = false;
         this.showMessage = true;
         item.qty = 1;
-        var arr = JSON.parse(localStorage.getItem('cart-storage')) || [];
-        arr.map((i, idx) => {
-            if(i.name !== item.name && i.image !== item.image) {
-              arr.push(item);
-            }else{
-              i.qty += 1;
-            }
-        });
-        if(arr.length === 0) { arr.push(item); }        
-        localStorage.setItem('cart-storage', JSON.stringify(arr));
+        const items = this.cartObj.find(it => it.name == item.name);
+
+        if (this.cartObj.indexOf(items) !== -1) {
+          this.cartObj[this.cartObj.indexOf(items)].qty += 1;
+        }else {
+            this.cartObj.push(item);
+        }
+
+        if(this.cartObj.length === 0) {this.cartObj.push(item); }
+        localStorage.setItem('cart-storage', JSON.stringify(this.cartObj));
         this.cartObj = JSON.parse(localStorage.getItem('cart-storage'));
       }, 3000)
     },
