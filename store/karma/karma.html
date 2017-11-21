@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Karma Store Fashion</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
   <link rel="stylesheet" href="./css/simple-lineicons.css">
   <link rel="stylesheet" href="../../css/bulma.css">
   <link rel="stylesheet" href="./css/karma.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
 <body>
   <div class="app-wrapper" id="app-wrapper">
@@ -39,8 +40,22 @@
               <ul class="navbar-end navbar-item">
                 <li><a><i class="icon-magnifier icons"></i></a></li>
                 <li><a><i class="icon-user icons"></i></a></li>
-                <li><a class="minicart"><span class="cart-number" v-if="cartLength !== 0">{{cartLength}}</span><i class="icon-handbag icons"></i></a></li>
+                <li><a class="minicart"><span class="cart-number" v-if="cartObj && cartObj.length !== 0">{{cartObj.length}}</span><i class="icon-handbag icons"></i></a></li>
               </ul>
+              <div class="cart-mini">
+                <h4>Mini cart</h4>
+                <ul>
+                  <li v-for="ic in cartObj">
+                    <img :src="ic.image" width="40" alt="">
+                    <div class="minicart-itemcontent">
+                      <ul>
+                        <li><span>{{ic.name}}</span></li>
+                        <li><span><span>Qty:</span>{{ic.qty}} * {{ic.price}} => {{ic.qty * ic.price}}</span></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <button class="button navbar-burger" data-target="navMenu" v-on:click="toggleVar = !toggleVar">
               <span></span>

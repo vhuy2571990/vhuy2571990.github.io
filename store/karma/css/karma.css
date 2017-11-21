@@ -1,12 +1,15 @@
 *,
 html,
 body {
-  font-size: 1rem;
-  overflow-x: hidden;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-list a {
+
 }
 
 .text-logo {
-  font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
 }
@@ -114,7 +117,7 @@ body {
   display: inline-block;
   text-align: left;
   color: #363636;
-  font-weight: 700;
+  text-transform: uppercase;
   border-bottom: 2px solid #363636;
 }
 
@@ -254,9 +257,10 @@ body {
 }
 
 .item-list .item-price {
-  font-weight: 700;
   text-align: center;
   color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
 }
 
 #top-header {
@@ -283,15 +287,51 @@ body {
   text-align: center;
 }
 
-.minicart {
-  position: relative;
+.menu-list a.minicart:hover {
+  background: none;
+}
+.cart-mini {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 1em;
+  background: #fff;
+}
+
+.cart-mini h4 {
+  font-family: 'Source sans pro', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.cart-mini ul li {
+  margin: .5em 0 2em;
+}
+
+.cart-mini ul li img {
+  vertical-align: text-top;
+}
+.cart-mini .minicart-itemcontent {display: inline-block; vertical-align: bottom;}
+
+.cart-mini .minicart-itemcontent ul {border-left: 0;}
+
+.cart-mini .minicart-itemcontent ul li {
+ margin: 10px 0 0;
 }
 
 .minicart .cart-number{
   position: absolute;
-  right: 0;
-  top: -5px;
-  color: #ff3860;
+  right: 5px;
+  top: 5px;
+  background-color: #ff3860;
+  color: #fff;
+  padding: .1em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
 }
 
 @media (min-width: 480px) {
