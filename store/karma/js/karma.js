@@ -24,7 +24,8 @@ const appVue = new Vue({
     modalToggle: false,
     message: '',
     showMessage: false,
-    cartObj: JSON.parse(localStorage.getItem('cart-storage')) || []
+    cartObj: JSON.parse(localStorage.getItem('cart-storage')) || [],
+    showCart: false,
   },
 
   mounted: function() {
@@ -78,7 +79,14 @@ const appVue = new Vue({
     addTocart: function(item) {
       item.isLoading = true;
       this.showMessageFnc(item);
-      this.clearMessage();
+    },
+
+    findItemInCart: function(item) {
+      const items = this.cartObj.find(it => it.name == item.name);
+      if(this.cartObj.indexOf(items) !== -1) {
+        return {result: true, items: items};
+      }
+      return {result:false};
     },
 
     showMessageFnc: function(item){
@@ -87,24 +95,28 @@ const appVue = new Vue({
         item.isLoading = false;
         this.showMessage = true;
         item.qty = 1;
-        const items = this.cartObj.find(it => it.name == item.name);
 
-        if (this.cartObj.indexOf(items) !== -1) {
-          this.cartObj[this.cartObj.indexOf(items)].qty += 1;
-        }else {
-            this.cartObj.push(item);
-        }
+        var checkItemInCart = this.findItemInCart(item);
+        (checkItemInCart.result == true) ? this.cartObj[this.cartObj.indexOf(checkItemInCart.items)].qty += 1 : this.cartObj.push(item);
 
-        if(this.cartObj.length === 0) {this.cartObj.push(item); }
+        if(this.cartObj.length === 0) {this.cartObj.push(item);}
+
         localStorage.setItem('cart-storage', JSON.stringify(this.cartObj));
         this.cartObj = JSON.parse(localStorage.getItem('cart-storage'));
       }, 3000)
     },
 
     clearMessage: function(){
-      setTimeout(() => {
         this.showMessage = false;
-      }, 7000)
-    }
+    },
+
+    clearCart: function() {
+      this.cartObj = [];
+    },
+
+    removeCartItem: function(item) {
+      const tmp = this.findItemInCart(item);
+      return (tmp.result == true) ? this.cartObj.splice(this.cartObj.indexOf(tmp.items), 1) : void(0);
+    },
   }
 });
