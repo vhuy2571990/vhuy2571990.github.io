@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vhuy2571990/vhuy2571990.github.io/issues"
   },
-  "homepage": "https://github.com/vhuy2571990/vhuy2571990.github.io#readme"
+  "homepage": "https://github.com/vhuy2571990/vhuy2571990.github.io#readme",
+  "dependencies": {
+    "smooth-scrollbar": "^8.2.4"
+  }
 }

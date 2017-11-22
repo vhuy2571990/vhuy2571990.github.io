@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="./css/simple-lineicons.css">
   <link rel="stylesheet" href="../../css/bulma.css">
   <link rel="stylesheet" href="./css/karma.css">
+  <script src="../../node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 </head>
 
 <body>
-  <div class="app-wrapper" id="app-wrapper">
+  <div class="app-wrapper" id="app-wrapper" data-scrollbar>
     <header id="top-header">
       <div class="container">
         <div class="menu-list">
@@ -43,14 +44,17 @@
                 <li><a class="minicart" v-on:mouseover="showCart = !showCart" v-on:mouseout="showCart = false"><span class="cart-number" v-if="cartObj && cartObj.length !== 0">{{cartObj.length}}</span><i class="icon-handbag icons"></i></a></li>
               </ul>
               <div class="cart-mini" v-if="cartObj && cartObj.length !== 0" v-bind:class="{_show: showCart}" v-on:mouseover="showCart = true" v-on:mouseout="showCart = false">
-                <h4>Mini cart</h4>
-                <ul>
+                <div class="cart-head">
+                  <h4>Mini cart</h4>
+                  <div class="total-price"><span>$</span> <span class="number-price">{{cartTotalPrice}}</span></div>
+                </div>
+                <ul id="cart-contentscroll"  data-scrollbar>
                   <li v-for="ic in cartObj">
                     <img :src="ic.image" width="40" alt="">
                     <div class="minicart-itemcontent">
                       <ul>
                         <li><span>{{ic.name}}</span></li>
-                        <li><span><span>Qty:</span>{{ic.qty}} * {{ic.price}} => <span>$</span>{{Math.round(ic.qty * ic.price)}}</span></li>
+                        <li><span><span>Qty:</span><input type="text" class="qty" v-model="ic.qty" v-on:change="refreshCart()"> * {{ic.price}} => <span>$</span>{{Math.round(ic.qty * ic.price)}}</span></li>
                         <li><a class="button is-black  is-outlined" v-on:click="removeCartItem(ic)"><span>Remove</span></a></li>
                       </ul>
                     </div>
@@ -58,7 +62,6 @@
                 </ul>
                 <div class="button-wrapper-minicart">
                   <a class="button is-danger  is-outlined" v-on:click="clearCart()"><i class="icon-trash icons"></i> <span>Clear All</span></a>
-                  <a class="button is-primary  is-outlined"><i class="icon-refresh icons"></i> <span>Update Cart</span></a>
                   <a class="button is-black  is-outlined"><i class="icon-basket-loaded icons"></i> <span>Checkout</span></a>
                 </div>
               </div>
@@ -116,13 +119,19 @@
     <!-- modal image zoom in -->
     <div class="modal" v-bind:class="{'is-active': modalToggle}">
   		<div class="modal-background" v-on:click="closeModal"></div>
-  		<div class="modal-content">
+  		<div class="modal-content" data-scrollbar>
   			<img :src="imgZoom" alt="">
   		</div>
   		<button class="modal-close is-large" v-on:click="closeModal" aria-label="close"></button>
   	</div>
     <!-- end -->
   </div>
+  <style media="screen">
+    #cart-contentscroll {
+      height: 290px;
+      overflow: auto;
+    }
+  </style>
   <script src="./js/data.js"></script>
   <script src="./js/karma.js"></script>
 </body>

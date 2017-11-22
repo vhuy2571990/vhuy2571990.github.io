@@ -26,10 +26,14 @@ const appVue = new Vue({
     showMessage: false,
     cartObj: JSON.parse(localStorage.getItem('cart-storage')) || [],
     showCart: false,
+    cartTotalPrice: 0
   },
 
   mounted: function() {
     this.startRotation();
+    this.totalPrice();
+    var scrollBar = window.Scrollbar;
+    scrollBar.initAll();
   },
 
   methods: {
@@ -72,6 +76,14 @@ const appVue = new Vue({
       this.imgZoom = item.image;
     },
 
+    getCart: function() {
+      this.cartObj = JSON.parse(localStorage.getItem('cart-storage'));
+    },
+
+    setCart: function() {
+      localStorage.setItem('cart-storage', JSON.stringify(this.cartObj));
+    },
+
     closeModal: function() {
       this.modalToggle = false;
     },
@@ -79,17 +91,35 @@ const appVue = new Vue({
     addTocart: function(item) {
       item.isLoading = true;
       this.showMessageFnc(item);
+      this.totalPrice();
+    },
+
+    totalPrice: function() {
+      var tmp = 0;
+      this.cartObj.map(function(item) {
+        tmp += (item.price * parseInt(item.qty));
+      });
+      this.cartTotalPrice = Math.round(tmp);
+    },
+
+    refreshCart: function() {
+      this.totalPrice();
     },
 
     findItemInCart: function(item) {
       const items = this.cartObj.find(it => it.name == item.name);
-      if(this.cartObj.indexOf(items) !== -1) {
-        return {result: true, items: items};
+      if (this.cartObj.indexOf(items) !== -1) {
+        return {
+          result: true,
+          items: items
+        };
       }
-      return {result:false};
+      return {
+        result: false
+      };
     },
 
-    showMessageFnc: function(item){
+    showMessageFnc: function(item) {
       setTimeout(() => {
         this.message = `${item.name} added to cart successfully.`;
         item.isLoading = false;
@@ -97,17 +127,19 @@ const appVue = new Vue({
         item.qty = 1;
 
         var checkItemInCart = this.findItemInCart(item);
-        (checkItemInCart.result == true) ? this.cartObj[this.cartObj.indexOf(checkItemInCart.items)].qty += 1 : this.cartObj.push(item);
+        (checkItemInCart.result == true) ? this.cartObj[this.cartObj.indexOf(checkItemInCart.items)].qty += 1: this.cartObj.push(item);
 
-        if(this.cartObj.length === 0) {this.cartObj.push(item);}
-
-        localStorage.setItem('cart-storage', JSON.stringify(this.cartObj));
-        this.cartObj = JSON.parse(localStorage.getItem('cart-storage'));
+        if (this.cartObj.length === 0) {
+          this.cartObj.push(item);
+        }
+        this.setCart();
+        this.getCart();
+        this.totalPrice();
       }, 3000)
     },
 
-    clearMessage: function(){
-        this.showMessage = false;
+    clearMessage: function() {
+      this.showMessage = false;
     },
 
     clearCart: function() {
@@ -116,7 +148,9 @@ const appVue = new Vue({
 
     removeCartItem: function(item) {
       const tmp = this.findItemInCart(item);
-      return (tmp.result == true) ? this.cartObj.splice(this.cartObj.indexOf(tmp.items), 1) : void(0);
+      (tmp.result == true) ? this.cartObj.splice(this.cartObj.indexOf(tmp.items), 1): void(0);
+      this.setCart();
+      return this.totalPrice();
     },
   }
 });
