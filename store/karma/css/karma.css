@@ -30,13 +30,13 @@ html, body{
 .top.slider {
   position: relative;
   overflow: hidden;
-  min-height: 177px;
+  min-height: 298px;
   height: auto;
   max-width: 1800px;
 }
 
 .container-wrapper #main-content {
-  padding: 1em;
+  padding: 0em 1em 1em;
 }
 
 .menu-list a.logo-item{
@@ -147,10 +147,16 @@ html, body{
 .mobile-icon {
   float: right;
   margin-top: 20px;
+  position: relative;
 }
 
 .mobile-icon ul li {
   display: inline-block;
+}
+
+.mobile-icon .minicart .cart-number {
+  top: -10px;
+  right: -10px;
 }
 
 .top.slider .item-list-item .item-description a.btn {
@@ -295,6 +301,7 @@ html, body{
 .notification._show {
   display: block;
   border-radius: 0;
+  padding-right: 40px;
 }
 
 .modal-content, .modal-card {
@@ -380,6 +387,7 @@ html, body{
   border: none;
   outline: 0;
   border-bottom: 2px solid #00d1b2;
+  margin-left: 5px;
 }
 
 .cart-head {
@@ -392,8 +400,13 @@ html, body{
 
 .cart-head .total-price {
   font-size: 18px;
-  font-weight: bold;
+
+}
+
+.cart-head .total-price .number-price {
   color: #ff3860;
+  font-size: 20px;
+  font-family:  'Source sans pro', sans-serif;
 }
 
 .minicart .cart-number{

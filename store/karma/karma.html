@@ -26,7 +26,7 @@
               <ul>
                 <li><a href="#"><i class="icon-magnifier icons"></i> </a></li>
                 <li><a href="#"><i class="icon-user icons"></i> </a></li>
-                <li><a href="#"><i class="icon-handbag icons"></i> </a></li>
+                <li><a class="minicart" v-on:mouseover="showCart = !showCart" v-on:mouseout="showCart = false"><span class="cart-number" v-if="cartObj && cartObj.length !== 0">{{cartObj.length}}</span><i class="icon-handbag icons"></i></a></li>
               </ul>
             </div>
             <div class="navbar-menu navbar-brand">
@@ -46,7 +46,7 @@
               <div class="cart-mini" v-if="cartObj && cartObj.length !== 0" v-bind:class="{_show: showCart}" v-on:mouseover="showCart = true" v-on:mouseout="showCart = false">
                 <div class="cart-head">
                   <h4>Mini cart</h4>
-                  <div class="total-price"><span>$</span> <span class="number-price">{{cartTotalPrice}}</span></div>
+                  <div class="total-price"><span>Total price: $</span> <span class="number-price">{{cartTotalPrice}}</span></div>
                 </div>
                 <ul id="cart-contentscroll"  data-scrollbar>
                   <li v-for="ic in cartObj">
@@ -104,13 +104,13 @@
           <div class="column item" v-for="(item, i) in v" :key="item.id" v-bind:class="{'adding': item.isLoading}">
             <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
               <img :src="item.image" alt=""/><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt=""/>
-              <a class="button is-black is-inverted is-outlined previewitem" v-on:click="zoomIn(item)" :disabled="item.isLoading"><i class="icon-magnifier-add"></i></a>
-              <a class="button is-black is-inverted is-outlined addtocart" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}"><i class="icon-basket"></i></a>
+              <a class="button is-black is-inverted is-outlined previewitem is-hidden-mobile" v-on:click="zoomIn(item)" :disabled="item.isLoading"><i class="icon-magnifier-add"></i></a>
+              <a class="button is-black is-inverted is-outlined addtocart is-hidden-mobile" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}"><i class="icon-basket"></i></a>
             </div>
             <div class="item-name">{{item.name}}</div>
             <div class="item-price"><span>$</span>{{item.price}}</div>
             <div class="button-wrapper is-hidden-desktop">
-              <a class="button is-outlined">Add to cart</a>
+              <a class="button is-outlined" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}">Add to cart</a>
             </div>
           </div>
         </div>
