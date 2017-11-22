@@ -32,6 +32,10 @@ body {
   display: block;
 }
 
+.menu-list .navbar-end li {
+  margin-left: 10px; 
+}
+
 .mobile-sidebarmenu {
   position: fixed;
   left: -2750px;
