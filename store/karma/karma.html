@@ -39,10 +39,20 @@
                 <li><a href="#">Contact Us</a></li>
               </ul>
               <ul class="navbar-end navbar-item">
-                <li><a><i class="icon-magnifier icons"></i></a></li>
-                <li><a><i class="icon-user icons"></i></a></li>
+                <li><input type="search" class="search-form" v-bind:class="{_show: showSearch}" placeholder="Type to search product"></li>
+                <li><a v-on:click="showSearch = !showSearch"><i class="icon-magnifier icons"></i></a></li>
+                <li><a v-on:mouseover="showUserForm = !showUserForm" v-on:mouseout="showUserForm = false"><i class="icon-user icons"></i></a></li>
                 <li><a class="minicart" v-on:mouseover="showCart = !showCart" v-on:mouseout="showCart = false"><span class="cart-number" v-if="cartObj && cartObj.length !== 0">{{cartObj.length}}</span><i class="icon-handbag icons"></i></a></li>
               </ul>
+              <div class="user-form" v-bind:class="{active: showUserForm}" v-on:mouseover="showUserForm = !showUserForm" v-on:mouseout="showUserForm = false">
+                <h1>Account</h1>
+                <ul>
+                  <li><a href="#">Register</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+                <div class="fb-login"><i class="icons icon-social-facebook"></i><span>Facebook Login</span></div>
+              </div>
+              <!-- Mini cart -->
               <div class="cart-mini" v-if="cartObj && cartObj.length !== 0" v-bind:class="{_show: showCart}" v-on:mouseover="showCart = true" v-on:mouseout="showCart = false">
                 <div class="cart-head">
                   <h4>Mini cart</h4>
@@ -130,6 +140,7 @@
     #cart-contentscroll {
       height: 290px;
       overflow: auto;
+      margin: 10px 0;
     }
   </style>
   <script src="./js/data.js"></script>

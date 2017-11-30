@@ -26,14 +26,17 @@ const appVue = new Vue({
     showMessage: false,
     cartObj: JSON.parse(localStorage.getItem('cart-storage')) || [],
     showCart: false,
+    showUserForm: false,
+    showSearch: false,
     cartTotalPrice: 0
   },
 
   mounted: function() {
     this.startRotation();
     this.totalPrice();
+    options = {alwaysShowTracks: true};
     var scrollBar = window.Scrollbar;
-    scrollBar.initAll();
+    scrollBar.initAll(options);
   },
 
   methods: {
@@ -127,11 +130,12 @@ const appVue = new Vue({
         item.qty = 1;
 
         var checkItemInCart = this.findItemInCart(item);
-        (checkItemInCart.result == true) ? this.cartObj[this.cartObj.indexOf(checkItemInCart.items)].qty += 1: this.cartObj.push(item);
+        (checkItemInCart.result == true) ? this.cartObj[this.cartObj.indexOf(checkItemInCart.items)].qty += 1 : this.cartObj.push(item);
 
         if (this.cartObj.length === 0) {
           this.cartObj.push(item);
         }
+
         this.setCart();
         this.getCart();
         this.totalPrice();

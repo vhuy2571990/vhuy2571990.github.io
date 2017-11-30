@@ -33,7 +33,7 @@ body {
 }
 
 .menu-list .navbar-end li {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .mobile-sidebarmenu {
@@ -300,10 +300,6 @@ body {
   right: 7px;
 }
 
-.menu-list a.minicart:hover {
-  background: none;
-}
-
 .cart-mini {
   position: absolute;
   top: 100%;
@@ -339,6 +335,74 @@ body {
   text-transform: uppercase;
   margin: 0 5px;
   padding: 5px 10px;
+}
+
+.user-form {
+  background: #fff;
+  min-width: 220px;
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  padding: 5px 10px;
+  text-align: right;
+  text-transform: uppercase;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .3s ease-in-out;
+}
+
+.user-form.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-form ul li {
+  margin-bottom: 5px;
+}
+
+.user-form ul li:hover a{
+  background: #f0e68c;
+  border-radius: 0;
+  color: #fff;
+}
+
+.user-form h1 {
+  padding: .5em .75em;
+  margin-bottom: .5em;
+  border-bottom: 2px solid #333;
+}
+
+.user-form .fb-login {
+  display: block;
+  text-transform: capitalize;
+  text-align: center;
+  padding: .5em .75em;
+  display: block;
+  max-width: 100%;
+  cursor: pointer;
+  border: 1px solid #3273dc;
+  color: #3273dc;
+  transition: all .3s ease-in-out;
+}
+
+.user-form .fb-login:hover {
+  background: #3273dc;
+  color: #fff;
+}
+
+.search-form {
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  width: 0;
+  transition: all .3s ease-in-out;
+}
+
+.search-form._show {
+  border-color: #333;
+  width: 250px;
 }
 
 .cart-mini h4 {
