@@ -30,6 +30,26 @@ const listSlimShirt = [
    {name: 'Slim Fit Navy Twill Button Cuff Shirt', image: './images/men-shirt/57128.jpg', listImages: ['./images/men-shirt/57128_alt1.jpg', './images/men-shirt/57128_alt2.jpg'], price: 39.95}
 ]
 
+const dataMenu = {
+    men: {
+      title: 'Menswear',
+      sMenu: [
+        {text: 'Shirts'},
+        {text: 'Suits'},
+        {text: 'Ties'},
+        {text: 'Coats & Blazers'},
+        {text: 'Chios & Jeans'},
+      ]
+    },
+    women: {
+      title: 'Womenswear',
+      sMenu: [
+        {text: 'Shirts'},
+        {text: 'tailoring'},
+      ]
+    },
+    promoImage: 'images/outlet_mega.jpg'
+}
 
 var j = listSlimShirt.length,
     chunk = 4,

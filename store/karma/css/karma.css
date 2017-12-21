@@ -90,7 +90,7 @@ body {
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
   overflow: hidden;
-  padding-top: 77px;
+  padding-top: 73px;
 }
 
 .top.slider .item-list-item img {
@@ -471,6 +471,62 @@ body {
   font-size: 16px;
   min-width: 20px;
   text-align: center;
+}
+
+/*Sub menu*/
+.sub-menu {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    -webkit-box-shadow: 0px 39px 31px -37px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 39px 31px -37px rgba(0,0,0,0.75);
+    box-shadow: 0px 39px 31px -37px rgba(0,0,0,0.75);
+    border-top: 1px solid #d1d1d14f;
+    padding: 30px 0 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .3s ease-in-out;
+}
+
+.sub-menu._show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub-menu .container {
+   display: -webkit-flex;
+   display: -ms-flex;
+   display: flex;
+   justify-content: space-between;
+   max-width: 1000px;
+}
+
+.list-s-menu {
+  padding: 0 15px;
+}
+
+.list-s-menu h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.list-s-menu ul li {
+  line-height: 1.8em;
+}
+
+.list-s-menu ul li a {
+  text-transform: capitalize;
+  color: #888;
+  transition: color .15s ease-in-out;
+}
+
+.list-s-menu ul li a:hover {
+  color: #ff3860;
 }
 
 @media (min-width: 480px) {

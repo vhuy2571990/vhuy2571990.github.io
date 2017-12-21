@@ -16,8 +16,10 @@ const appVue = new Vue({
   el: '#app-wrapper',
   data: {
     images: listImage,
+    dataMenu: dataMenu,
     slimShirts: newArr,
     toggleVar: false,
+    sMenu: null,
     currentNumber: 0,
     timer: null,
     imgZoom: '',
@@ -140,6 +142,16 @@ const appVue = new Vue({
         this.getCart();
         this.totalPrice();
       }, 3000)
+    },
+
+    showSub: function() {
+      console.log('ss');
+      return this.sMenu = true;
+    },
+
+    closeSub: function() {
+      console.log('z');
+      return this.sMenu = false;
     },
 
     clearMessage: function() {
