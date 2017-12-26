@@ -144,13 +144,24 @@ const appVue = new Vue({
       }, 3000)
     },
 
-    showSub: function() {
-      console.log('ss');
+    showSub: function(data) {
+      switch (data) {
+        case 'sale':
+          this.dataMenu = dataMenu;
+          break;
+        case 'shirts':
+          this.dataMenu = dataMenuShirts
+          break;
+        case 'suits':
+          this.dataMenu = dataMenuSuits;
+          break;
+        default:
+
+      }
       return this.sMenu = true;
     },
 
     closeSub: function() {
-      console.log('z');
       return this.sMenu = false;
     },
 

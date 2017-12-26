@@ -502,7 +502,6 @@ body {
    display: -ms-flex;
    display: flex;
    justify-content: space-between;
-   max-width: 1000px;
 }
 
 .list-s-menu {
@@ -516,7 +515,7 @@ body {
 }
 
 .list-s-menu ul li {
-  line-height: 1.8em;
+  line-height: 30px;
 }
 
 .list-s-menu ul li a {

@@ -31,12 +31,13 @@
             </div>
             <div class="navbar-menu navbar-brand">
               <ul class="navbar-start navbar-item">
-                <li v-on:mouseover="showSub" v-on:mouseout="closeSub">
-                  <router-link to="/foo">Foo</router-link>
+                <li v-on:mouseover="showSub('sale')" v-on:mouseout="closeSub">
+                  <router-link to="/foo">Sale</router-link>
                 </li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li v-on:mouseover="showSub('shirts')" v-on:mouseout="closeSub"><a href="#">Shirts</a></li>
+                <li v-on:mouseover="showSub('suits')" v-on:mouseout="closeSub"><a href="#">Suits</a></li>
+                <li v-on:mouseover="showSub('coats')" v-on:mouseout="closeSub"><a href="#">Coats</a></li>
+                <li v-on:mouseover="showSub('accessories')" v-on:mouseout="closeSub"><a href="#">Accessories</a></li>
               </ul>
               <ul class="navbar-end navbar-item">
                 <li><input type="search" class="search-form" v-bind:class="{_show: showSearch}" placeholder="Type to search product"></li>
@@ -86,17 +87,11 @@
       </div>
       <div class="sub-menu" v-bind:class="{_show: sMenu}" v-on:mouseover="showSub" v-on:mouseout="closeSub">
         <div class="container">
-          <div class="list-s-menu">
-              <h3 class="list-title">{{dataMenu.men.title}}</h3>
+          <div class="list-s-menu" v-for="z in dataMenu.column">
+              <h3 class="list-title">{{z.title}}</h3>
               <ul>
-                <li v-for="item in dataMenu.men.sMenu"><router-link to="/foo">{{item.text}}</router-link></li>
+                <li v-for="item in z.sMenu"><router-link to="/foo">{{item.text}}</router-link></li>
               </ul>
-          </div>
-          <div class="list-s-menu">
-            <h3 class="list-title">{{dataMenu.women.title}}</h3>
-            <ul>
-              <li v-for="item in dataMenu.women.sMenu"><router-link to="/foo">{{item.text}}</router-link></li>
-            </ul>
           </div>
           <div class="promo-image"><img :src="dataMenu.promoImage" alt=""></div>
         </div>

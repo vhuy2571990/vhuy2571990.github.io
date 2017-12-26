@@ -31,7 +31,8 @@ const listSlimShirt = [
 ]
 
 const dataMenu = {
-    men: {
+  column : [
+    {
       title: 'Menswear',
       sMenu: [
         {text: 'Shirts'},
@@ -41,14 +42,88 @@ const dataMenu = {
         {text: 'Chios & Jeans'},
       ]
     },
-    women: {
+    {
       title: 'Womenswear',
       sMenu: [
         {text: 'Shirts'},
         {text: 'tailoring'},
       ]
     },
-    promoImage: 'images/outlet_mega.jpg'
+  ],
+  promoImage: 'images/outlet_mega.jpg'
+}
+
+const dataMenuShirts = {
+    column: [
+      {
+        title: 'Shirts',
+        sMenu: [
+          {text: 'Sales Shirts'},
+          {text: 'Online Exclusive Shirts'},
+          {text: 'Ties'},
+          {text: 'Coats & Blazers'},
+          {text: 'Chios & Jeans'},
+        ]
+      },
+      {
+        title: 'Shop by fit',
+        sMenu: [
+          {text: 'Regular Fit Shirts'},
+          {text: 'Slim Fit Shirts'},
+          {text: 'Fitted Fit Shirts'},
+          {text: 'Super Fitted Fit Shirts'},
+        ]
+      },
+      {
+        title: 'Shop by Collection',
+        sMenu: [
+          {text: 'The White Shirt'},
+          {text: 'Stretch Shirts'},
+          {text: 'Gingham Checks'},
+          {text: 'Party Collection Shirts'}
+        ]
+      }
+    ],
+    promoImage: 'images/womenswear_mega.jpg'
+}
+
+const dataMenuSuits = {
+    column: [
+      {
+        title: 'Suits',
+        sMenu: [
+          {text: 'Sales Suits'},
+          {text: '1 Piece Suits'},
+          {text: '2 Piece Suits'},
+        ]
+      },
+      {
+        title: 'Shop by fit',
+        sMenu: [
+          {text: 'Regular Fit Suits'},
+          {text: 'Slim Fit Suits'},
+          {text: 'Skinny Fit Suits'},
+        ]
+      },
+      {
+        title: 'Shop by Colour',
+        sMenu: [
+          {text: 'Navy Suits'},
+          {text: 'Blue Suits'},
+          {text: 'Grey Suits'},
+          {text: 'Black Suits'}
+        ]
+      },
+      {
+        title: 'Shop by Collection',
+        sMenu: [
+          {text: 'Luxury Suit Collection'},
+          {text: 'Infinity Suit Collection'},
+          {text: 'Black Tie'}
+        ]
+      }
+    ],
+    promoImage: 'images/promo_1.jpg'
 }
 
 var j = listSlimShirt.length,
