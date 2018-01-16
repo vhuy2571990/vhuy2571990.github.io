@@ -1,8 +1,8 @@
 *,
 html,
 body {
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-family: 'Crimson Text', serif;
 }
 
 .text-logo {
@@ -335,7 +335,7 @@ body {
   padding: 1em;
   background: #fff;
   border-bottom: 2px solid #000;
-  max-height: 400px;
+  max-height: 440px;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(10px);
@@ -530,6 +530,13 @@ body {
    display: -ms-flex;
    display: flex;
    justify-content: space-between;
+}
+
+.menu-list a,
+.sub-menu,
+.cart-mini {
+  font-family: Source Sans Pro, serif;
+  font-size: 16px;
 }
 
 .list-s-menu {
