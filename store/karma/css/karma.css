@@ -18,8 +18,36 @@ body {
   max-width: 1800px;
 }
 
+#cart-contentscroll {
+  height: 290px;
+  overflow: auto;
+  margin: 10px 0;
+}
+
 .container-wrapper #main-content {
   padding: 0em 1em 1em;
+}
+
+.wrapper {
+  margin-top: 1em;
+}
+
+.wrapper .item {position: relative;}
+
+.wrapper .item .description {position: absolute; top: 150px; transform: translate(-50%, -50%); color: #fff; text-align: center;}
+.wrapper .item .description h1{text-transform: uppercase; font-size: 30px;}
+.wrapper .item .description .button {margin-top: 10px; border: 1px solid #fff; color: #fff; background: 0; border-radius: 0; font-size: 18px; text-transform: uppercase; transition: all .2s ease-in-out;}
+.wrapper .item .description .button:hover {background: #000; border-color: #000;}
+.wrapper .item .description.font-black .button {margin-top: 10px; border: 1px solid #000; color: #000; background: 0; border-radius: 0; font-size: 18px; text-transform: uppercase; transition: all .2s ease-in-out; min-width: 150px;}
+.wrapper .item .description.font-black .button:hover {background: #fff; border-color: #fff;}
+
+.wrapper .item .description.right {right: 100px; }
+.wrapper .item .description.right.font-black {color: #000; right: 0; top: 200px;}
+.wrapper .item .description.left { left: 50%; }
+.wrapper .item img{
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
 }
 
 .menu-list a.logo-item{
