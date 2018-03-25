@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+  #left-sidebar { display: block; position: fixed; }
+  .main-content { padding-left: 400px; }
+  .timeline-group .item-content {opacity: 0; padding-top: 1em;}
+  .row {
+  	display: -ms-flex;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  }
+  .left-sidebar {
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+  	max-width: 400px;
+  	text-align: center;
+    padding-top: 1.5em;
+  }
+  #accordion {
+    border-top: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .timeline-group {height: auto;}
+}

@@ -213,6 +213,9 @@ iframe {
 .work-experience .company-name {
   font-size: .9em;
   text-transform: uppercase;
+	background: #2098d1;
+	color: #fff;
+	padding: 1px 5px;
 }
 
 .work-experience ._time {
