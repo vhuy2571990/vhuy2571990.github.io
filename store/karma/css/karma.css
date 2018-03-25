@@ -176,18 +176,34 @@ footer.container hr {
 }
 footer.container h1 {
   text-align: center;
-  font-size: 22px;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 footer.container .button-wrapper {
   display: block;
-  margin-top: 20px;
+  margin: 20px 0;
   text-align: center;
 }
 footer.container .button-wrapper button {
   text-transform: capitalize;
   border-color: #333;
+  font-weight: 700;
+  min-width: 350px;
+}
+.list-link ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.list-link ul li {
+  border-right: 1px solid #888;
+}
+.list-link ul li a {
+  color: #333;
+  margin: 0 10px;
 }
 .social-icon {
   margin-top: 1em;
