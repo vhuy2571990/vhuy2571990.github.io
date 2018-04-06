@@ -1,9 +1,16 @@
 /*Sub menu*/
-*,
-html,
-body {
+* {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Crimson Text', serif;
+}
+html {
+  font-size: 16px;
+  font-family: 'Crimson Text', serif;
+}
+body {
+  display: none;
+  font-size: 16px;
+  font-family: 'Crimson Text', serif;
 }
 .text-logo {
   font-size: 30px;
@@ -176,34 +183,18 @@ footer.container hr {
 }
 footer.container h1 {
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
 footer.container .button-wrapper {
   display: block;
-  margin: 20px 0;
+  margin-top: 20px;
   text-align: center;
 }
 footer.container .button-wrapper button {
-  text-transform: capitalize;
+  text-transform: uppercase;
   border-color: #333;
-  font-weight: 700;
-  min-width: 350px;
-}
-.list-link ul {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.list-link ul li {
-  border-right: 1px solid #888;
-}
-.list-link ul li a {
-  color: #333;
-  margin: 0 10px;
 }
 .social-icon {
   margin-top: 1em;
@@ -254,7 +245,7 @@ footer.container .button-wrapper button {
   float: right;
 }
 .menu-list a {
-  font-family: sans-serif;
+  font-family: Source Sans Pro, serif;
   font-size: 16px;
 }
 .mobile-sidebarmenu {
@@ -351,6 +342,7 @@ footer.container .button-wrapper button {
 .item-list .item-price {
   text-align: center;
   color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
 }
 .button-wrapper {
@@ -404,9 +396,11 @@ footer.container .button-wrapper button {
   transform: translateY(10px);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: Source Sans Pro, serif;
   font-size: 16px;
 }
 .cart-mini h4 {
+  font-family: 'Source sans pro', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -524,6 +518,7 @@ footer.container .button-wrapper button {
 .cart-head .total-price .number-price {
   color: #ff3860;
   font-size: 20px;
+  font-family: 'Source sans pro', sans-serif;
 }
 .minicart .cart-number {
   position: absolute;
@@ -532,6 +527,7 @@ footer.container .button-wrapper button {
   background-color: #ff3860;
   color: #fff;
   padding: .1em;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   min-width: 20px;
   text-align: center;
@@ -551,6 +547,7 @@ footer.container .button-wrapper button {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease-in-out;
+  font-family: Source Sans Pro, serif;
   font-size: 16px;
 }
 .sub-menu .container {

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Karma Store Fashion</title>
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Source+Sans+Pro" rel="stylesheet">
+  <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" href="./css/simple-lineicons.css">
   <link rel="stylesheet" href="../../css/bulma.css">
   <link rel="stylesheet" href="./css/karma.css">
@@ -120,6 +120,24 @@
         </slider-wrapper>
       </div>
       <router-view></router-view>
+      <div class="container" id="main-content">
+        <div class="notification is-primary" v-bind:class="{'_show': showMessage}"> <button class="delete" v-on:click="clearMessage"></button><span>{{message}}</span></div>
+        <h1 class="item-title"># Best Seller</h1>
+        <div class="item-list columns" v-for="v in newArr">
+          <div class="column item" v-for="(item, i) in v" :key="item.id" v-bind:class="{'adding': item.isLoading}">
+            <div class="img-wrapper" v-on:mouseout="stopSlide(item)" v-on:mouseover="startSlide(item)">
+              <img :src="item.image" alt=""/><img v-if="item.listImages" class="img-slide" v-for="img in item.listImages" :src="img" alt=""/>
+              <a class="button is-black is-inverted is-outlined previewitem is-hidden-mobile" v-on:click="zoomIn(item)" :disabled="item.isLoading"><i class="icon-magnifier-add"></i></a>
+              <a class="button is-black is-inverted is-outlined addtocart is-hidden-mobile" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}"><i class="icon-basket"></i></a>
+            </div>
+            <div class="item-name">{{item.name}}</div>
+            <div class="item-price"><span>$</span>{{item.price}}</div>
+            <div class="button-wrapper is-hidden-desktop">
+              <a class="button is-outlined" v-on:click="addTocart(item)" :disabled="item.isLoading" v-bind:class="{'disabled is-loading': item.isLoading}">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="container wrapper">
       <hr>
