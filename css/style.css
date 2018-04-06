@@ -336,7 +336,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
   background-position: center center;
   display: block;
   position: absolute;
-  opacity: 0;
+  opacity: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -363,7 +363,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 .default-loading-icon:before {
   position: absolute;
   content: "";
-  border-color: rgba(0, 0, 0, 1) transparent transparent;
+  border-color: rgb(73, 19, 119) transparent transparent;
   border-radius: 100%;
   border-style: solid;
   border-width: 3px;
@@ -415,7 +415,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 }
 
 .default-loading-icon:before {
-  border-top-color: #000000!important;
+  border-top-color: rgb(73, 19, 119)!important;
 }
 
 .timeline-item {
