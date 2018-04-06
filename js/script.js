@@ -74,12 +74,12 @@ app.controller('infoCtrl', function($scope){
 			time: 'July 2015',
 			years: '2015',
 			works: [
-				{content: 'Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
-				{content: 'Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS.'},
-				{content: 'Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.'},
-				{content: 'Fixed front end bugs.'},
-				{content: 'Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.'},
-				{content: 'Experience with Angular , Ionic, Tweenlite.'}
+				{content: '- Do Intranet Social Network Website for company, help improve UI/UX and developed main company website gnt.co.jp.'},
+				{content: '- Created and maintained the front-end standards document and oversaw production of Javascript, HTML, and CSS.'},
+				{content: '- Created and implemented a custom CSS grid system, with CSS media queries for mobile responsiveness.'},
+				{content: '- Fixed front end bugs.'},
+				{content: '- Write Hybird App Portal Internal Human manager like check in out, Absence request..., fix bug app.'},
+				{content: '- Experience with Angular , Ionic, Tweenlite.'}
 			]
 		},
 		{
@@ -87,9 +87,10 @@ app.controller('infoCtrl', function($scope){
 			time: 'March 2017',
 			years: '2017',
 			works: [
-				{content: 'Front-end developer for Magento platform theme UI.'},
-				{content: 'UI/UX developer, fix bug, HTML, CSS, Javascript'},
-				{content: 'Fix FrontEnd Bugs, JavaScript, HTML, CSS.'}
+				{content: '- Front-end developer for Magento platform theme UI.'},
+				{content: '- UI/UX developer, fix bug, HTML, CSS, Javascript.'},
+				{content: '- Fix FrontEnd Bugs, JavaScript, HTML, CSS.'},
+				{content: '- Research new technical about FrontEnd.'}
 			],
 			process: true
 		}
