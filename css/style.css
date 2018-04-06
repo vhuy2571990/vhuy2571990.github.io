@@ -11,12 +11,8 @@ body, html {
 }
 
 a, a:visited, a:focus {
-  color: #888;
+  color: #000;
   text-decoration: none;
-}
-
-a:hover {
-  color: #333;
 }
 
 iframe {
@@ -178,7 +174,7 @@ iframe {
   margin: 1rem;
   list-style-type: none;
   font-size: 14px;
-  color: #888;
+  color: #000;
   padding-left: 0;
 }
 
