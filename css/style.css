@@ -197,7 +197,7 @@ iframe {
 #collapseThree ul li, #collapseTwo ul li, #educationSection ul li {
   line-height: 1.8rem;
   list-style: none;
-  margin-top: 10px;
+  margin: 5px 0;
   font-size: 1rem;
 }
 
@@ -213,7 +213,7 @@ iframe {
 .work-experience .company-name {
   font-size: .9em;
   text-transform: uppercase;
-	background: #2098d1;
+	background: #e74b3c;
 	color: #fff;
 	padding: 1px 5px;
 }
@@ -363,7 +363,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 .default-loading-icon:before {
   position: absolute;
   content: "";
-  border-color: rgb(73, 19, 119) transparent transparent;
+  border-color: #e74b3c transparent transparent;
   border-radius: 100%;
   border-style: solid;
   border-width: 3px;
@@ -401,8 +401,14 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
   padding-left: 2em;
 }
 
-.timeline-group ul {
-  padding-left: 0;
+.timeline-group ul,
+#educationSection ul {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #34485d;
+  width: 100%;
+  border-radius: 3px;
+  color: #fff;
 }
 
 .timeline-group::before {
@@ -415,7 +421,7 @@ body[data-ajax-transitions="true"] #ajax-loading-screen[data-method="standard"],
 }
 
 .default-loading-icon:before {
-  border-top-color: rgb(73, 19, 119)!important;
+  border-top-color: #e74b3c!important;
 }
 
 .timeline-item {

@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   #left-sidebar { display: block; position: fixed; }
   .main-content { padding-left: 400px; }
-  .timeline-group .item-content {opacity: 0; padding-top: 1em;}
+  .timeline-group .item-content {opacity: 0; padding-top: 1em; width: 100%;}
   .row {
   	display: -ms-flex;
   	display: -webkit-box;

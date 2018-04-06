@@ -7,8 +7,8 @@
 	});
 
 	$(document).ready(function(){
-		var _innerHeight1 = $('.timeline-group.first').innerHeight(),
-		    _innerHeight2 = $('.timeline-group.second').innerHeight();
+		var _innerHeight1 = $('.timeline-group.first').innerHeight() + 30,
+		    _innerHeight2 = $('.timeline-group.second').innerHeight() + 30;
 		TweenLite.fromTo("#accordion .panel.first", 2, {css: {opacity:0}}, {css: {opacity: 1}, ease: Sine});
 		TweenLite.fromTo(".timeline-group.first", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight1, overflow: "visible"}, delay: 1, ease: Sine});
 		TweenLite.fromTo(".timeline-group.second", 1, {css: {height: "0px", overflow: "hidden"}}, {css: {height: _innerHeight2, overflow: "visible"}, delay: 3, ease: Elastic});
